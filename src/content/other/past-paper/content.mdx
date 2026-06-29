@@ -1,0 +1,178 @@
+# Past Paper Helper
+
+A Chrome extension that instantly links Cambridge IGCSE/CAIE Question Papers (QP) to their corresponding Mark Schemes (MS), removing the need for manual searching.
+
+---
+
+# Why I Built This
+
+While preparing for Cambridge IGCSE exams, I frequently practiced past papers online.
+
+A repetitive frustration was switching between:
+
+- Question Paper (QP)
+- Mark Scheme (MS)
+
+Even though the URL structure is predictable, I had to manually modify or search for the correct file every time.
+
+This extension automates that process with a single click or shortcut.
+
+---
+
+# Features
+
+## QP ⇄ MS Toggle
+
+Automatically detects the current page:
+
+- If viewing a Question Paper → opens Mark Scheme
+- If viewing a Mark Scheme → opens Question Paper
+
+---
+
+## Floating Action Button
+
+A lightweight UI button appears on supported pages:
+
+- Open Mark Scheme
+- Open Question Paper
+
+Designed to stay unobtrusive while studying.
+
+---
+
+## ️ Keyboard Shortcut
+
+Fast switching without clicking:
+
+```
+Ctrl + Shift + S
+```
+
+Enables split-study workflow instantly.
+
+---
+
+## Toast Notifications
+
+Non-intrusive feedback system:
+
+- “Opening Mark Scheme…”
+- “Split Mode ON/OFF”
+
+Provides clarity without interrupting workflow.
+
+---
+
+# ️ How It Works
+
+The extension uses a simple URL transformation rule:
+
+```
+qp → ms
+```
+
+### Example
+
+**Question Paper:**
+
+```
+.../0620_w25_qp_11.pdf
+```
+
+**Mark Scheme:**
+
+```
+.../0620_w25_ms_11.pdf
+```
+
+---
+
+The extension:
+
+1. Detects current URL
+2. Identifies paper type (QP or MS)
+3. Generates corresponding link
+4. Opens target automatically
+
+---
+
+# Tech Stack
+
+- JavaScript (Vanilla)
+- Chrome Extensions API (Manifest V3)
+- Content Scripts
+- DOM Manipulation
+- Keyboard Event Handling
+
+---
+
+# Project Structure
+
+```
+past-paper-helper/
+│
+├── manifest.json
+├── content.js
+└── icons/
+    ├── icon16.png
+    ├── icon48.png
+    └── icon128.png
+```
+
+---
+
+# Installation (Developer Mode)
+
+1. Clone the repository
+2. Open Chrome → `chrome://extensions`
+3. Enable **Developer Mode**
+4. Click **Load unpacked**
+5. Select project folder
+
+---
+
+# What I Learned
+
+- Chrome Extension architecture (Manifest V3)
+- Content script injection
+- DOM manipulation in restricted environments
+- Keyboard shortcut handling
+- URL parsing and transformation logic
+- Building small utility tools with high real-world impact
+
+---
+
+# Motivation
+
+Small friction points in daily workflows add up.
+
+This project was built to eliminate one repetitive step in student study workflows and improve efficiency when practicing past papers.
+
+---
+
+# Future Improvements
+
+- Auto-detect exam boards (CAIE / Edexcel / IB)
+- Study session tracking
+- Mistake logging system
+- Mobile companion version
+- Split-screen tab grouping mode
+
+---
+
+# License
+
+MIT License — free to use and modify.
+
+---
+
+# Summary
+
+Past Paper Helper demonstrates:
+
+- Chrome extension development (Manifest V3)
+- Browser automation workflows
+- URL transformation logic
+- Productivity-focused tool design
+- Lightweight UX engineering

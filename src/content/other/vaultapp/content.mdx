@@ -1,0 +1,246 @@
+# Vault App
+
+A personal offline-first vault management and transaction ledger application built with **React, Vite, and IndexedDB**.
+
+It is designed as a **Progressive Web App (PWA)** that runs seamlessly on iPad, Android, and desktop devices without requiring a backend.
+
+---
+
+# Overview
+
+Vault App provides a lightweight, fully offline financial tracking system with:
+
+- Transaction ledger management
+- Deposit & withdrawal tracking
+- Filtering & search system
+- Exportable financial reports
+- PWA installability
+
+---
+
+# Ledger System
+
+A unified ledger for all transactions:
+
+- View all deposits and withdrawals
+- Real-time balance calculation
+- Separate tracking of income and expenses
+- Structured transaction records including:
+  - Name
+  - Amount
+  - Note
+  - Date
+
+---
+
+# Deposit & Withdrawal System
+
+Users can quickly add financial entries:
+
+- Instant form submission
+- Smart name autocomplete suggestions
+- Optimized for speed and simplicity
+- Minimal interaction required
+
+---
+
+# Filtering System
+
+Advanced filtering capabilities:
+
+- Search by name (case-insensitive)
+- Search by note (case-insensitive)
+- Filter by:
+  - Minimum amount
+  - Maximum amount
+  - Date range
+
+Filters apply consistently across:
+
+- UI ledger view
+- Exported Excel files
+- Exported PDF reports
+
+---
+
+# ️ Edit Transactions
+
+Users can:
+
+- Edit any existing transaction
+- Fix mistakes without deleting records
+- See instant updates in the ledger
+
+---
+
+# Export System
+
+Export financial data into professional formats:
+
+## Supported formats
+
+- Excel (.xlsx with styling)
+- PDF (table-based layout)
+
+## Export includes:
+
+- Table headers (formatted)
+- Clean structured rows
+- Filtered dataset only
+
+---
+
+# Progressive Web App (PWA)
+
+Vault App runs as a fully installable PWA:
+
+- Install on iPad, iPhone, Android, and desktop
+- Offline functionality via IndexedDB
+- Native app-like experience
+- No App Store or Play Store required
+
+---
+
+# Tech Stack
+
+- React
+- Vite
+- IndexedDB (Dexie)
+- XLSX
+- jsPDF + autoTable
+- vite-plugin-pwa
+- GitHub Pages
+
+---
+
+# Storage System
+
+All data is stored locally using **IndexedDB**:
+
+- No backend required
+- No cloud storage
+- Fully offline-first architecture
+- Fast local reads/writes
+
+---
+
+# Deployment
+
+Hosted on GitHub Pages:
+
+https://princekrazy.github.io/vault-app/
+
+---
+
+# ️ Development Setup
+
+## 1. Clone repository
+
+```bash
+git clone https://github.com/princekrazy/vault-app.git
+cd vault-app
+```
+
+---
+
+## 2. Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+## 3. Run locally
+
+```bash
+npm run dev
+```
+
+---
+
+## 4. Build production version
+
+```bash
+npm run build
+```
+
+---
+
+## 5. Deploy to GitHub Pages
+
+```bash
+npm run deploy
+```
+
+---
+
+# Install as App (PWA)
+
+## iOS (iPad / iPhone)
+
+- Open in Safari
+- Tap Share button
+- Select **Add to Home Screen**
+
+## Android
+
+- Open in Chrome
+- Tap **Install App**
+
+---
+
+# Project Structure
+
+```
+src/
+├── pages/
+│   ├── Ledger.jsx
+│   ├── Deposit.jsx
+│   ├── Withdraw.jsx
+│
+├── db/
+│   └── transactions.js
+│
+├── utils/
+│   ├── exportExcel.js
+│   ├── exportPDF.js
+│
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+# Privacy
+
+- No backend
+- No tracking
+- No external database
+- Fully offline-capable
+
+All user data stays on the device.
+
+---
+
+# What This Project Demonstrates
+
+- Progressive Web App development
+- Offline-first architecture design
+- IndexedDB data persistence
+- Financial ledger system design
+- Export systems (Excel & PDF)
+- Mobile-first UX engineering
+- Performance optimization for low-resource devices
+
+---
+
+# Summary
+
+Vault App demonstrates a production-quality offline financial system featuring:
+
+- React + Vite frontend architecture
+- IndexedDB local storage
+- PWA installability
+- Exportable financial reports
+- Fully backendless design

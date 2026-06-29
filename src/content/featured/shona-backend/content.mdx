@@ -1,0 +1,213 @@
+# Shona AI Translator (Backend)
+
+A FastAPI backend that powers an AI-based translation system converting English to Shona.
+
+It handles translation requests, stores user history, and provides a clean REST API for frontend integration.
+
+---
+
+# 🌍 Live API
+
+https://shona-translation-ai.onrender.com
+
+---
+
+# ⚡ Features
+
+## 🔁 REST API for Translation
+
+Provides a simple endpoint for translating text from English to Shona.
+
+---
+
+## 🗄 Translation History Storage
+
+- Stores translations in **SQLite**
+- Keeps record of all user requests
+- Enables history retrieval for frontend UI
+
+---
+
+## 🧠 Clean Modular Architecture
+
+The backend is structured for scalability and maintainability.
+
+---
+
+## 🔌 CORS Enabled
+
+Allows secure communication with frontend applications.
+
+---
+
+## 📦 Lightweight & Fast
+
+Built to be minimal, fast, and easy to deploy.
+
+---
+
+# 🧱 Tech Stack
+
+- FastAPI
+- Python
+- SQLAlchemy
+- SQLite
+- deep-translator (Google Translate wrapper)
+
+---
+
+# 🔌 API Endpoints
+
+## 📝 Translate Text
+
+```
+POST /translate
+```
+
+### Request
+
+```json
+{
+  "text": "Hello, how are you?"
+}
+```
+
+### Response
+
+```json
+{
+  "id": 1,
+  "original": "Hello, how are you?",
+  "translation": "Mhoroi, makadini"
+}
+```
+
+---
+
+## 📜 Get History
+
+```
+GET /history
+```
+
+Returns a list of previously translated texts.
+
+---
+
+# 🏗 Architecture
+
+```
+Frontend (Next.js)
+        ↓
+FastAPI Backend
+        ↓
+Translation Service (deep-translator / Google Translate)
+        ↓
+SQLite Database
+```
+
+---
+
+# 🚀 Run Locally
+
+## 1. Create virtual environment
+
+```bash
+python -m venv venv
+venv\Scripts\activate   # Windows
+```
+
+---
+
+## 2. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 3. Start server
+
+```bash
+uvicorn main:app --reload
+```
+
+Server runs at:
+
+http://127.0.0.1:8000
+
+---
+
+# 📦 Requirements
+
+```
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+deep-translator
+```
+
+---
+
+# 🔐 CORS Configuration
+
+```python
+CORSMiddleware(
+    allow_origins=["*"]
+)
+```
+
+This enables frontend access during development and production.
+
+---
+
+# 🧠 What This Project Demonstrates
+
+- Backend API development with FastAPI
+- RESTful architecture design
+- Database integration (SQLite)
+- External API integration (translation service)
+- CORS configuration for frontend apps
+- Clean backend structuring
+
+---
+
+# 🔄 System Flow
+
+1. Frontend sends text input
+2. FastAPI receives request
+3. Text is translated via deep-translator
+4. Result is stored in SQLite
+5. Response is returned to frontend
+6. History can be fetched anytime
+
+---
+
+# 🌍 Purpose
+
+This backend was built to support a practical AI translation tool aimed at:
+
+- Improving access to African language tools
+- Demonstrating real-world AI integration
+- Supporting frontend-backend full-stack architecture
+
+---
+
+# 👤 Author
+
+Prince (you)  
+Full Stack Developer | AI Enthusiast
+
+---
+
+# 📌 Summary
+
+This backend demonstrates:
+
+- API design with FastAPI
+- Real-time request handling
+- Database persistence
+- External service integration
+- Full-stack system architecture

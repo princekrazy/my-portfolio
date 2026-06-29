@@ -1,0 +1,222 @@
+# Uber Clone Frontend
+
+A modern ride-hailing frontend built with **React** and **MapLibre GL**, designed to simulate a production-grade Uber-like system with real-time driver-rider interaction, persistent ride state, and live geolocation tracking.
+
+---
+
+## Overview
+
+This project demonstrates a full ride-hailing experience including:
+
+- Real-time map rendering
+- Live driver tracking
+- Ride lifecycle management
+- Persistent session recovery
+- Role-based flows (Rider & Driver)
+- Payment integration
+
+It focuses heavily on **real-time frontend architecture** and **state synchronization challenges**.
+
+---
+
+## Why MapLibre?
+
+Instead of proprietary mapping solutions, this project uses **MapLibre GL**.
+
+### Benefits
+
+- Fully open source
+- No vendor lock-in
+- High-performance vector rendering
+- Production-ready mapping engine
+- Strong community support
+
+```js
+import maplibregl from "maplibre-gl";
+```
+
+Rider Experience
+Authentication
+
+Riders can:
+
+Register
+Login
+Maintain persistent sessions
+Ride Request Flow
+Rider logs in
+Current location is detected automatically
+Location permission is requested
+Rider selects destination on map
+Route is calculated and displayed
+ETA is shown
+Ride price is calculated
+Ride request is submitted
+Driver Matching
+
+After requesting a ride:
+
+Rider enters waiting state
+Available drivers receive request
+Driver can accept ride
+Rider is automatically assigned
+Live Driver Tracking
+
+When a driver accepts:
+
+Driver info is displayed
+Driver marker appears on map
+Marker updates in real time
+Rider sees live movement toward pickup point
+Ride Completion
+
+When trip ends:
+
+Completion notification is shown
+Ride state resets
+Rider can request a new ride
+Driver Experience
+Authentication
+
+Drivers can:
+
+Register
+Login
+Update profile
+Ride Discovery
+
+Drivers can view incoming ride requests including:
+
+Pickup route
+Destination route
+Distance
+Ride details
+Ride Acceptance
+
+After accepting a ride:
+
+Driver is assigned exclusively to that ride
+Other requests are blocked
+Live location sharing begins
+Ride Completion
+Ride is marked completed
+Commission is deducted
+Wallet balance updates
+Driver Wallet Logic
+
+Drivers start with:
+
+20
+
+If balance drops below 0:
+
+Cannot accept rides
+Warning displayed
+Must top up to continue
+Persistent Ride State
+
+To prevent issues from refreshes or crashes:
+
+The app uses Local Storage persistence.
+
+Stored state includes:
+Active ride
+Ride status
+Driver assignment
+Rider assignment
+Benefits:
+Resume rides after refresh
+Prevent duplicate ride creation
+Prevent multiple ride acceptance
+Improve reliability during network drops
+Real-Time Features
+Live Driver Location Updates
+Driver coordinates sent continuously via backend
+Frontend listens via WebSockets
+Map updates instantly
+Smooth animated movement
+Route Visualization
+
+Dynamic rendering of:
+
+Pickup route
+Destination route
+Driver-to-rider route
+
+This ensures full transparency during rides.
+
+Tech Stack
+React
+JavaScript
+MapLibre GL
+REST APIs
+WebSockets
+Local Storage
+PayPal Integration
+Key Challenges Solved
+Real-Time Synchronization
+
+Ensures accurate driver movement with minimal delay.
+
+Session Recovery
+
+Restores ride state after refresh or disconnect.
+
+Ride Integrity
+Prevents multiple active rides per user
+Prevents drivers accepting multiple rides
+Geolocation Handling
+Permissions management
+GPS tracking
+Route calculation
+Dynamic map rendering
+‍ Skills Demonstrated
+React architecture
+Real-time systems
+Mapping & geolocation
+WebSocket integration
+State persistence
+Payment systems
+UX flow design
+Scalable frontend architecture
+Live Demo
+Frontend
+
+https://princekrazy.github.io/kuvo_rides/
+
+Backend API
+
+https://kuvo-api.onrender.com/api
+
+What Recruiters Can Test
+Rider Flow
+Register / login
+Enable location
+Select destination
+View route + ETA + fare
+Request ride
+Track driver in real time
+Receive completion event
+Driver Flow
+Register / login
+View ride requests
+Preview routes
+Accept ride
+Share live location
+Complete ride
+View wallet updates
+Note
+
+For best experience:
+
+Open rider and driver flows in separate browsers or devices to observe real-time synchronization.
+
+Summary
+
+This project demonstrates production-level frontend engineering involving:
+
+Real-time data flow
+Map-based UI systems
+Persistent application state
+Multi-role architecture
+Complex UI state synchronization

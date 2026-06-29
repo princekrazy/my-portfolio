@@ -1,0 +1,186 @@
+# Emoji Sweeper
+
+A Visual Studio Code extension that removes emoji characters from source code quickly and efficiently.
+
+It helps clean copied code, enforce formatting standards, and prepare files for production environments.
+
+---
+
+# Overview
+
+Emoji Sweeper provides a simple set of commands to remove emojis from:
+
+- Entire files
+- Selected text
+- Specific line ranges
+
+It is designed to be fast, lightweight, and developer-friendly.
+
+---
+
+# Features
+
+## Remove Emojis from Whole File
+
+Cleans the entire active file in one command:
+
+```
+Remove Emojis: Whole File
+```
+
+---
+
+## ️ Remove Emojis from Selection
+
+Only cleans highlighted code:
+
+```
+Remove Emojis: Selection
+```
+
+---
+
+## Remove Emojis from Line Range
+
+Target specific sections of a file:
+
+```
+Remove Emojis: Line Range
+```
+
+Users specify start and end line numbers.
+
+---
+
+## Lightweight & Fast
+
+- Minimal performance overhead
+- Instant text transformation
+- No external dependencies
+
+---
+
+# Built With
+
+- TypeScript
+- Node.js
+- Visual Studio Code Extension API
+
+---
+
+# Project Structure
+
+```
+src/
+│
+├── commands/
+│   ├── cleanWholeFile.ts
+│   ├── cleanSelection.ts
+│   └── cleanLineRange.ts
+│
+├── emojiCleaner.ts
+│
+└── extension.ts
+```
+
+---
+
+# Installation
+
+## Marketplace Install
+
+Install directly from the Visual Studio Code Marketplace.
+
+---
+
+## Manual Install (.vsix)
+
+1. Download the latest `.vsix` file
+2. Open Visual Studio Code
+3. Open Command Palette:
+
+```
+Ctrl + Shift + P
+```
+
+4. Run:
+
+```
+Extensions: Install from VSIX...
+```
+
+5. Select the downloaded file
+
+---
+
+# Why I Built This
+
+This project was created to learn the **Visual Studio Code Extension API** while building a practical developer utility.
+
+It demonstrates:
+
+- Command registration
+- Editor text manipulation
+- Workspace editing
+- User input handling
+- TypeScript extension development
+- Packaging and publishing extensions
+
+---
+
+# Use Cases
+
+Emoji Sweeper is useful when:
+
+- Cleaning copied code from documentation or chat tools
+- Preparing production-ready files
+- Enforcing coding standards
+- Removing non-standard characters from codebases
+
+---
+
+# What I Learned
+
+- VS Code extension architecture
+- Working with the editor API
+- Command palette integration
+- Text manipulation at scale
+- TypeScript-based tooling development
+- Packaging extensions for distribution
+
+---
+
+# Contributing
+
+Contributions, issues, and suggestions are welcome.
+
+Developers can improve:
+
+- Cleaner regex patterns
+- Performance optimizations
+- New command types
+- UI enhancements
+
+---
+
+# License
+
+MIT License — free to use and modify.
+
+---
+
+# Author
+
+Prince Kuvenga
+
+---
+
+# Summary
+
+Emoji Sweeper demonstrates:
+
+- VS Code extension development
+- Developer tooling design
+- Text processing and editor APIs
+- TypeScript engineering
+- Practical productivity-focused software

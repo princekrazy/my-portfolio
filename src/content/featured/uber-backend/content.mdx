@@ -1,0 +1,311 @@
+# Uber Clone Backend API
+
+A production-style backend service built with **Laravel** that powers a real-time ride-hailing platform. The API manages rider and driver authentication, ride dispatching, payment processing, live driver tracking, and ride lifecycle management.
+
+---
+
+# Overview
+
+The backend provides the core business logic behind the ride-hailing application by combining:
+
+- RESTful APIs
+- Real-time WebSocket communication
+- Authentication & authorization
+- Ride dispatch workflows
+- PayPal payment processing
+
+The architecture was designed to support responsive rider and driver experiences while maintaining ride integrity and real-time synchronization.
+
+---
+
+# Key Features
+
+## Real-Time Driver Tracking
+
+The backend uses **Laravel Reverb** to broadcast driver GPS updates through WebSockets.
+
+Instead of continuously polling the server, rider applications subscribe to live events and receive location updates instantly.
+
+### Benefits
+
+- Live driver movement
+- Lower latency
+- Reduced polling overhead
+- Better scalability
+- Improved user experience
+
+---
+
+## Ride Lifecycle Management
+
+The API manages every stage of a ride:
+
+1. Rider creates ride request
+2. Nearby drivers receive request
+3. Driver previews ride
+4. Driver accepts ride
+5. Rider receives driver information
+6. Driver location updates continuously
+7. Driver completes trip
+8. Ride status finalized
+9. Driver commission deducted
+
+---
+
+## Authentication
+
+Separate authentication flows exist for:
+
+- Riders
+- Drivers
+
+Features include:
+
+- Registration
+- Login
+- Protected routes
+- Driver profile management
+
+---
+
+## PayPal Integration
+
+Secure payments are handled using the PayPal REST API.
+
+Workflow:
+
+1. Create PayPal order
+2. Redirect customer
+3. Capture payment
+4. Confirm transaction
+5. Continue ride workflow
+
+---
+
+## Driver Wallet System
+
+Each driver maintains an internal wallet.
+
+Business rules:
+
+- Initial balance of **20**
+- Commission deducted after each completed ride
+- Drivers with negative balances cannot accept rides
+- Clear feedback when balance restrictions apply
+
+This models commission-based ride-hailing platforms.
+
+---
+
+# Tech Stack
+
+- Laravel
+- PHP
+- Laravel Reverb
+- WebSockets
+- REST APIs
+- MySQL
+- PayPal REST API
+
+---
+
+# API Endpoints
+
+## Authentication
+
+| Method | Endpoint          |
+| ------ | ----------------- |
+| POST   | `/driverregister` |
+| POST   | `/driverlogin`    |
+| POST   | `/userregister`   |
+| POST   | `/userlogin`      |
+
+---
+
+## Ride Management
+
+| Method | Endpoint           |
+| ------ | ------------------ |
+| POST   | `/createride`      |
+| GET    | `/getriderequests` |
+| POST   | `/driveraccept`    |
+| POST   | `/drivercomplete`  |
+
+---
+
+## Driver
+
+| Method | Endpoint                |
+| ------ | ----------------------- |
+| GET    | `/getdriverdetails`     |
+| POST   | `/updatedriverinfo`     |
+| POST   | `/updatedriverlocation` |
+
+---
+
+## Rider
+
+| Method | Endpoint           |
+| ------ | ------------------ |
+| GET    | `/getriderdetails` |
+
+---
+
+## Payments
+
+| Method | Endpoint              |
+| ------ | --------------------- |
+| POST   | `/createpaypalorder`  |
+| POST   | `/capturepaypalorder` |
+
+---
+
+# Running the Project
+
+## Install dependencies
+
+```bash
+composer install
+```
+
+## Configure environment
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+Update your database and PayPal credentials.
+
+---
+
+## Run migrations
+
+```bash
+php artisan migrate
+```
+
+---
+
+## Start the application
+
+```bash
+concurrently "php artisan serve" "php artisan reverb:start"
+```
+
+This starts:
+
+- Laravel API
+- Laravel Reverb WebSocket server
+
+---
+
+# Architecture Highlights
+
+## Real-Time Communication
+
+Driver GPS coordinates are broadcast through WebSockets using Laravel Reverb.
+
+This enables rider applications to receive live driver updates without polling.
+
+Benefits include:
+
+- Lower latency
+- Reduced server load
+- Better scalability
+- Smooth map updates
+
+---
+
+## Ride State Management
+
+Business rules ensure:
+
+- Drivers cannot accept multiple rides simultaneously
+- Riders cannot create duplicate active rides
+- Ride completion remains consistent
+
+---
+
+# Future Improvements
+
+- Driver availability zones
+- Surge pricing
+- Ride analytics
+- Push notifications
+- Driver ratings
+- Multi-payment provider support
+- Background GPS optimization
+
+---
+
+# Skills Demonstrated
+
+- Laravel development
+- REST API architecture
+- Real-time systems
+- WebSocket integration
+- Authentication & authorization
+- Payment gateway integration
+- Business rule implementation
+- Geolocation workflows
+- Backend architecture
+
+---
+
+# Live API
+
+**Production API**
+
+https://kuvo-api.onrender.com/api
+
+---
+
+# Deployment
+
+Hosted on **Render** providing:
+
+- REST API
+- Authentication services
+- Ride management
+- Wallet processing
+- PayPal integration
+- Laravel Reverb WebSocket services
+
+---
+
+# Architecture
+
+The production deployment separates:
+
+- HTTP API
+- WebSocket communication
+- Payment processing
+- Driver location broadcasting
+
+This enables riders to receive near real-time location updates while maintaining responsive API performance.
+
+---
+
+# Related Project
+
+This backend powers the **Uber Clone Frontend**, which consumes these APIs to provide riders and drivers with a complete real-time ride-hailing experience.
+
+---
+
+# Summary
+
+This project demonstrates production-ready backend engineering involving:
+
+- Laravel application architecture
+- RESTful API design
+- Real-time communication
+- Payment processing
+- Authentication systems
+- Ride dispatch workflows
+- Business logic implementation
+- Scalable backend design
+
+```
+
+```

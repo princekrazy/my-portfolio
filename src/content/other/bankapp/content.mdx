@@ -1,0 +1,342 @@
+# Vault Manager Desktop
+
+A desktop cash vault management application built with **React, Tauri, Rust, and SQLite**.
+
+Vault Manager is designed for secure offline financial tracking, including deposits, withdrawals, ledger management, and automated reporting.
+
+---
+
+# Overview
+
+This application runs entirely on the user's machine with no internet dependency.
+
+It provides a complete system for:
+
+- Cash tracking
+- Transaction logging
+- Balance calculation
+- Report generation
+
+---
+
+# Features
+
+## Deposits
+
+Users can record incoming cash:
+
+- Depositor name
+- Amount
+- Notes
+- Manual date selection
+- Auto-suggestions from previous entries
+
+---
+
+## Withdrawals
+
+Users can record outgoing cash:
+
+- Recipient name
+- Amount
+- Notes
+- Manual date selection
+- Auto-suggestions from previous entries
+
+---
+
+## Ledger System
+
+A full transaction history view:
+
+- View all transactions
+- Edit entries
+- Delete entries
+- Sort by newest first
+
+---
+
+## Filtering System
+
+Advanced filtering options:
+
+- Filter by name
+- Minimum amount
+- Maximum amount
+- Start date
+- End date
+
+---
+
+## Balance Dashboard
+
+Automatically calculates:
+
+- Total Deposits
+- Total Withdrawals
+- Net Balance
+
+Formula:
+
+```
+Net Balance = Total Deposits - Total Withdrawals
+```
+
+---
+
+## Reporting
+
+Export financial data:
+
+- Excel export (SheetJS)
+- PDF export (jsPDF)
+
+---
+
+## Offline-First Design
+
+Vault Manager operates completely offline:
+
+- No internet required
+- No cloud storage
+- No external servers
+- Fully local SQLite database
+
+---
+
+# Tech Stack
+
+## Frontend
+
+- React
+- Vite
+
+## Desktop Framework
+
+- Tauri
+
+## Backend Layer
+
+- Rust
+- rusqlite
+
+## Database
+
+- SQLite
+
+## Reporting
+
+- SheetJS (Excel export)
+- jsPDF (PDF export)
+
+---
+
+# Project Structure
+
+```
+VaultManager/
+│
+├── src/
+│   ├── pages/
+│   │   ├── DepositPage.jsx
+│   │   ├── WithdrawalPage.jsx
+│   │   └── LedgerPage.jsx
+│   │
+│   ├── components/
+│   │   └── BalanceCard.jsx
+│   │
+│   └── App.jsx
+│
+├── src-tauri/
+│   ├── src/
+│   │   ├── main.rs
+│   │   └── db.rs
+│   │
+│   ├── Cargo.toml
+│   └── tauri.conf.json
+│
+└── package.json
+```
+
+---
+
+# Database Schema
+
+## Transactions Table
+
+```sql
+CREATE TABLE transactions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    type TEXT NOT NULL,
+    name TEXT NOT NULL,
+    amount REAL NOT NULL,
+    note TEXT,
+    transaction_date TEXT NOT NULL
+);
+```
+
+---
+
+# Example Transaction
+
+```json
+{
+  "id": 1,
+  "type": "deposit",
+  "name": "John Doe",
+  "amount": 500.0,
+  "note": "Cash deposit",
+  "transaction_date": "2026-06-23"
+}
+```
+
+---
+
+# ️ Available Operations
+
+## Add Deposit
+
+Stores:
+
+- Type
+- Name
+- Amount
+- Note
+- Transaction date
+
+---
+
+## Add Withdrawal
+
+Stores:
+
+- Type
+- Name
+- Amount
+- Note
+- Transaction date
+
+---
+
+## ️ Edit Transaction
+
+Allows updates to:
+
+- Name
+- Amount
+- Note
+- Date
+
+---
+
+## Delete Transaction
+
+Removes entries permanently from the ledger.
+
+---
+
+# Architecture
+
+Vault Manager is built with a hybrid desktop architecture:
+
+```
+React UI
+   ↓
+Tauri Bridge
+   ↓
+Rust Backend (db logic)
+   ↓
+SQLite Local Database
+```
+
+---
+
+# Data Storage
+
+- All data is stored locally in SQLite
+- No cloud sync
+- No external communication
+- Fully offline-first system
+
+---
+
+# Development Setup
+
+## Prerequisites
+
+Install:
+
+- Node.js
+- Rust
+- Microsoft C++ Build Tools
+- Tauri CLI
+
+---
+
+## Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+## Run development app
+
+```bash
+npm run tauri dev
+```
+
+---
+
+## Build production app
+
+```bash
+npm run tauri build
+```
+
+---
+
+## Output locations
+
+```
+src-tauri/target/release/
+src-tauri/target/release/bundle/
+```
+
+---
+
+# Future Enhancements
+
+- PIN protection
+- Multi-user support
+- Audit logs
+- Automatic backups
+- Monthly reports
+- Analytics dashboard
+- Search improvements
+- Multi-vault system
+
+---
+
+# What This Project Demonstrates
+
+- Desktop application development
+- Full-stack Rust + React integration
+- Offline-first architecture
+- Local database design
+- Financial data modeling
+- Cross-platform desktop engineering
+- Secure data handling patterns
+
+---
+
+# Summary
+
+Vault Manager Desktop demonstrates a production-grade offline financial system with:
+
+- Desktop app architecture (Tauri)
+- Rust backend logic
+- Local SQLite persistence
+- React UI system
+- Reporting & export capabilities
