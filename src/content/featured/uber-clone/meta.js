@@ -13,7 +13,7 @@ export default {
     "Local Storage",
     "PayPal API",
   ],
-  github: "",
+  github: "https://github.com/princekrazy/kuvo_rides",
   live: "https://princekrazy.github.io/kuvo_rides/",
   api: "https://kuvo-api.onrender.com/api",
   featured: true,

@@ -15,7 +15,7 @@ export default {
     "UX Design",
   ],
 
-  github: "", // add if available
+  github: "https://github.com/princekrazy/shona-frontend", // add if available
   live: "https://shona-frontend.vercel.app/",
 
   featured: true,

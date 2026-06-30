@@ -17,7 +17,7 @@ export default {
     "jsPDF",
   ],
 
-  github: "", // add repo if available
+  github: "https://github.com/princekrazy/bankapp", // add repo if available
   live: null, // desktop app (no web demo)
 
   featured: true,

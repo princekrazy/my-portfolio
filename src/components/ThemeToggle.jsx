@@ -17,8 +17,8 @@ export default function ThemeToggle() {
   }
 
   return (
-    <button onClick={toggle} className="px-3 py-1 border rounded">
-      {theme === "light" ? "Dark" : "Light"}
+    <button onClick={toggle} className="px-3 py-1 border rounded font-bold">
+      {theme === "light" ? "Dark Mode" : "Light Mode"}
     </button>
   );
 }

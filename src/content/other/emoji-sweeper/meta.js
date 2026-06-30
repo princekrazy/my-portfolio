@@ -14,8 +14,8 @@ export default {
     "Text Editor Manipulation",
   ],
 
-  github: "", // add repo if available
-  live: null, // VS Code extension
+  github: "https://github.com/princekrazy/emoji-cleaner", // add repo if available
+  live: "https://marketplace.visualstudio.com/items?itemName=princekrazy.emoji-sweeper&ssr=false#review-details", // VS Code extension
 
   featured: true,
 

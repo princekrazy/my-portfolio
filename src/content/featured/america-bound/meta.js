@@ -15,7 +15,7 @@ export default {
     "UX Design",
   ],
 
-  github: "", // add if available
+  github: "https://github.com/princekrazy/americaboundsite", // add if available
   live: "https://americabound.org",
 
   featured: true,

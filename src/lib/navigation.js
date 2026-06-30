@@ -4,7 +4,13 @@ export function getSidebarNav() {
   return {
     main: [
       { label: "Home", path: "/" },
-      { label: "Projects", path: "/projects" },
+      { label: "Featured Projects", path: "/#featured" },
+      { label: "Other Projects", path: "/#other" },
+      { label: "Experience", path: "/#experience" },
+      { label: "Skills", path: "/#skills" },
+      { label: "Contact Me", path: "/#contact" },
+      { label: "About Me", path: "/#about" },
+      { label: "Filter Projects By Technologies", path: "/projects" },
     ],
 
     projects: [

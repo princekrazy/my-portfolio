@@ -15,8 +15,8 @@ export default {
     "Keyboard Shortcuts",
   ],
 
-  github: "", // add repo if available
-  live: null, // Chrome extension (not web hosted)
+  github: "https://github.com/princekrazy/past-paper-helper", // add repo if available
+  live: "https://chromewebstore.google.com/detail/past-paper-helper/ciaejkddcmcalbcpfloaldcnbolgpeol", // Chrome extension (not web hosted)
 
   featured: true,
 

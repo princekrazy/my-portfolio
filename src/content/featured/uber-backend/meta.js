@@ -16,7 +16,7 @@ export default {
     "PayPal API",
   ],
 
-  github: "", // Add your repository
+  github: "https://github.com/princekrazy/kuvo_api", // Add your repository
   live: "https://kuvo-api.onrender.com/api",
 
   featured: true,

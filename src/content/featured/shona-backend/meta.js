@@ -16,7 +16,7 @@ export default {
     "Deep Translator",
   ],
 
-  github: "", // add repo if available
+  github: "https://github.com/princekrazy/shona-translation-ai", // add repo if available
   live: "https://shona-translation-ai.onrender.com",
 
   featured: false,

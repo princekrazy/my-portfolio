@@ -16,7 +16,7 @@ export default {
     "GitHub Pages",
   ],
 
-  github: "", // add repo if available
+  github: "https://github.com/princekrazy/TheEmptyLibrary", // add repo if available
   live: "https://princekrazy.github.io/TheEmptyLibrary/",
 
   featured: true,
