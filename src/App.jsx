@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import { Navigate } from "react-router-dom";
 
 import Home from "./pages/Home";
 import ProjectPage from "./pages/ProjectPage";
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<ProjectsIndex />} />
         <Route path="/projects/:id" element={<ProjectPage />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </AnimatePresence>
   );

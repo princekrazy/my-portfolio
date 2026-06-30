@@ -16,12 +16,12 @@ const projects = {
   "uber-clone-frontend": uberclone,
   "uber-clone-backend": uberbackend,
   americabound: americabound,
-  "shona-frontend": shonafrontend,
-  "shona-backend": shonabackend,
+  "shona-ai-translator": shonafrontend,
+  "shona-ai-translator-backend": shonabackend,
   "vault-app": vaultapp,
-  "bank-app": bankapp,
-  "empty-library": emptyapp,
-  "emoji-sweepr": emojiapp,
+  "vault-manager-desktop": bankapp,
+  "the-empty-library": emptyapp,
+  "emoji-sweeper": emojiapp,
   "past-paper-helper": pastpaperapp,
 };
 
