@@ -10,6 +10,7 @@ export function getSidebarNav() {
       { label: "Skills", path: "/#skills" },
       { label: "Contact Me", path: "/#contact" },
       { label: "About Me", path: "/#about" },
+      { label: "Download Resume", path: "/#contact" },
       { label: "Filter Projects By Technologies", path: "/projects" },
     ],
 
