@@ -6,7 +6,7 @@ This portfolio is designed not just as a personal website, but as a structured c
 
 Live Site
 
-https://YOUR-LIVE-SITE-HERE
+http://www.princekuvenga.com/
 
 Overview
 
