@@ -42,7 +42,7 @@ export default function Contact() {
         </a>
 
         <a
-          href={`${import.meta.env.BASE_URL}resume.pdf`}
+          href={`${import.meta.env.BASE_URL}Prince_Kuvenga_Resume.pdf`}
           download="Prince_Kuvenga_Resume.pdf"
           className="inline-flex items-center gap-2 rounded-lg bg-black px-4 py-2 font-medium text-white transition hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
         >
