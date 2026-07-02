@@ -10,6 +10,7 @@ import vaultapp from "../content/other/vaultapp/meta.js";
 import emptyapp from "../content/other/empty-library/meta.js";
 import emojiapp from "../content/other/emoji-sweeper/meta.js";
 import pastpaperapp from "../content/other/past-paper/meta.js";
+import dinogame from "../content/featured/neuro-run/meta.js";
 const projects = {
   "ai-chatbot": aiChatbot,
   weather: weather,
@@ -23,6 +24,7 @@ const projects = {
   "the-empty-library": emptyapp,
   "emoji-sweeper": emojiapp,
   "past-paper-helper": pastpaperapp,
+  neurorun: dinogame,
 };
 
 export const featuredProjects = [
@@ -31,6 +33,7 @@ export const featuredProjects = [
   americabound,
   shonafrontend,
   shonabackend,
+  dinogame,
 ];
 
 export const otherProjects = [

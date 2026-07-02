@@ -1,0 +1,201 @@
+# NeuroRun: Gesture Runner
+
+An AI-powered endless runner where your webcam becomes the controller. Instead of using a keyboard, players control the game through real-time hand gestures detected with computer vision.
+
+---
+
+# Live Demo
+
+https://princekrazy.itch.io/dino-ai-game
+
+---
+
+# Overview
+
+NeuroRun is an experimental game that combines **computer vision**, **machine learning**, and **game development** to create a touchless gaming experience.
+
+Using a webcam, the application detects hand gestures in real time and maps them directly to player actions inside the game.
+
+The result is a complete AI interaction loop where physical movement controls gameplay without requiring a keyboard or controller.
+
+---
+
+# The Idea
+
+Traditional games rely on physical controllers.
+
+NeuroRun explores an alternative interaction model by allowing players to control an endless runner using only hand gestures.
+
+The webcam continuously tracks the player's hand and translates recognized gestures into game actions with minimal latency.
+
+---
+
+# Features
+
+## Real-Time Hand Tracking
+
+The application captures live webcam footage and detects hand landmarks using **MediaPipe**.
+
+Features include:
+
+- Continuous hand detection
+- 21 landmark tracking
+- Low-latency processing
+- Live gesture recognition
+
+---
+
+## AI Gesture Recognition
+
+Recognized gestures are mapped directly to gameplay.
+
+| Gesture   | Action |
+| --------- | ------ |
+| Open Hand | Jump   |
+| Fist      | Duck   |
+
+The gesture detection system includes smoothing techniques to improve reliability and reduce accidental inputs.
+
+---
+
+## Endless Runner Gameplay
+
+The game includes:
+
+- Physics-based jumping
+- Ducking mechanics
+- Procedural obstacle generation
+- Increasing difficulty
+- Instant restart after collision
+
+---
+
+## Score Tracking
+
+Players can track:
+
+- Current score
+- High score
+
+Scores update continuously during gameplay.
+
+---
+
+# Tech Stack
+
+- Python
+- Pygame
+- OpenCV
+- MediaPipe
+
+---
+
+# ️ System Architecture
+
+The gameplay is driven by a real-time processing pipeline:
+
+```text
+Webcam
+    ↓
+OpenCV Frame Capture
+    ↓
+MediaPipe Hand Detection
+    ↓
+Gesture Classification
+    ↓
+Pygame Game Loop
+    ↓
+Player Movement
+```
+
+Each frame passes through this pipeline, enabling smooth interaction between computer vision and gameplay.
+
+---
+
+# How It Works
+
+1. Webcam captures live video.
+2. OpenCV processes incoming frames.
+3. MediaPipe detects 21 hand landmarks.
+4. Finger positions are analyzed.
+5. Gestures are classified.
+6. The Pygame loop updates the player's movement instantly.
+
+This creates a continuous AI-powered interaction loop:
+
+> **Camera → Computer Vision → Gesture Recognition → Game Action**
+
+---
+
+# Challenges Solved
+
+Building a gesture-controlled game introduced several technical challenges:
+
+### Gesture Noise Reduction
+
+Implemented buffering and smoothing techniques to reduce false gesture detections.
+
+### Real-Time Processing
+
+Balanced AI inference with rendering speed to maintain responsive gameplay.
+
+### Synchronizing Systems
+
+Coordinated webcam processing, gesture recognition, and the Pygame loop to minimize latency.
+
+### Performance Optimization
+
+Optimized frame processing to keep gameplay fluid while continuously analyzing webcam input.
+
+---
+
+# What This Project Demonstrates
+
+This project showcases practical experience in:
+
+- Computer Vision
+- Human-Computer Interaction (HCI)
+- Machine Learning integration
+- Real-time systems
+- Event-driven programming
+- Game development
+- AI-assisted input systems
+
+---
+
+# Why This Project Matters
+
+NeuroRun demonstrates how AI can move beyond traditional applications like chatbots and image classification.
+
+Instead, it explores **new interaction paradigms**, transforming a webcam into an intuitive game controller.
+
+The project highlights how computer vision can create more natural and engaging user experiences while showcasing the integration of AI with real-time software systems.
+
+---
+
+# Key Skills Demonstrated
+
+- Computer Vision
+- MediaPipe integration
+- OpenCV image processing
+- Real-time application development
+- Game loop architecture
+- Human-computer interaction
+- AI-powered interaction systems
+- Performance optimization
+
+---
+
+# Live Demo
+
+https://princekrazy.itch.io/dino-ai-game
+
+Play directly in your browser using your webcam.
+
+---
+
+# Summary
+
+NeuroRun is an AI-powered gesture-controlled game that combines computer vision, machine learning, and game development into a seamless real-time interactive experience.
+
+It demonstrates the design of responsive AI systems capable of transforming natural human gestures into meaningful software interactions.
