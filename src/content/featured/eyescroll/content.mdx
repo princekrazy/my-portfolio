@@ -1,0 +1,263 @@
+# EyeScroll
+
+Hands-free smartphone navigation powered by real-time eye tracking, MediaPipe, and Android Accessibility Services.
+
+EyeScroll is an Android application that enables users to navigate mobile devices using eye gestures instead of touch. By combining on-device computer vision with Android's Accessibility API, the application provides a low-latency, privacy-focused accessibility solution that works across other Android applications.
+
+---
+
+# Overview
+
+Traditional mobile interaction relies almost entirely on touch input, which can present accessibility challenges for users with limited mobility.
+
+EyeScroll explores an alternative interaction model by transforming eye movements into navigation commands. Using the device's front-facing camera, the application detects intentional left and right eye winks and translates them into scrolling gestures that are dispatched through Android's Accessibility Service.
+
+All processing occurs directly on the device, ensuring user privacy while maintaining responsive performance.
+
+---
+
+# Features
+
+## ️ Real-Time Eye Tracking
+
+The application continuously analyzes frames captured from the front-facing camera using **CameraX** and **MediaPipe Face Landmarker**.
+
+Features include:
+
+- Continuous facial landmark detection
+- Independent tracking of both eyes
+- Low-latency image analysis
+- Fully on-device processing
+
+No images or video are uploaded or stored.
+
+---
+
+## Wink-Based Gesture Recognition
+
+Eye gestures are mapped directly to navigation commands.
+
+| Gesture        | Action      |
+| -------------- | ----------- |
+| Left Eye Wink  | Scroll Up   |
+| Right Eye Wink | Scroll Down |
+
+A cooldown system helps distinguish intentional gestures from natural blinking, reducing false positives.
+
+---
+
+## Cross-Application Navigation
+
+Unlike applications limited to their own interface, EyeScroll operates across other Android apps by integrating with the Android Accessibility Service.
+
+Users can navigate supported applications without physically touching the screen.
+
+---
+
+## Floating Tracking Overlay
+
+A lightweight overlay provides real-time visual feedback while tracking is active.
+
+It displays:
+
+- Tracking status
+- Camera activity
+- Eye detection state
+
+---
+
+## Privacy-Focused Design
+
+All computer vision processing occurs locally on the user's device.
+
+Benefits include:
+
+- No cloud processing
+- No image uploads
+- Reduced latency
+- Improved user privacy
+
+---
+
+# Tech Stack
+
+- Kotlin
+- Android SDK
+- Jetpack Compose
+- CameraX
+- MediaPipe Face Landmarker
+- Android Accessibility Services
+- Foreground Services
+- Overlay Windows
+- Android Lifecycle Components
+- Gradle
+
+---
+
+# Architecture
+
+```text
+                 CameraX
+                    │
+                    ▼
+        MediaPipe Face Landmarker
+                    │
+                    ▼
+          Wink Detection Algorithm
+                    │
+          ┌─────────┴─────────┐
+          ▼                   ▼
+    Left Eye Wink       Right Eye Wink
+          │                   │
+          ▼                   ▼
+     Scroll Up          Scroll Down
+                    │
+                    ▼
+ Android Accessibility Service
+```
+
+The architecture separates computer vision, gesture recognition, and accessibility actions into independent modules, improving maintainability and scalability.
+
+---
+
+# ️ How It Works
+
+1. CameraX streams frames from the front-facing camera.
+2. MediaPipe detects facial landmarks in real time.
+3. Eye Aspect Ratio (EAR) is calculated independently for each eye.
+4. A wink detection algorithm identifies intentional gestures.
+5. The Accessibility Service dispatches scroll actions to the operating system.
+6. Users can navigate supported applications hands-free.
+
+This creates a continuous interaction pipeline:
+
+> **Camera → Face Detection → Eye Tracking → Gesture Recognition → Accessibility Action**
+
+---
+
+# Project Structure
+
+```text
+app/
+├── accessibility/
+│   └── EyeScrollService
+├── camera/
+│   ├── CameraController
+│   ├── CameraAnalyzer
+│   └── ServiceLifecycleOwner
+├── service/
+│   ├── EyeTrackingService
+│   └── OverlayManager
+├── vision/
+│   ├── FaceLandmarkerHelper
+│   └── WinkDetector
+├── ui/
+└── viewmodel/
+```
+
+---
+
+# Permissions
+
+EyeScroll requires several Android system permissions to provide continuous hands-free interaction:
+
+- Camera
+- Accessibility Service
+- Display Over Other Apps
+- Foreground Service
+- Notifications (Android 13+)
+
+These permissions enable background camera processing and interaction with other applications while respecting Android's security model.
+
+---
+
+# Challenges Solved
+
+Developing EyeScroll required overcoming several Android platform challenges:
+
+### Camera Access from a Foreground Service
+
+Configured CameraX to maintain reliable camera access while the application runs in the background.
+
+### Real-Time Face Tracking
+
+Integrated MediaPipe's asynchronous facial landmark detection into a continuous processing pipeline.
+
+### Stable Wink Recognition
+
+Implemented Eye Aspect Ratio calculations with cooldown logic to minimize false gesture detection caused by normal blinking.
+
+### Accessibility Integration
+
+Connected gesture recognition with Android Accessibility Services to generate reliable scrolling actions across third-party applications.
+
+### Overlay & System Permissions
+
+Managed overlay windows, accessibility permissions, and Android background execution requirements to ensure smooth operation across Android versions.
+
+---
+
+# What This Project Demonstrates
+
+EyeScroll showcases experience in:
+
+- Android application development
+- Computer vision
+- Human-computer interaction
+- Accessibility engineering
+- Real-time event processing
+- Machine learning integration
+- CameraX image analysis
+- Mobile system services
+- Performance optimization
+- Privacy-focused AI design
+
+---
+
+# Future Improvements
+
+Potential enhancements include:
+
+- Horizontal scrolling
+- Cursor control using gaze estimation
+- Adjustable gesture sensitivity
+- Calibration wizard
+- Multiple gesture profiles
+- Head pose tracking
+- Performance optimizations
+- Additional accessibility customization options
+
+---
+
+# Why This Project Matters
+
+EyeScroll demonstrates how on-device machine learning can improve accessibility without compromising user privacy.
+
+Rather than relying on cloud-based AI services, the application performs all computer vision processing locally, reducing latency while ensuring sensitive visual data never leaves the user's device.
+
+The project also highlights how Android system services, computer vision, and accessibility technologies can be combined to create more inclusive mobile experiences.
+
+---
+
+# Key Skills Demonstrated
+
+- Android Development
+- Kotlin
+- Jetpack Compose
+- Computer Vision
+- MediaPipe Integration
+- CameraX
+- Accessibility Services
+- Human-Computer Interaction (HCI)
+- Real-Time Systems
+- Mobile AI
+- Privacy-Focused Machine Learning
+- Software Architecture
+
+---
+
+# Summary
+
+EyeScroll is an AI-powered Android accessibility application that transforms eye gestures into navigation commands through real-time computer vision.
+
+By integrating CameraX, MediaPipe, and Android Accessibility Services, the project demonstrates the design of responsive, privacy-first interaction systems that expand how users can interact with mobile devices.
