@@ -1581,7 +1581,401 @@ cd vault-app
 `,(0,Q.jsx)(t.li,{children:`Text processing and editor APIs`}),`
 `,(0,Q.jsx)(t.li,{children:`TypeScript engineering`}),`
 `,(0,Q.jsx)(t.li,{children:`Practical productivity-focused software`}),`
-`]})]})}function am(e={}){let{wrapper:t}=e.components||{};return t?(0,Q.jsx)(t,{...e,children:(0,Q.jsx)(im,{...e})}):im(e)}var om={id:`emoji-sweeper`,title:`Emoji Sweeper (VS Code Extension)`,description:`A Visual Studio Code extension that removes emojis from source code across files, selections, or line ranges for clean production-ready code.`,tech:[`TypeScript`,`Node.js`,`VS Code Extension API`,`Command Palette Integration`,`Text Editor Manipulation`],github:`https://github.com/princekrazy/emoji-cleaner`,live:`https://marketplace.visualstudio.com/items?itemName=princekrazy.emoji-sweeper&ssr=false#review-details`,featured:!0,content:am};function sm(e){let t={code:`code`,h1:`h1`,h2:`h2`,h3:`h3`,hr:`hr`,li:`li`,ol:`ol`,p:`p`,pre:`pre`,strong:`strong`,ul:`ul`,...e.components};return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(t.h1,{children:`Past Paper Helper`}),`
+`]})]})}function am(e={}){let{wrapper:t}=e.components||{};return t?(0,Q.jsx)(t,{...e,children:(0,Q.jsx)(im,{...e})}):im(e)}var om={id:`emoji-sweeper`,title:`Emoji Sweeper (VS Code Extension)`,description:`A Visual Studio Code extension that removes emojis from source code across files, selections, or line ranges for clean production-ready code.`,tech:[`TypeScript`,`Node.js`,`VS Code Extension API`,`Command Palette Integration`,`Text Editor Manipulation`],github:`https://github.com/princekrazy/emoji-cleaner`,live:`https://marketplace.visualstudio.com/items?itemName=princekrazy.emoji-sweeper&ssr=false#review-details`,featured:!0,content:am};function sm(e){let t={code:`code`,h1:`h1`,h2:`h2`,h3:`h3`,hr:`hr`,li:`li`,p:`p`,pre:`pre`,strong:`strong`,ul:`ul`,...e.components};return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(t.h1,{children:`PrinceBoard`}),`
+`,(0,Q.jsxs)(t.p,{children:[`A modern Kanban-style task management platform inspired by tools like `,(0,Q.jsx)(t.strong,{children:`Linear`}),`, `,(0,Q.jsx)(t.strong,{children:`Asana`}),`, and `,(0,Q.jsx)(t.strong,{children:`Notion`}),`.`]}),`
+`,(0,Q.jsx)(t.p,{children:`PrinceBoard helps individuals and teams organize work through drag-and-drop boards, task assignments, labels, comments, and activity tracking while providing secure cloud persistence through Supabase.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Live Demo`}),`
+`,(0,Q.jsx)(t.p,{children:`https://princeboard-tau.vercel.app/`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Overview`}),`
+`,(0,Q.jsx)(t.p,{children:`PrinceBoard is a full-stack project management application built to explore how modern collaboration platforms manage tasks, users, and workflows.`}),`
+`,(0,Q.jsx)(t.p,{children:`The application combines a responsive React frontend with Supabase authentication, PostgreSQL storage, and Row Level Security to provide each user with an isolated workspace.`}),`
+`,(0,Q.jsx)(t.p,{children:`Rather than simply displaying task cards, PrinceBoard focuses on solving real engineering problems including authentication, authorization, drag-and-drop state synchronization, relational database design, and scalable content management.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Features`}),`
+`,(0,Q.jsx)(t.h2,{children:`Kanban Board`}),`
+`,(0,Q.jsx)(t.p,{children:`Organize work visually using an interactive Kanban board.`}),`
+`,(0,Q.jsx)(t.p,{children:`Default workflow:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`To Do`}),`
+`,(0,Q.jsx)(t.li,{children:`In Progress`}),`
+`,(0,Q.jsx)(t.li,{children:`In Review`}),`
+`,(0,Q.jsx)(t.li,{children:`Done`}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`Features include:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Drag-and-drop task movement`}),`
+`,(0,Q.jsx)(t.li,{children:`Persistent task status`}),`
+`,(0,Q.jsx)(t.li,{children:`Smooth animations`}),`
+`,(0,Q.jsx)(t.li,{children:`Real-time UI updates`}),`
+`]}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`Guest Authentication`}),`
+`,(0,Q.jsx)(t.p,{children:`Users can begin using the application immediately.`}),`
+`,(0,Q.jsx)(t.p,{children:`Features:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Anonymous authentication`}),`
+`,(0,Q.jsx)(t.li,{children:`Automatic workspace creation`}),`
+`,(0,Q.jsx)(t.li,{children:`Persistent sessions`}),`
+`,(0,Q.jsx)(t.li,{children:`Secure cloud storage`}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`Supabase Authentication handles account creation without requiring email or password registration.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`Row Level Security`}),`
+`,(0,Q.jsx)(t.p,{children:`Every user receives an isolated workspace.`}),`
+`,(0,Q.jsx)(t.p,{children:`Supabase Row Level Security (RLS) policies ensure:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Users only access their own tasks`}),`
+`,(0,Q.jsx)(t.li,{children:`Private workspaces remain secure`}),`
+`,(0,Q.jsx)(t.li,{children:`Database-level authorization enforcement`}),`
+`]}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`Task Management`}),`
+`,(0,Q.jsx)(t.p,{children:`Each task supports:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Title`}),`
+`,(0,Q.jsx)(t.li,{children:`Description`}),`
+`,(0,Q.jsx)(t.li,{children:`Priority`}),`
+`,(0,Q.jsx)(t.li,{children:`Due date`}),`
+`,(0,Q.jsx)(t.li,{children:`Status`}),`
+`,(0,Q.jsx)(t.li,{children:`Labels`}),`
+`,(0,Q.jsx)(t.li,{children:`Assigned members`}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`Changes persist automatically through Supabase.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`Team Management`}),`
+`,(0,Q.jsx)(t.p,{children:`Create collaborative workspaces by adding team members.`}),`
+`,(0,Q.jsx)(t.p,{children:`Features include:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Member creation`}),`
+`,(0,Q.jsx)(t.li,{children:`Avatar color customization`}),`
+`,(0,Q.jsx)(t.li,{children:`Task assignments`}),`
+`,(0,Q.jsx)(t.li,{children:`Assigned user display on cards`}),`
+`]}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`Labels`}),`
+`,(0,Q.jsx)(t.p,{children:`Tasks can be categorized using customizable labels.`}),`
+`,(0,Q.jsx)(t.p,{children:`Examples:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Bug`}),`
+`,(0,Q.jsx)(t.li,{children:`Feature`}),`
+`,(0,Q.jsx)(t.li,{children:`Backend`}),`
+`,(0,Q.jsx)(t.li,{children:`UI`}),`
+`,(0,Q.jsx)(t.li,{children:`Design`}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`Labels support:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Multiple assignments`}),`
+`,(0,Q.jsx)(t.li,{children:`Color coding`}),`
+`,(0,Q.jsx)(t.li,{children:`Task filtering`}),`
+`]}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`Comments`}),`
+`,(0,Q.jsx)(t.p,{children:`Each task includes its own discussion thread.`}),`
+`,(0,Q.jsx)(t.p,{children:`Users can:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Add comments`}),`
+`,(0,Q.jsx)(t.li,{children:`View conversation history`}),`
+`,(0,Q.jsx)(t.li,{children:`Track collaboration within individual tasks`}),`
+`]}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`Activity Timeline`}),`
+`,(0,Q.jsx)(t.p,{children:`Task history is recorded automatically.`}),`
+`,(0,Q.jsx)(t.p,{children:`Examples include:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Task created`}),`
+`,(0,Q.jsx)(t.li,{children:`Status changed`}),`
+`,(0,Q.jsx)(t.li,{children:`Member assigned`}),`
+`,(0,Q.jsx)(t.li,{children:`Comment added`}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`Providing a complete audit trail of project activity.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Tech Stack`}),`
+`,(0,Q.jsx)(t.p,{children:`Frontend`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`React`}),`
+`,(0,Q.jsx)(t.li,{children:`TypeScript`}),`
+`,(0,Q.jsx)(t.li,{children:`Vite`}),`
+`,(0,Q.jsx)(t.li,{children:`Tailwind CSS`}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`Backend`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Supabase`}),`
+`,(0,Q.jsx)(t.li,{children:`PostgreSQL`}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`Libraries`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`React Router`}),`
+`,(0,Q.jsx)(t.li,{children:`dnd-kit`}),`
+`,(0,Q.jsx)(t.li,{children:`Zustand (if used)`}),`
+`]}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Architecture`}),`
+`,(0,Q.jsx)(t.pre,{children:(0,Q.jsx)(t.code,{className:`language-text`,children:`React Frontend\r
+       │\r
+       ▼\r
+React Router\r
+       │\r
+       ▼\r
+Supabase Authentication\r
+       │\r
+       ▼\r
+PostgreSQL Database\r
+       │\r
+       ▼\r
+Row Level Security
+`})}),`
+`,(0,Q.jsx)(t.p,{children:`The architecture separates presentation, authentication, and persistence while keeping business logic modular and scalable.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`️ Database Design`}),`
+`,(0,Q.jsx)(t.p,{children:`PrinceBoard uses a relational PostgreSQL database.`}),`
+`,(0,Q.jsx)(t.p,{children:`Core entities include:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Users`}),`
+`,(0,Q.jsx)(t.li,{children:`Tasks`}),`
+`,(0,Q.jsx)(t.li,{children:`Labels`}),`
+`,(0,Q.jsx)(t.li,{children:`Team Members`}),`
+`,(0,Q.jsx)(t.li,{children:`Comments`}),`
+`,(0,Q.jsx)(t.li,{children:`Activity History`}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`Relationships are maintained through linking tables, enabling many-to-many associations such as task labels and task assignees.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Challenges Solved`}),`
+`,(0,Q.jsx)(t.p,{children:`Developing PrinceBoard involved solving several common problems found in collaborative software.`}),`
+`,(0,Q.jsx)(t.h3,{children:`Drag-and-Drop Synchronization`}),`
+`,(0,Q.jsx)(t.p,{children:`Ensured task movement remained synchronized between UI state and persistent database storage.`}),`
+`,(0,Q.jsx)(t.h3,{children:`Secure Multi-Tenant Data`}),`
+`,(0,Q.jsx)(t.p,{children:`Implemented Row Level Security to isolate user workspaces and prevent unauthorized data access.`}),`
+`,(0,Q.jsx)(t.h3,{children:`Relational Data Modeling`}),`
+`,(0,Q.jsx)(t.p,{children:`Designed database relationships supporting labels, assignees, comments, and activity logs while maintaining data consistency.`}),`
+`,(0,Q.jsx)(t.h3,{children:`Guest Authentication`}),`
+`,(0,Q.jsx)(t.p,{children:`Created a frictionless onboarding experience using anonymous authentication while preserving persistent workspaces.`}),`
+`,(0,Q.jsx)(t.h3,{children:`Scalable Content Management`}),`
+`,(0,Q.jsx)(t.p,{children:`Separated project metadata and content to simplify future expansion and maintenance.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`What This Project Demonstrates`}),`
+`,(0,Q.jsx)(t.p,{children:`PrinceBoard showcases experience in:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Full-stack web development`}),`
+`,(0,Q.jsx)(t.li,{children:`Authentication systems`}),`
+`,(0,Q.jsx)(t.li,{children:`Authorization with Row Level Security`}),`
+`,(0,Q.jsx)(t.li,{children:`PostgreSQL relational database design`}),`
+`,(0,Q.jsx)(t.li,{children:`Modern React architecture`}),`
+`,(0,Q.jsx)(t.li,{children:`Drag-and-drop interfaces`}),`
+`,(0,Q.jsx)(t.li,{children:`State management`}),`
+`,(0,Q.jsx)(t.li,{children:`CRUD application design`}),`
+`,(0,Q.jsx)(t.li,{children:`Team collaboration workflows`}),`
+`,(0,Q.jsx)(t.li,{children:`Responsive UI development`}),`
+`]}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Future Improvements`}),`
+`,(0,Q.jsx)(t.p,{children:`Potential enhancements include:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Real-time collaboration`}),`
+`,(0,Q.jsx)(t.li,{children:`Live notifications`}),`
+`,(0,Q.jsx)(t.li,{children:`File attachments`}),`
+`,(0,Q.jsx)(t.li,{children:`Workspace invitations`}),`
+`,(0,Q.jsx)(t.li,{children:`Calendar view`}),`
+`,(0,Q.jsx)(t.li,{children:`Sprint planning`}),`
+`,(0,Q.jsx)(t.li,{children:`Markdown task descriptions`}),`
+`,(0,Q.jsx)(t.li,{children:`Search across projects`}),`
+`,(0,Q.jsx)(t.li,{children:`Dashboard analytics`}),`
+`]}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Why This Project Matters`}),`
+`,(0,Q.jsx)(t.p,{children:`Modern software teams depend on project management platforms to coordinate work efficiently.`}),`
+`,(0,Q.jsx)(t.p,{children:`PrinceBoard explores the engineering concepts behind those platforms by implementing authentication, authorization, relational data modeling, and intuitive task management workflows within a production-style application.`}),`
+`,(0,Q.jsx)(t.p,{children:`The project demonstrates the ability to design software that is not only functional but also scalable, maintainable, and user-focused.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Key Skills Demonstrated`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`React`}),`
+`,(0,Q.jsx)(t.li,{children:`TypeScript`}),`
+`,(0,Q.jsx)(t.li,{children:`PostgreSQL`}),`
+`,(0,Q.jsx)(t.li,{children:`Supabase`}),`
+`,(0,Q.jsx)(t.li,{children:`Authentication`}),`
+`,(0,Q.jsx)(t.li,{children:`Row Level Security`}),`
+`,(0,Q.jsx)(t.li,{children:`Database Design`}),`
+`,(0,Q.jsx)(t.li,{children:`State Management`}),`
+`,(0,Q.jsx)(t.li,{children:`Drag-and-Drop Interfaces`}),`
+`,(0,Q.jsx)(t.li,{children:`Full-Stack Architecture`}),`
+`,(0,Q.jsx)(t.li,{children:`Responsive Design`}),`
+`,(0,Q.jsx)(t.li,{children:`CRUD Systems`}),`
+`]}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Summary`}),`
+`,(0,Q.jsx)(t.p,{children:`PrinceBoard is a full-stack Kanban project management platform that combines modern React development with secure cloud persistence, relational database design, and collaborative workflows.`}),`
+`,(0,Q.jsx)(t.p,{children:`The project demonstrates the engineering principles behind production project management tools while showcasing scalable frontend and backend architecture.`})]})}function cm(e={}){let{wrapper:t}=e.components||{};return t?(0,Q.jsx)(t,{...e,children:(0,Q.jsx)(sm,{...e})}):sm(e)}var lm={id:`princeboard`,title:`PrinceBoard`,description:`A modern Kanban-style project management platform with drag-and-drop task management, team collaboration, and Supabase-powered authentication and persistence.`,tech:[`React`,`TypeScript`,`Vite`,`Tailwind CSS`,`Supabase`,`PostgreSQL`,`Row Level Security`,`React Router`,`dnd-kit`],github:`https://github.com/princekrazy/princeboard`,live:`https://princeboard-tau.vercel.app/`,featured:!0,content:cm};function um(e){let t={code:`code`,h1:`h1`,h2:`h2`,hr:`hr`,li:`li`,p:`p`,pre:`pre`,strong:`strong`,ul:`ul`,...e.components};return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(t.h1,{children:`PrinceBoard Mobile`}),`
+`,(0,Q.jsxs)(t.p,{children:[`A modern Kanban-style task management application built with `,(0,Q.jsx)(t.strong,{children:`React Native`}),`, `,(0,Q.jsx)(t.strong,{children:`Expo`}),`, `,(0,Q.jsx)(t.strong,{children:`TypeScript`}),`, and `,(0,Q.jsx)(t.strong,{children:`Supabase`}),`.`]}),`
+`,(0,Q.jsx)(t.p,{children:`PrinceBoard Mobile brings the core PrinceBoard project management experience to Android, allowing users to organize tasks, manage teams, and track project activity from anywhere.`}),`
+`,(0,Q.jsx)(t.p,{children:`The application focuses on solving real-world mobile development challenges including authentication, database synchronization, relational data modeling, mobile navigation, and secure cloud persistence.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Download`}),`
+`,(0,Q.jsx)(t.p,{children:`The latest Android APK is available through the project's release distribution.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Overview`}),`
+`,(0,Q.jsxs)(t.p,{children:[`PrinceBoard Mobile is a mobile-first project management application inspired by tools like `,(0,Q.jsx)(t.strong,{children:`Linear`}),`, `,(0,Q.jsx)(t.strong,{children:`Asana`}),`, and `,(0,Q.jsx)(t.strong,{children:`Notion`}),`.`]}),`
+`,(0,Q.jsx)(t.p,{children:`The goal was to create a complete task management experience optimized for mobile devices while maintaining the same secure backend architecture as the web platform.`}),`
+`,(0,Q.jsx)(t.p,{children:`Users can create and organize tasks, assign team members, categorize work with labels, communicate through comments, and monitor project activity through a centralized timeline.`}),`
+`,(0,Q.jsx)(t.p,{children:`The application uses Supabase as a backend service, providing authentication, PostgreSQL storage, and Row Level Security to ensure every user's workspace remains private.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Features`}),`
+`,(0,Q.jsx)(t.h2,{children:`Kanban Board`}),`
+`,(0,Q.jsx)(t.p,{children:`Manage projects visually through a structured Kanban workflow.`}),`
+`,(0,Q.jsx)(t.p,{children:`Default columns:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`To Do`}),`
+`,(0,Q.jsx)(t.li,{children:`In Progress`}),`
+`,(0,Q.jsx)(t.li,{children:`In Review`}),`
+`,(0,Q.jsx)(t.li,{children:`Done`}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`Features include:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Move tasks between columns`}),`
+`,(0,Q.jsx)(t.li,{children:`Persistent task status`}),`
+`,(0,Q.jsx)(t.li,{children:`Pull-to-refresh support`}),`
+`,(0,Q.jsx)(t.li,{children:`Mobile optimized interactions`}),`
+`]}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`Task Management`}),`
+`,(0,Q.jsx)(t.p,{children:`Each task contains important project information.`}),`
+`,(0,Q.jsx)(t.p,{children:`Users can:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Create tasks`}),`
+`,(0,Q.jsx)(t.li,{children:`Update task status`}),`
+`,(0,Q.jsx)(t.li,{children:`Delete tasks`}),`
+`,(0,Q.jsx)(t.li,{children:`Add descriptions`}),`
+`,(0,Q.jsx)(t.li,{children:`Set priority levels`}),`
+`,(0,Q.jsx)(t.li,{children:`Assign due dates`}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`Priority levels include:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Low`}),`
+`,(0,Q.jsx)(t.li,{children:`Normal`}),`
+`,(0,Q.jsx)(t.li,{children:`High`}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`Native mobile components are used for features such as date selection to provide a familiar Android experience.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`Due Date Tracking`}),`
+`,(0,Q.jsx)(t.p,{children:`PrinceBoard Mobile provides visual task deadlines.`}),`
+`,(0,Q.jsx)(t.p,{children:`Features include:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Overdue task detection`}),`
+`,(0,Q.jsx)(t.li,{children:`Upcoming deadline indicators`}),`
+`,(0,Q.jsx)(t.li,{children:`Due dates displayed directly on task cards`}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`This helps users quickly identify important deadlines while managing projects.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`Team Management`}),`
+`,(0,Q.jsx)(t.p,{children:`Create and manage project collaborators.`}),`
+`,(0,Q.jsx)(t.p,{children:`Features include:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Create team members`}),`
+`,(0,Q.jsx)(t.li,{children:`Delete team members`}),`
+`,(0,Q.jsx)(t.li,{children:`Assign multiple members to tasks`}),`
+`,(0,Q.jsx)(t.li,{children:`Display assigned users through avatars`}),`
+`]}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`Labels`}),`
+`,(0,Q.jsx)(t.p,{children:`Tasks can be organized using customizable labels.`}),`
+`,(0,Q.jsx)(t.p,{children:`Examples:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Bug`}),`
+`,(0,Q.jsx)(t.li,{children:`Feature`}),`
+`,(0,Q.jsx)(t.li,{children:`Backend`}),`
+`,(0,Q.jsx)(t.li,{children:`UI`}),`
+`,(0,Q.jsx)(t.li,{children:`Design`}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`Label functionality includes:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Creating custom labels`}),`
+`,(0,Q.jsx)(t.li,{children:`Removing labels`}),`
+`,(0,Q.jsx)(t.li,{children:`Assigning multiple labels to tasks`}),`
+`,(0,Q.jsx)(t.li,{children:`Color-coded categorization`}),`
+`]}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`Comments`}),`
+`,(0,Q.jsx)(t.p,{children:`Every task includes a discussion area.`}),`
+`,(0,Q.jsx)(t.p,{children:`Users can:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Add comments`}),`
+`,(0,Q.jsx)(t.li,{children:`View previous discussions`}),`
+`,(0,Q.jsx)(t.li,{children:`Track conversations chronologically`}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`This allows collaboration directly within individual tasks.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`Activity Timeline`}),`
+`,(0,Q.jsx)(t.p,{children:`The application automatically records important task events.`}),`
+`,(0,Q.jsx)(t.p,{children:`Examples:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Task created`}),`
+`,(0,Q.jsx)(t.li,{children:`Task status changed`}),`
+`,(0,Q.jsx)(t.li,{children:`Members assigned`}),`
+`,(0,Q.jsx)(t.li,{children:`Labels updated`}),`
+`,(0,Q.jsx)(t.li,{children:`Comments added`}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`The activity timeline provides visibility into project changes over time.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`Search and Filtering`}),`
+`,(0,Q.jsx)(t.p,{children:`Users can quickly find relevant tasks.`}),`
+`,(0,Q.jsx)(t.p,{children:`Features include:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Search tasks by title`}),`
+`,(0,Q.jsx)(t.li,{children:`Filter by priority`}),`
+`,(0,Q.jsx)(t.li,{children:`Filter by labels`}),`
+`]}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Authentication & Security`}),`
+`,(0,Q.jsx)(t.p,{children:`PrinceBoard Mobile uses Supabase Authentication with anonymous guest accounts.`}),`
+`,(0,Q.jsx)(t.p,{children:`Features include:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Instant guest onboarding`}),`
+`,(0,Q.jsx)(t.li,{children:`Persistent user sessions`}),`
+`,(0,Q.jsx)(t.li,{children:`Secure cloud storage`}),`
+`,(0,Q.jsx)(t.li,{children:`User-specific data access`}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`Supabase Row Level Security policies ensure users can only access their own workspace data.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Tech Stack`}),`
+`,(0,Q.jsx)(t.h2,{children:`Mobile Frontend`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`React Native`}),`
+`,(0,Q.jsx)(t.li,{children:`Expo`}),`
+`,(0,Q.jsx)(t.li,{children:`TypeScript`}),`
+`]}),`
+`,(0,Q.jsx)(t.h2,{children:`Backend`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Supabase`}),`
+`,(0,Q.jsx)(t.li,{children:`PostgreSQL`}),`
+`]}),`
+`,(0,Q.jsx)(t.h2,{children:`State Management`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Zustand`}),`
+`]}),`
+`,(0,Q.jsx)(t.h2,{children:`Navigation`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`React Navigation`}),`
+`]}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Application Architecture`}),`
+`,(0,Q.jsx)(t.pre,{children:(0,Q.jsx)(t.code,{className:`language-text`,children:`React Native Application\r
+          │\r
+          ▼\r
+React Navigation\r
+          │\r
+          ▼\r
+Zustand State Management\r
+          │\r
+          ▼\r
+Supabase Authentication\r
+          │\r
+          ▼\r
+PostgreSQL Database\r
+          │\r
+          ▼\r
+Row Level Security
+`})})]})}function dm(e={}){let{wrapper:t}=e.components||{};return t?(0,Q.jsx)(t,{...e,children:(0,Q.jsx)(um,{...e})}):um(e)}var fm={id:`princeboard-mobile`,title:`PrinceBoard Mobile`,description:`A modern Kanban-style mobile task management application built with React Native, Expo, TypeScript, and Supabase. Manage projects, tasks, teams, labels, comments, and activity tracking from anywhere.`,tech:[`React Native`,`Expo`,`TypeScript`,`Supabase`,`PostgreSQL`,`Row Level Security`,`Zustand`,`React Navigation`],github:`https://github.com/princekrazy/princeboardmobileapp`,live:`https://github.com/princekrazy/princeboardmobileapp/releases/tag/production`,featured:!0,content:dm};function pm(e){let t={code:`code`,h1:`h1`,h2:`h2`,h3:`h3`,hr:`hr`,li:`li`,ol:`ol`,p:`p`,pre:`pre`,strong:`strong`,ul:`ul`,...e.components};return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(t.h1,{children:`Past Paper Helper`}),`
 `,(0,Q.jsx)(t.p,{children:`A Chrome extension that instantly links Cambridge IGCSE/CAIE Question Papers (QP) to their corresponding Mark Schemes (MS), removing the need for manual searching.`}),`
 `,(0,Q.jsx)(t.hr,{}),`
 `,(0,Q.jsx)(t.h1,{children:`Why I Built This`}),`
@@ -1707,7 +2101,7 @@ cd vault-app
 `,(0,Q.jsx)(t.li,{children:`URL transformation logic`}),`
 `,(0,Q.jsx)(t.li,{children:`Productivity-focused tool design`}),`
 `,(0,Q.jsx)(t.li,{children:`Lightweight UX engineering`}),`
-`]})]})}function cm(e={}){let{wrapper:t}=e.components||{};return t?(0,Q.jsx)(t,{...e,children:(0,Q.jsx)(sm,{...e})}):sm(e)}var lm={id:`past-paper-helper`,title:`Past Paper Helper (Chrome Extension)`,description:`A Chrome extension that instantly links Cambridge IGCSE/CAIE Question Papers to their corresponding Mark Schemes, removing manual searching.`,tech:[`JavaScript`,`Chrome Extensions API`,`Manifest V3`,`Content Scripts`,`DOM Manipulation`,`Keyboard Shortcuts`],github:`https://github.com/princekrazy/past-paper-helper`,live:`https://chromewebstore.google.com/detail/past-paper-helper/ciaejkddcmcalbcpfloaldcnbolgpeol`,featured:!0,content:cm};function um(e){let t={blockquote:`blockquote`,code:`code`,h1:`h1`,h2:`h2`,h3:`h3`,hr:`hr`,li:`li`,ol:`ol`,p:`p`,pre:`pre`,strong:`strong`,ul:`ul`,...e.components};return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(t.h1,{children:`NeuroRun: Gesture Runner`}),`
+`]})]})}function mm(e={}){let{wrapper:t}=e.components||{};return t?(0,Q.jsx)(t,{...e,children:(0,Q.jsx)(pm,{...e})}):pm(e)}var hm={id:`past-paper-helper`,title:`Past Paper Helper (Chrome Extension)`,description:`A Chrome extension that instantly links Cambridge IGCSE/CAIE Question Papers to their corresponding Mark Schemes, removing manual searching.`,tech:[`JavaScript`,`Chrome Extensions API`,`Manifest V3`,`Content Scripts`,`DOM Manipulation`,`Keyboard Shortcuts`],github:`https://github.com/princekrazy/past-paper-helper`,live:`https://chromewebstore.google.com/detail/past-paper-helper/ciaejkddcmcalbcpfloaldcnbolgpeol`,featured:!0,content:mm};function gm(e){let t={blockquote:`blockquote`,code:`code`,h1:`h1`,h2:`h2`,h3:`h3`,hr:`hr`,li:`li`,ol:`ol`,p:`p`,pre:`pre`,strong:`strong`,ul:`ul`,...e.components};return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(t.h1,{children:`NeuroRun: Gesture Runner`}),`
 `,(0,Q.jsx)(t.p,{children:`An AI-powered endless runner where your webcam becomes the controller. Instead of using a keyboard, players control the game through real-time hand gestures detected with computer vision.`}),`
 `,(0,Q.jsx)(t.hr,{}),`
 `,(0,Q.jsx)(t.h1,{children:`Live Demo`}),`
@@ -1844,7 +2238,7 @@ Player Movement
 `,(0,Q.jsx)(t.hr,{}),`
 `,(0,Q.jsx)(t.h1,{children:`Summary`}),`
 `,(0,Q.jsx)(t.p,{children:`NeuroRun is an AI-powered gesture-controlled game that combines computer vision, machine learning, and game development into a seamless real-time interactive experience.`}),`
-`,(0,Q.jsx)(t.p,{children:`It demonstrates the design of responsive AI systems capable of transforming natural human gestures into meaningful software interactions.`})]})}function dm(e={}){let{wrapper:t}=e.components||{};return t?(0,Q.jsx)(t,{...e,children:(0,Q.jsx)(um,{...e})}):um(e)}var fm={id:`neurorun`,title:`NeuroRun: Gesture Runner`,description:`An AI-powered endless runner controlled entirely by hand gestures using MediaPipe, OpenCV, and Pygame.`,tech:[`Python`,`Pygame`,`OpenCV`,`MediaPipe`,`Computer Vision`,`Machine Learning`,`Game Development`],github:`https://github.com/princekrazy/ai-dino-game`,live:`https://princekrazy.itch.io/dino-ai-game`,featured:!0,content:dm};function pm(e){let t={blockquote:`blockquote`,code:`code`,h1:`h1`,h2:`h2`,h3:`h3`,hr:`hr`,li:`li`,ol:`ol`,p:`p`,pre:`pre`,strong:`strong`,ul:`ul`,...e.components};return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(t.h1,{children:`EyeScroll`}),`
+`,(0,Q.jsx)(t.p,{children:`It demonstrates the design of responsive AI systems capable of transforming natural human gestures into meaningful software interactions.`})]})}function _m(e={}){let{wrapper:t}=e.components||{};return t?(0,Q.jsx)(t,{...e,children:(0,Q.jsx)(gm,{...e})}):gm(e)}var vm={id:`neurorun`,title:`NeuroRun: Gesture Runner`,description:`An AI-powered endless runner controlled entirely by hand gestures using MediaPipe, OpenCV, and Pygame.`,tech:[`Python`,`Pygame`,`OpenCV`,`MediaPipe`,`Computer Vision`,`Machine Learning`,`Game Development`],github:`https://github.com/princekrazy/ai-dino-game`,live:`https://princekrazy.itch.io/dino-ai-game`,featured:!0,content:_m};function ym(e){let t={blockquote:`blockquote`,code:`code`,h1:`h1`,h2:`h2`,h3:`h3`,hr:`hr`,li:`li`,ol:`ol`,p:`p`,pre:`pre`,strong:`strong`,ul:`ul`,...e.components};return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(t.h1,{children:`EyeScroll`}),`
 `,(0,Q.jsx)(t.p,{children:`Hands-free smartphone navigation powered by real-time eye tracking, MediaPipe, and Android Accessibility Services.`}),`
 `,(0,Q.jsx)(t.p,{children:`EyeScroll is an Android application that enables users to navigate mobile devices using eye gestures instead of touch. By combining on-device computer vision with Android's Accessibility API, the application provides a low-latency, privacy-focused accessibility solution that works across other Android applications.`}),`
 `,(0,Q.jsx)(t.hr,{}),`
@@ -2038,4 +2432,4 @@ Player Movement
 `,(0,Q.jsx)(t.hr,{}),`
 `,(0,Q.jsx)(t.h1,{children:`Summary`}),`
 `,(0,Q.jsx)(t.p,{children:`EyeScroll is an AI-powered Android accessibility application that transforms eye gestures into navigation commands through real-time computer vision.`}),`
-`,(0,Q.jsx)(t.p,{children:`By integrating CameraX, MediaPipe, and Android Accessibility Services, the project demonstrates the design of responsive, privacy-first interaction systems that expand how users can interact with mobile devices.`})]})}function mm(e={}){let{wrapper:t}=e.components||{};return t?(0,Q.jsx)(t,{...e,children:(0,Q.jsx)(pm,{...e})}):pm(e)}var hm={id:`eyescroll`,title:`EyeScroll`,description:`A hands-free Android accessibility application that uses real-time eye tracking and MediaPipe to control scrolling across apps using eye gestures.`,tech:[`Kotlin`,`Android`,`Jetpack Compose`,`CameraX`,`MediaPipe`,`Computer Vision`,`Accessibility Services`,`Machine Learning`],github:`https://github.com/princekrazy/eyescroll`,live:`https://github.com/princekrazy/eyescroll/releases/tag/production`,featured:!0,content:mm},gm={"ai-chatbot":Ap,weather:zp,"uber-clone-frontend":Np,"uber-clone-backend":Ip,americabound:Hp,"shona-ai-translator":Gp,"shona-ai-translator-backend":Jp,"vault-app":em,"vault-manager-desktop":Zp,"the-empty-library":rm,"emoji-sweeper":om,"past-paper-helper":lm,neurorun:fm,eyescroll:hm},_m=[hm,Ip,fm,Hp,Np,Jp],vm=[Gp,Zp,em,rm,om,lm];function ym(e){return gm[e]}function bm({project:e}){return(0,Q.jsxs)(`div`,{className:`border rounded-lg p-4 hover:shadow-md transition`,children:[(0,Q.jsxs)(zn,{to:`/projects/${e.id}`,className:`block`,children:[(0,Q.jsx)(`h3`,{className:`text-xl font-bold hover:underline`,children:e.title}),(0,Q.jsx)(`p`,{className:`text-gray-600 text-sm mt-1`,children:e.description}),(0,Q.jsx)(`div`,{className:`flex gap-2 mt-2 flex-wrap`,children:e.tech.map(e=>(0,Q.jsx)(`span`,{className:`text-xs bg-gray-200 text-black px-2 py-1 rounded`,children:e},e))})]}),(0,Q.jsxs)(`div`,{className:`flex gap-4 mt-3 text-sm`,children:[e.github&&(0,Q.jsx)(`a`,{href:e.github,target:`_blank`,rel:`noreferrer`,className:`text-blue-600`,children:`GitHub`}),e.live&&(0,Q.jsx)(`a`,{href:e.live,target:`_blank`,rel:`noreferrer`,className:`text-green-600`,children:`Live`})]})]})}function xm(){return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(`h2`,{className:`text-2xl font-bold mb-4 bg-white text-black dark:bg-black dark:text-white`,children:`Featured Projects`}),(0,Q.jsx)(`div`,{className:`grid md:grid-cols-2 gap-4`,children:_m.map(e=>(0,Q.jsx)(bm,{project:e},e.id))})]})}function Sm(){return(0,Q.jsxs)(`section`,{className:`mt-10 bg-white text-black dark:bg-black dark:text-white`,children:[(0,Q.jsx)(`h2`,{className:`text-2xl font-bold mb-4`,children:`Other Projects`}),(0,Q.jsx)(`div`,{className:`space-y-3`,children:vm.map(e=>(0,Q.jsx)(bm,{project:e},e.id))})]})}function Cm(){return localStorage.getItem(`theme`)||`light`}function wm(e){localStorage.setItem(`theme`,e),e===`dark`?document.documentElement.classList.add(`dark`):document.documentElement.classList.remove(`dark`)}function Tm(){let[e,t]=(0,w.useState)(`light`);(0,w.useEffect)(()=>{let e=Cm();t(e),wm(e)},[]);function n(){let n=e===`light`?`dark`:`light`;t(n),wm(n)}return(0,Q.jsx)(`button`,{onClick:n,className:`px-3 py-1 border rounded font-bold`,children:e===`light`?`Dark Mode`:`Light Mode`})}function Em(){return{main:[{label:`Home`,path:`/`},{label:`Featured Projects`,path:`/#featured`},{label:`Other Projects`,path:`/#other`},{label:`Experience`,path:`/#experience`},{label:`Skills`,path:`/#skills`},{label:`Contact Me`,path:`/#contact`},{label:`About Me`,path:`/#about`},{label:`Download Resume`,path:`/#contact`},{label:`Filter Projects By Technologies`,path:`/projects`}],projects:[..._m.map(e=>({label:e.title,path:`/projects/${e.id}`,featured:!0})),...vm.map(e=>({label:e.title,path:`/projects/${e.id}`,featured:!1}))]}}function Dm(){let e=Em();return xt(),(0,Q.jsxs)(`aside`,{className:`w-64 p-4 border-r min-h-screen bg-white text-black dark:bg-black dark:text-white`,children:[(0,Q.jsx)(`div`,{className:`mb-4 font-bold`,children:`Menu`}),(0,Q.jsx)(`nav`,{className:`flex flex-col gap-2 mb-6`,children:e.main.map(e=>e.path.includes(`#`)?(0,Q.jsx)(`a`,{href:e.path,onClick:t=>{t.preventDefault();let n=e.path.split(`#`)[1];document.getElementById(n)?.scrollIntoView({behavior:`smooth`}),window.history.pushState(null,``,e.path)},children:e.label},e.path):(0,Q.jsx)(zn,{to:e.path,children:e.label},e.path))}),(0,Q.jsx)(`div`,{className:`text-sm font-semibold mb-2`,children:`Projects`}),(0,Q.jsx)(`nav`,{className:`flex flex-col gap-1`,children:e.projects.map(e=>(0,Q.jsx)(zn,{to:e.path,className:`text-sm text-gray-600 hover:text-black`,children:e.label},e.path))})]})}function Om({children:e}){return(0,Q.jsxs)(`div`,{className:`min-h-screen bg-white dark:bg-black dark:text-white flex flex-col`,children:[(0,Q.jsxs)(`header`,{className:`grid grid-cols-3 items-center p-4 border-b font-bold`,children:[(0,Q.jsx)(`div`,{children:`SOFTWARE ENGINEER`}),(0,Q.jsx)(`h1`,{className:`justify-self-center font-bold text-3xl`,children:`PRINCE KUVENGA`}),(0,Q.jsx)(`div`,{className:`justify-self-end`,children:(0,Q.jsx)(Tm,{})})]}),(0,Q.jsxs)(`div`,{className:`flex flex-1`,children:[(0,Q.jsx)(`aside`,{className:`w-64 border-r p-4 sticky top-0 h-screen`,children:(0,Q.jsx)(Dm,{})}),(0,Q.jsx)(`main`,{className:`flex-1 p-6`,children:e})]})]})}var km=[{company:`St. Edward's University`,role:`Sports Program Supervisor`,period:`Jan 2026 – Present`,location:`Austin, Texas, United States`,type:`Full-time`,description:`Supervise club sports events, coordinate facility operations, ensure participant safety, and provide first aid when needed. Developed strong leadership, decision-making, and risk management skills while working in fast-paced environments.`,highlights:[`Supervised club sports competitions and events.`,`Provided first aid and ensured participant safety.`,`Developed leadership and crisis management skills.`]},{company:`Swan Valley Group`,role:`Marketing Intern`,period:`May 2025 – Aug 2025`,location:`Harare, Zimbabwe`,type:`Internship`,description:`Worked on marketing and operations for a startup launching a new product. Built Excel dashboards with Python automation while contributing to product marketing and customer engagement initiatives.`,highlights:[`Created reporting dashboards using Excel and Python.`,`Supported product launch marketing campaigns.`,`Strengthened presentation and communication skills.`]},{company:`SoftClans Technologies Limited`,role:`Software Engineer Intern`,period:`Jan 2025 – May 2025`,location:`Nairobi, Kenya`,type:`Internship`,description:`Developed software using Laravel and Sencha Ext JS while collaborating with clients and developers. Built a multilingual API for a government application, improving accessibility for users.`,highlights:[`Built multilingual API functionality.`,`Worked with Laravel and Sencha Ext JS.`,`Collaborated with clients during project planning.`]}];function Am(){return(0,Q.jsxs)(`section`,{className:`mt-16`,children:[(0,Q.jsx)(`h2`,{className:`text-3xl font-bold mb-8`,children:`Experience`}),(0,Q.jsx)(`div`,{className:`space-y-8`,children:km.map(e=>(0,Q.jsxs)(`div`,{className:`border rounded-xl p-6 bg-white dark:bg-neutral-900`,children:[(0,Q.jsxs)(`div`,{className:`flex justify-between flex-wrap gap-2`,children:[(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`h3`,{className:`text-xl font-semibold`,children:e.role}),(0,Q.jsx)(`p`,{className:`font-medium`,children:e.company})]}),(0,Q.jsxs)(`div`,{className:`text-sm text-gray-500 dark:text-gray-400 text-right`,children:[(0,Q.jsx)(`p`,{children:e.period}),(0,Q.jsx)(`p`,{children:e.location}),(0,Q.jsx)(`p`,{children:e.type})]})]}),(0,Q.jsx)(`p`,{className:`mt-4 text-gray-700 dark:text-gray-300`,children:e.description}),(0,Q.jsx)(`ul`,{className:`mt-4 list-disc list-inside space-y-1`,children:e.highlights.map(e=>(0,Q.jsx)(`li`,{children:e},e))})]},`${e.company}-${e.role}`))})]})}var jm={Frontend:[`React`,`Next.js`,`React Native`,`TypeScript`,`Tauri`],Backend:[`Node.js`,`Laravel`,`FastAPI`,`REST APIs`],Languages:[`Java`,`Python`,`Rust`,`TypeScript`,`Javascript`,`C++`],Database:[`MySQL`]};function Mm(){return(0,Q.jsxs)(`section`,{className:`mt-16`,children:[(0,Q.jsx)(`h2`,{className:`text-3xl font-bold mb-8`,children:`Skills`}),(0,Q.jsx)(`div`,{className:`grid gap-6 md:grid-cols-2`,children:Object.entries(jm).map(([e,t])=>(0,Q.jsxs)(`div`,{className:`rounded-xl border p-6 bg-white dark:bg-neutral-900`,children:[(0,Q.jsx)(`h3`,{className:`text-xl font-semibold mb-4`,children:e}),(0,Q.jsx)(`div`,{className:`flex flex-wrap gap-2`,children:t.map(e=>(0,Q.jsx)(`span`,{className:`rounded-full bg-gray-200 dark:bg-gray-700 px-3 py-1 text-sm font-medium text-black dark:text-white`,children:e},e))})]},e))})]})}var Nm={color:void 0,size:void 0,className:void 0,style:void 0,attr:void 0},Pm=w.createContext&&w.createContext(Nm),Fm=[`attr`,`size`,`title`];function Im(e,t){if(e==null)return{};var n,r,i=Lm(e,t);if(Object.getOwnPropertySymbols){var a=Object.getOwnPropertySymbols(e);for(r=0;r<a.length;r++)n=a[r],t.indexOf(n)===-1&&{}.propertyIsEnumerable.call(e,n)&&(i[n]=e[n])}return i}function Lm(e,t){if(e==null)return{};var n={};for(var r in e)if({}.hasOwnProperty.call(e,r)){if(t.indexOf(r)!==-1)continue;n[r]=e[r]}return n}function Rm(){return Rm=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)({}).hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e},Rm.apply(null,arguments)}function zm(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable})),n.push.apply(n,r)}return n}function Bm(e){for(var t=1;t<arguments.length;t++){var n=arguments[t]==null?{}:arguments[t];t%2?zm(Object(n),!0).forEach(function(t){Vm(e,t,n[t])}):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):zm(Object(n)).forEach(function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))})}return e}function Vm(e,t,n){return(t=Hm(t))in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function Hm(e){var t=Um(e,`string`);return typeof t==`symbol`?t:t+``}function Um(e,t){if(typeof e!=`object`||!e)return e;var n=e[Symbol.toPrimitive];if(n!==void 0){var r=n.call(e,t||`default`);if(typeof r!=`object`)return r;throw TypeError(`@@toPrimitive must return a primitive value.`)}return(t===`string`?String:Number)(e)}function Wm(e){return e&&e.map((e,t)=>w.createElement(e.tag,Bm({key:t},e.attr),Wm(e.child)))}function Gm(e){return t=>w.createElement(Km,Rm({attr:Bm({},e.attr)},t),Wm(e.child))}function Km(e){var t=t=>{var n=e.attr,r=e.size,i=e.title,a=Im(e,Fm),o=r||t.size||`1em`,s;return t.className&&(s=t.className),e.className&&(s=(s?s+` `:``)+e.className),w.createElement(`svg`,Rm({stroke:`currentColor`,fill:`currentColor`,strokeWidth:`0`},t.attr,n,a,{className:s,style:Bm(Bm({color:e.color||t.color},t.style),e.style),height:o,width:o,xmlns:`http://www.w3.org/2000/svg`}),i&&w.createElement(`title`,null,i),e.children)};return Pm===void 0?t(Nm):w.createElement(Pm.Consumer,null,e=>t(e))}function qm(e){return Gm({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z`},child:[]}]})(e)}function Jm(e){return Gm({tag:`svg`,attr:{viewBox:`0 0 496 512`},child:[{tag:`path`,attr:{d:`M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z`},child:[]}]})(e)}function Ym(e){return Gm({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z`},child:[]}]})(e)}function Xm(e){return Gm({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z`},child:[]}]})(e)}function Zm(){return(0,Q.jsxs)(`section`,{id:`contact`,className:`mt-16`,children:[(0,Q.jsx)(`h2`,{className:`text-3xl font-bold mb-4`,children:`Contact`}),(0,Q.jsx)(`p`,{className:`text-gray-600 dark:text-gray-400 mb-8`,children:`I'm always open to discussing new opportunities and interesting projects.`}),(0,Q.jsxs)(`div`,{className:`flex gap-6`,children:[(0,Q.jsx)(`a`,{href:`mailto:kuvengaprince@gmail.com`,"aria-label":`Email`,className:`rounded-full border p-4 transition hover:scale-110 hover:bg-gray-100 dark:hover:bg-neutral-800`,children:(0,Q.jsx)(Ym,{size:28})}),(0,Q.jsx)(`a`,{href:`https://github.com/princekrazy`,target:`_blank`,rel:`noopener noreferrer`,"aria-label":`GitHub`,className:`rounded-full border p-4 transition hover:scale-110 hover:bg-gray-100 dark:hover:bg-neutral-800`,children:(0,Q.jsx)(Jm,{size:28})}),(0,Q.jsx)(`a`,{href:`https://www.linkedin.com/in/prince-kuvenga`,target:`_blank`,rel:`noopener noreferrer`,"aria-label":`LinkedIn`,className:`rounded-full border p-4 transition hover:scale-110 hover:bg-gray-100 dark:hover:bg-neutral-800`,children:(0,Q.jsx)(qm,{size:28})}),(0,Q.jsxs)(`a`,{href:`/Prince_Kuvenga_Resume.pdf`,download:`Prince_Kuvenga_Resume.pdf`,className:`inline-flex items-center gap-2 rounded-lg bg-black px-4 py-2 font-medium text-white transition hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200`,children:[(0,Q.jsx)(Xm,{size:28}),`Download Resume`]})]})]})}function Qm(){return(0,Q.jsxs)(`section`,{id:`about`,className:`mt-16`,children:[(0,Q.jsx)(`h2`,{className:`text-3xl font-bold mb-6`,children:`About Me`}),(0,Q.jsxs)(`div`,{className:`space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed`,children:[(0,Q.jsx)(`p`,{children:`I’m from Zimbabwe and currently an international student at St. Edward’s University, where I’m majoring in Computer Science and set to graduate in 2029.`}),(0,Q.jsx)(`p`,{children:`My journey into tech started long before university driven by a childhood curiosity about the world around me. I was fascinated by the idea that everything I interacted with, from apps on my phone to the games I played, was built by someone no smarter than me. That realization made software feel less like something distant and more like something I could actively create.`}),(0,Q.jsx)(`p`,{children:`Outside of coding, I enjoy hiking and playing video games. Both reflect how I like to explore different worlds one in nature and the other in interactive digital spaces.`}),(0,Q.jsx)(`p`,{children:`When it comes to software development, I care less about using flashy tools or writing overly complex code, and more about how well a system is designed to solve real problems. To me, good engineering is about clarity, intention, and building solutions that actually work for the people who use them.`})]})]})}function $m(){return(0,Q.jsx)(Dp,{children:(0,Q.jsx)(Om,{children:(0,Q.jsxs)(`div`,{className:`max-w-4xl mx-auto p-6 bg-white text-black dark:bg-black dark:text-white`,children:[(0,Q.jsxs)(`section`,{className:`mb-10`,children:[(0,Q.jsx)(`header`,{className:`flex justify-between  border-b`,children:(0,Q.jsx)(`h1`,{className:`text-4xl font-bold`,children:`My Portfolio`})}),(0,Q.jsx)(`p`,{className:`text-gray-600 mt-2`,children:`Full-stack developer building scalable web applications with React, Laravel, and modern APIs.`})]}),(0,Q.jsx)(`section`,{id:`contact`,children:(0,Q.jsx)(Zm,{})}),(0,Q.jsx)(`section`,{id:`featured`,className:`mt-10`,children:(0,Q.jsx)(xm,{})}),(0,Q.jsx)(`section`,{id:`other`,className:`mt-12`,children:(0,Q.jsx)(Sm,{})}),(0,Q.jsx)(`section`,{id:`experience`,children:(0,Q.jsx)(Am,{})}),(0,Q.jsx)(`section`,{id:`skills`,children:(0,Q.jsx)(Mm,{})}),(0,Q.jsx)(`section`,{id:`about`,children:(0,Q.jsx)(Qm,{})})]})})})}function eh(){let{id:e}=Ct(),t=ym(e);if(console.log(`Route ID:`,e),!t)return(0,Q.jsx)(Om,{children:(0,Q.jsx)(`div`,{className:`p-6`,children:`Project not found`})});let n=t.content;return(0,Q.jsx)(Om,{children:(0,Q.jsxs)(`div`,{className:`max-w-3xl mx-auto p-6`,children:[(0,Q.jsx)(`h1`,{className:`text-3xl font-bold`,children:t.title}),(0,Q.jsx)(`p`,{className:`text-gray-600 dark:text-gray-300 mb-4`,children:t.description}),(0,Q.jsxs)(`div`,{className:`flex gap-4 mb-6 text-blue-500`,children:[t.github&&(0,Q.jsx)(`a`,{href:t.github,children:`GitHub`}),t.live&&(0,Q.jsx)(`a`,{href:t.live,children:`Live`})]}),(0,Q.jsx)(`article`,{className:`prose dark:prose-invert max-w-none`,children:(0,Q.jsx)(n,{})})]})})}function th({tags:e,active:t,setActive:n}){return(0,Q.jsxs)(`div`,{className:`flex gap-2 flex-wrap mb-4 bg-white text-black dark:bg-black dark:text-white`,children:[(0,Q.jsx)(`button`,{onClick:()=>n(`all`),className:`px-3 py-1 border rounded ${t===`all`?`bg-black text-white`:``}`,children:`All`}),e.map(e=>(0,Q.jsx)(`button`,{onClick:()=>n(e),className:`px-3 py-1 border rounded ${t===e?`bg-black text-white`:``}`,children:e},e))]})}function nh(){let e=[..._m,...vm],t=[...new Set(e.flatMap(e=>e.tech))],[n,r]=(0,w.useState)(`all`),i=n===`all`?e:e.filter(e=>e.tech.includes(n));return(0,Q.jsx)(Om,{children:(0,Q.jsxs)(`div`,{className:`max-w-4xl mx-auto p-6`,children:[(0,Q.jsx)(`h1`,{className:`text-3xl font-bold mb-4`,children:`Filter by Technologies`}),(0,Q.jsx)(th,{tags:t,active:n,setActive:r}),(0,Q.jsx)(`div`,{className:`grid gap-3 mt-4`,children:i.map(e=>(0,Q.jsx)(zn,{to:`/projects/${e.id}`,className:`border p-3 rounded hover:bg-gray-50`,children:e.title},e.id))})]})})}function rh(){let e=vt();return(0,Q.jsx)(kd,{mode:`wait`,children:(0,Q.jsxs)(Yt,{location:e,children:[(0,Q.jsx)(qt,{path:`/`,element:(0,Q.jsx)($m,{})}),(0,Q.jsx)(qt,{path:`/projects`,element:(0,Q.jsx)(nh,{})}),(0,Q.jsx)(qt,{path:`/projects/:id`,element:(0,Q.jsx)(eh,{})}),(0,Q.jsx)(qt,{path:`*`,element:(0,Q.jsx)($m,{})})]},e.pathname)})}Ep.createRoot(document.getElementById(`root`)).render((0,Q.jsx)(Ln,{basename:`/`,children:(0,Q.jsx)(rh,{})}));
+`,(0,Q.jsx)(t.p,{children:`By integrating CameraX, MediaPipe, and Android Accessibility Services, the project demonstrates the design of responsive, privacy-first interaction systems that expand how users can interact with mobile devices.`})]})}function bm(e={}){let{wrapper:t}=e.components||{};return t?(0,Q.jsx)(t,{...e,children:(0,Q.jsx)(ym,{...e})}):ym(e)}var xm={id:`eyescroll`,title:`EyeScroll`,description:`A hands-free Android accessibility application that uses real-time eye tracking and MediaPipe to control scrolling across apps using eye gestures.`,tech:[`Kotlin`,`Android`,`Jetpack Compose`,`CameraX`,`MediaPipe`,`Computer Vision`,`Accessibility Services`,`Machine Learning`],github:`https://github.com/princekrazy/eyescroll`,live:`https://github.com/princekrazy/eyescroll/releases/tag/production`,featured:!0,content:bm},Sm={"ai-chatbot":Ap,princeboard:lm,"princeboard-mobile":fm,weather:zp,"uber-clone-frontend":Np,"uber-clone-backend":Ip,americabound:Hp,"shona-ai-translator":Gp,"shona-ai-translator-backend":Jp,"vault-app":em,"vault-manager-desktop":Zp,"the-empty-library":rm,"emoji-sweeper":om,"past-paper-helper":hm,neurorun:vm,eyescroll:xm},Cm=[xm,Ip,vm,Hp,Np,lm],wm=[Gp,Jp,fm,Zp,em,rm,om,hm];function Tm(e){return Sm[e]}function Em({project:e}){return(0,Q.jsxs)(`div`,{className:`border rounded-lg p-4 hover:shadow-md transition`,children:[(0,Q.jsxs)(zn,{to:`/projects/${e.id}`,className:`block`,children:[(0,Q.jsx)(`h3`,{className:`text-xl font-bold hover:underline`,children:e.title}),(0,Q.jsx)(`p`,{className:`text-gray-600 text-sm mt-1`,children:e.description}),(0,Q.jsx)(`div`,{className:`flex gap-2 mt-2 flex-wrap`,children:e.tech.map(e=>(0,Q.jsx)(`span`,{className:`text-xs bg-gray-200 text-black px-2 py-1 rounded`,children:e},e))})]}),(0,Q.jsxs)(`div`,{className:`flex gap-4 mt-3 text-sm`,children:[e.github&&(0,Q.jsx)(`a`,{href:e.github,target:`_blank`,rel:`noreferrer`,className:`text-blue-600`,children:`GitHub`}),e.live&&(0,Q.jsx)(`a`,{href:e.live,target:`_blank`,rel:`noreferrer`,className:`text-green-600`,children:`Live`})]})]})}function Dm(){return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(`h2`,{className:`text-2xl font-bold mb-4 bg-white text-black dark:bg-black dark:text-white`,children:`Featured Projects`}),(0,Q.jsx)(`div`,{className:`grid md:grid-cols-2 gap-4`,children:Cm.map(e=>(0,Q.jsx)(Em,{project:e},e.id))})]})}function Om(){return(0,Q.jsxs)(`section`,{className:`mt-10 bg-white text-black dark:bg-black dark:text-white`,children:[(0,Q.jsx)(`h2`,{className:`text-2xl font-bold mb-4`,children:`Other Projects`}),(0,Q.jsx)(`div`,{className:`space-y-3`,children:wm.map(e=>(0,Q.jsx)(Em,{project:e},e.id))})]})}function km(){return localStorage.getItem(`theme`)||`light`}function Am(e){localStorage.setItem(`theme`,e),e===`dark`?document.documentElement.classList.add(`dark`):document.documentElement.classList.remove(`dark`)}function jm(){let[e,t]=(0,w.useState)(`light`);(0,w.useEffect)(()=>{let e=km();t(e),Am(e)},[]);function n(){let n=e===`light`?`dark`:`light`;t(n),Am(n)}return(0,Q.jsx)(`button`,{onClick:n,className:`px-3 py-1 border rounded font-bold`,children:e===`light`?`Dark Mode`:`Light Mode`})}function Mm(){return{main:[{label:`Home`,path:`/`},{label:`Featured Projects`,path:`/#featured`},{label:`Other Projects`,path:`/#other`},{label:`Experience`,path:`/#experience`},{label:`Skills`,path:`/#skills`},{label:`Contact Me`,path:`/#contact`},{label:`About Me`,path:`/#about`},{label:`Download Resume`,path:`/#contact`},{label:`Filter Projects By Technologies`,path:`/projects`}],projects:[...Cm.map(e=>({label:e.title,path:`/projects/${e.id}`,featured:!0})),...wm.map(e=>({label:e.title,path:`/projects/${e.id}`,featured:!1}))]}}function Nm(){let e=Mm();return xt(),(0,Q.jsxs)(`aside`,{className:`w-64 p-4 border-r min-h-screen bg-white text-black dark:bg-black dark:text-white`,children:[(0,Q.jsx)(`div`,{className:`mb-4 font-bold`,children:`Menu`}),(0,Q.jsx)(`nav`,{className:`flex flex-col gap-2 mb-6`,children:e.main.map(e=>e.path.includes(`#`)?(0,Q.jsx)(`a`,{href:e.path,onClick:t=>{t.preventDefault();let n=e.path.split(`#`)[1];document.getElementById(n)?.scrollIntoView({behavior:`smooth`}),window.history.pushState(null,``,e.path)},children:e.label},e.path):(0,Q.jsx)(zn,{to:e.path,children:e.label},e.path))}),(0,Q.jsx)(`div`,{className:`text-sm font-semibold mb-2`,children:`Projects`}),(0,Q.jsx)(`nav`,{className:`flex flex-col gap-1`,children:e.projects.map(e=>(0,Q.jsx)(zn,{to:e.path,className:`text-sm text-gray-600 hover:text-black`,children:e.label},e.path))})]})}function Pm({children:e}){return(0,Q.jsxs)(`div`,{className:`min-h-screen bg-white dark:bg-black dark:text-white flex flex-col`,children:[(0,Q.jsxs)(`header`,{className:`grid grid-cols-3 items-center p-4 border-b font-bold`,children:[(0,Q.jsx)(`div`,{children:`SOFTWARE ENGINEER`}),(0,Q.jsx)(`h1`,{className:`justify-self-center font-bold text-3xl`,children:`PRINCE KUVENGA`}),(0,Q.jsx)(`div`,{className:`justify-self-end`,children:(0,Q.jsx)(jm,{})})]}),(0,Q.jsxs)(`div`,{className:`flex flex-1`,children:[(0,Q.jsx)(`aside`,{className:`w-64 border-r p-4 sticky top-0 h-screen`,children:(0,Q.jsx)(Nm,{})}),(0,Q.jsx)(`main`,{className:`flex-1 p-6`,children:e})]})]})}var Fm=[{company:`St. Edward's University`,role:`Sports Program Supervisor`,period:`Jan 2026 – Present`,location:`Austin, Texas, United States`,type:`Full-time`,description:`Supervise club sports events, coordinate facility operations, ensure participant safety, and provide first aid when needed. Developed strong leadership, decision-making, and risk management skills while working in fast-paced environments.`,highlights:[`Supervised club sports competitions and events.`,`Provided first aid and ensured participant safety.`,`Developed leadership and crisis management skills.`]},{company:`Swan Valley Group`,role:`Marketing Intern`,period:`May 2025 – Aug 2025`,location:`Harare, Zimbabwe`,type:`Internship`,description:`Worked on marketing and operations for a startup launching a new product. Built Excel dashboards with Python automation while contributing to product marketing and customer engagement initiatives.`,highlights:[`Created reporting dashboards using Excel and Python.`,`Supported product launch marketing campaigns.`,`Strengthened presentation and communication skills.`]},{company:`SoftClans Technologies Limited`,role:`Software Engineer Intern`,period:`Jan 2025 – May 2025`,location:`Nairobi, Kenya`,type:`Internship`,description:`Developed software using Laravel and Sencha Ext JS while collaborating with clients and developers. Built a multilingual API for a government application, improving accessibility for users.`,highlights:[`Built multilingual API functionality.`,`Worked with Laravel and Sencha Ext JS.`,`Collaborated with clients during project planning.`]}];function Im(){return(0,Q.jsxs)(`section`,{className:`mt-16`,children:[(0,Q.jsx)(`h2`,{className:`text-3xl font-bold mb-8`,children:`Experience`}),(0,Q.jsx)(`div`,{className:`space-y-8`,children:Fm.map(e=>(0,Q.jsxs)(`div`,{className:`border rounded-xl p-6 bg-white dark:bg-neutral-900`,children:[(0,Q.jsxs)(`div`,{className:`flex justify-between flex-wrap gap-2`,children:[(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`h3`,{className:`text-xl font-semibold`,children:e.role}),(0,Q.jsx)(`p`,{className:`font-medium`,children:e.company})]}),(0,Q.jsxs)(`div`,{className:`text-sm text-gray-500 dark:text-gray-400 text-right`,children:[(0,Q.jsx)(`p`,{children:e.period}),(0,Q.jsx)(`p`,{children:e.location}),(0,Q.jsx)(`p`,{children:e.type})]})]}),(0,Q.jsx)(`p`,{className:`mt-4 text-gray-700 dark:text-gray-300`,children:e.description}),(0,Q.jsx)(`ul`,{className:`mt-4 list-disc list-inside space-y-1`,children:e.highlights.map(e=>(0,Q.jsx)(`li`,{children:e},e))})]},`${e.company}-${e.role}`))})]})}var Lm={Frontend:[`React`,`Next.js`,`React Native`,`TypeScript`,`Tauri`],Backend:[`Node.js`,`Laravel`,`FastAPI`,`REST APIs`],Languages:[`Java`,`Python`,`Rust`,`TypeScript`,`Javascript`,`C++`],Database:[`MySQL`]};function Rm(){return(0,Q.jsxs)(`section`,{className:`mt-16`,children:[(0,Q.jsx)(`h2`,{className:`text-3xl font-bold mb-8`,children:`Skills`}),(0,Q.jsx)(`div`,{className:`grid gap-6 md:grid-cols-2`,children:Object.entries(Lm).map(([e,t])=>(0,Q.jsxs)(`div`,{className:`rounded-xl border p-6 bg-white dark:bg-neutral-900`,children:[(0,Q.jsx)(`h3`,{className:`text-xl font-semibold mb-4`,children:e}),(0,Q.jsx)(`div`,{className:`flex flex-wrap gap-2`,children:t.map(e=>(0,Q.jsx)(`span`,{className:`rounded-full bg-gray-200 dark:bg-gray-700 px-3 py-1 text-sm font-medium text-black dark:text-white`,children:e},e))})]},e))})]})}var zm={color:void 0,size:void 0,className:void 0,style:void 0,attr:void 0},Bm=w.createContext&&w.createContext(zm),Vm=[`attr`,`size`,`title`];function Hm(e,t){if(e==null)return{};var n,r,i=Um(e,t);if(Object.getOwnPropertySymbols){var a=Object.getOwnPropertySymbols(e);for(r=0;r<a.length;r++)n=a[r],t.indexOf(n)===-1&&{}.propertyIsEnumerable.call(e,n)&&(i[n]=e[n])}return i}function Um(e,t){if(e==null)return{};var n={};for(var r in e)if({}.hasOwnProperty.call(e,r)){if(t.indexOf(r)!==-1)continue;n[r]=e[r]}return n}function Wm(){return Wm=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)({}).hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e},Wm.apply(null,arguments)}function Gm(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable})),n.push.apply(n,r)}return n}function Km(e){for(var t=1;t<arguments.length;t++){var n=arguments[t]==null?{}:arguments[t];t%2?Gm(Object(n),!0).forEach(function(t){qm(e,t,n[t])}):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):Gm(Object(n)).forEach(function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))})}return e}function qm(e,t,n){return(t=Jm(t))in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function Jm(e){var t=Ym(e,`string`);return typeof t==`symbol`?t:t+``}function Ym(e,t){if(typeof e!=`object`||!e)return e;var n=e[Symbol.toPrimitive];if(n!==void 0){var r=n.call(e,t||`default`);if(typeof r!=`object`)return r;throw TypeError(`@@toPrimitive must return a primitive value.`)}return(t===`string`?String:Number)(e)}function Xm(e){return e&&e.map((e,t)=>w.createElement(e.tag,Km({key:t},e.attr),Xm(e.child)))}function Zm(e){return t=>w.createElement(Qm,Wm({attr:Km({},e.attr)},t),Xm(e.child))}function Qm(e){var t=t=>{var n=e.attr,r=e.size,i=e.title,a=Hm(e,Vm),o=r||t.size||`1em`,s;return t.className&&(s=t.className),e.className&&(s=(s?s+` `:``)+e.className),w.createElement(`svg`,Wm({stroke:`currentColor`,fill:`currentColor`,strokeWidth:`0`},t.attr,n,a,{className:s,style:Km(Km({color:e.color||t.color},t.style),e.style),height:o,width:o,xmlns:`http://www.w3.org/2000/svg`}),i&&w.createElement(`title`,null,i),e.children)};return Bm===void 0?t(zm):w.createElement(Bm.Consumer,null,e=>t(e))}function $m(e){return Zm({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z`},child:[]}]})(e)}function eh(e){return Zm({tag:`svg`,attr:{viewBox:`0 0 496 512`},child:[{tag:`path`,attr:{d:`M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z`},child:[]}]})(e)}function th(e){return Zm({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z`},child:[]}]})(e)}function nh(e){return Zm({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z`},child:[]}]})(e)}function rh(){return(0,Q.jsxs)(`section`,{id:`contact`,className:`mt-16`,children:[(0,Q.jsx)(`h2`,{className:`text-3xl font-bold mb-4`,children:`Contact`}),(0,Q.jsx)(`p`,{className:`text-gray-600 dark:text-gray-400 mb-8`,children:`I'm always open to discussing new opportunities and interesting projects.`}),(0,Q.jsxs)(`div`,{className:`flex gap-6`,children:[(0,Q.jsx)(`a`,{href:`mailto:kuvengaprince@gmail.com`,"aria-label":`Email`,className:`rounded-full border p-4 transition hover:scale-110 hover:bg-gray-100 dark:hover:bg-neutral-800`,children:(0,Q.jsx)(th,{size:28})}),(0,Q.jsx)(`a`,{href:`https://github.com/princekrazy`,target:`_blank`,rel:`noopener noreferrer`,"aria-label":`GitHub`,className:`rounded-full border p-4 transition hover:scale-110 hover:bg-gray-100 dark:hover:bg-neutral-800`,children:(0,Q.jsx)(eh,{size:28})}),(0,Q.jsx)(`a`,{href:`https://www.linkedin.com/in/prince-kuvenga`,target:`_blank`,rel:`noopener noreferrer`,"aria-label":`LinkedIn`,className:`rounded-full border p-4 transition hover:scale-110 hover:bg-gray-100 dark:hover:bg-neutral-800`,children:(0,Q.jsx)($m,{size:28})}),(0,Q.jsxs)(`a`,{href:`/Prince_Kuvenga_Resume.pdf`,download:`Prince_Kuvenga_Resume.pdf`,className:`inline-flex items-center gap-2 rounded-lg bg-black px-4 py-2 font-medium text-white transition hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200`,children:[(0,Q.jsx)(nh,{size:28}),`Download Resume`]})]})]})}function ih(){return(0,Q.jsxs)(`section`,{id:`about`,className:`mt-16`,children:[(0,Q.jsx)(`h2`,{className:`text-3xl font-bold mb-6`,children:`About Me`}),(0,Q.jsxs)(`div`,{className:`space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed`,children:[(0,Q.jsx)(`p`,{children:`I’m from Zimbabwe and currently an international student at St. Edward’s University, where I’m majoring in Computer Science and set to graduate in 2029.`}),(0,Q.jsx)(`p`,{children:`My journey into tech started long before university driven by a childhood curiosity about the world around me. I was fascinated by the idea that everything I interacted with, from apps on my phone to the games I played, was built by someone no smarter than me. That realization made software feel less like something distant and more like something I could actively create.`}),(0,Q.jsx)(`p`,{children:`Outside of coding, I enjoy hiking and playing video games. Both reflect how I like to explore different worlds one in nature and the other in interactive digital spaces.`}),(0,Q.jsx)(`p`,{children:`When it comes to software development, I care less about using flashy tools or writing overly complex code, and more about how well a system is designed to solve real problems. To me, good engineering is about clarity, intention, and building solutions that actually work for the people who use them.`})]})]})}function ah(){return(0,Q.jsx)(Dp,{children:(0,Q.jsx)(Pm,{children:(0,Q.jsxs)(`div`,{className:`max-w-4xl mx-auto p-6 bg-white text-black dark:bg-black dark:text-white`,children:[(0,Q.jsxs)(`section`,{className:`mb-10`,children:[(0,Q.jsx)(`header`,{className:`flex justify-between  border-b`,children:(0,Q.jsx)(`h1`,{className:`text-4xl font-bold`,children:`My Portfolio`})}),(0,Q.jsx)(`p`,{className:`text-gray-600 mt-2`,children:`Full-stack developer building scalable web applications with React, Laravel, and modern APIs.`})]}),(0,Q.jsx)(`section`,{id:`contact`,children:(0,Q.jsx)(rh,{})}),(0,Q.jsx)(`section`,{id:`featured`,className:`mt-10`,children:(0,Q.jsx)(Dm,{})}),(0,Q.jsx)(`section`,{id:`other`,className:`mt-12`,children:(0,Q.jsx)(Om,{})}),(0,Q.jsx)(`section`,{id:`experience`,children:(0,Q.jsx)(Im,{})}),(0,Q.jsx)(`section`,{id:`skills`,children:(0,Q.jsx)(Rm,{})}),(0,Q.jsx)(`section`,{id:`about`,children:(0,Q.jsx)(ih,{})})]})})})}function oh(){let{id:e}=Ct(),t=Tm(e);if(console.log(`Route ID:`,e),!t)return(0,Q.jsx)(Pm,{children:(0,Q.jsx)(`div`,{className:`p-6`,children:`Project not found`})});let n=t.content;return(0,Q.jsx)(Pm,{children:(0,Q.jsxs)(`div`,{className:`max-w-3xl mx-auto p-6`,children:[(0,Q.jsx)(`h1`,{className:`text-3xl font-bold`,children:t.title}),(0,Q.jsx)(`p`,{className:`text-gray-600 dark:text-gray-300 mb-4`,children:t.description}),(0,Q.jsxs)(`div`,{className:`flex gap-4 mb-6 text-blue-500`,children:[t.github&&(0,Q.jsx)(`a`,{href:t.github,children:`GitHub`}),t.live&&(0,Q.jsx)(`a`,{href:t.live,children:`Live`})]}),(0,Q.jsx)(`article`,{className:`prose dark:prose-invert max-w-none`,children:(0,Q.jsx)(n,{})})]})})}function sh({tags:e,active:t,setActive:n}){return(0,Q.jsxs)(`div`,{className:`flex gap-2 flex-wrap mb-4 bg-white text-black dark:bg-black dark:text-white`,children:[(0,Q.jsx)(`button`,{onClick:()=>n(`all`),className:`px-3 py-1 border rounded ${t===`all`?`bg-black text-white`:``}`,children:`All`}),e.map(e=>(0,Q.jsx)(`button`,{onClick:()=>n(e),className:`px-3 py-1 border rounded ${t===e?`bg-black text-white`:``}`,children:e},e))]})}function ch(){let e=[...Cm,...wm],t=[...new Set(e.flatMap(e=>e.tech))],[n,r]=(0,w.useState)(`all`),i=n===`all`?e:e.filter(e=>e.tech.includes(n));return(0,Q.jsx)(Pm,{children:(0,Q.jsxs)(`div`,{className:`max-w-4xl mx-auto p-6`,children:[(0,Q.jsx)(`h1`,{className:`text-3xl font-bold mb-4`,children:`Filter by Technologies`}),(0,Q.jsx)(sh,{tags:t,active:n,setActive:r}),(0,Q.jsx)(`div`,{className:`grid gap-3 mt-4`,children:i.map(e=>(0,Q.jsx)(zn,{to:`/projects/${e.id}`,className:`border p-3 rounded hover:bg-gray-50`,children:e.title},e.id))})]})})}function lh(){let e=vt();return(0,Q.jsx)(kd,{mode:`wait`,children:(0,Q.jsxs)(Yt,{location:e,children:[(0,Q.jsx)(qt,{path:`/`,element:(0,Q.jsx)(ah,{})}),(0,Q.jsx)(qt,{path:`/projects`,element:(0,Q.jsx)(ch,{})}),(0,Q.jsx)(qt,{path:`/projects/:id`,element:(0,Q.jsx)(oh,{})}),(0,Q.jsx)(qt,{path:`*`,element:(0,Q.jsx)(ah,{})})]},e.pathname)})}Ep.createRoot(document.getElementById(`root`)).render((0,Q.jsx)(Ln,{basename:`/`,children:(0,Q.jsx)(lh,{})}));
