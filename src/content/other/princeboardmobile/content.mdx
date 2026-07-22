@@ -1,0 +1,221 @@
+# PrinceBoard Mobile
+
+A modern Kanban-style task management application built with **React Native**, **Expo**, **TypeScript**, and **Supabase**.
+
+PrinceBoard Mobile brings the core PrinceBoard project management experience to Android, allowing users to organize tasks, manage teams, and track project activity from anywhere.
+
+The application focuses on solving real-world mobile development challenges including authentication, database synchronization, relational data modeling, mobile navigation, and secure cloud persistence.
+
+---
+
+# Download
+
+The latest Android APK is available through the project's release distribution.
+
+---
+
+# Overview
+
+PrinceBoard Mobile is a mobile-first project management application inspired by tools like **Linear**, **Asana**, and **Notion**.
+
+The goal was to create a complete task management experience optimized for mobile devices while maintaining the same secure backend architecture as the web platform.
+
+Users can create and organize tasks, assign team members, categorize work with labels, communicate through comments, and monitor project activity through a centralized timeline.
+
+The application uses Supabase as a backend service, providing authentication, PostgreSQL storage, and Row Level Security to ensure every user's workspace remains private.
+
+---
+
+# Features
+
+## Kanban Board
+
+Manage projects visually through a structured Kanban workflow.
+
+Default columns:
+
+- To Do
+- In Progress
+- In Review
+- Done
+
+Features include:
+
+- Move tasks between columns
+- Persistent task status
+- Pull-to-refresh support
+- Mobile optimized interactions
+
+---
+
+## Task Management
+
+Each task contains important project information.
+
+Users can:
+
+- Create tasks
+- Update task status
+- Delete tasks
+- Add descriptions
+- Set priority levels
+- Assign due dates
+
+Priority levels include:
+
+- Low
+- Normal
+- High
+
+Native mobile components are used for features such as date selection to provide a familiar Android experience.
+
+---
+
+## Due Date Tracking
+
+PrinceBoard Mobile provides visual task deadlines.
+
+Features include:
+
+- Overdue task detection
+- Upcoming deadline indicators
+- Due dates displayed directly on task cards
+
+This helps users quickly identify important deadlines while managing projects.
+
+---
+
+## Team Management
+
+Create and manage project collaborators.
+
+Features include:
+
+- Create team members
+- Delete team members
+- Assign multiple members to tasks
+- Display assigned users through avatars
+
+---
+
+## Labels
+
+Tasks can be organized using customizable labels.
+
+Examples:
+
+- Bug
+- Feature
+- Backend
+- UI
+- Design
+
+Label functionality includes:
+
+- Creating custom labels
+- Removing labels
+- Assigning multiple labels to tasks
+- Color-coded categorization
+
+---
+
+## Comments
+
+Every task includes a discussion area.
+
+Users can:
+
+- Add comments
+- View previous discussions
+- Track conversations chronologically
+
+This allows collaboration directly within individual tasks.
+
+---
+
+## Activity Timeline
+
+The application automatically records important task events.
+
+Examples:
+
+- Task created
+- Task status changed
+- Members assigned
+- Labels updated
+- Comments added
+
+The activity timeline provides visibility into project changes over time.
+
+---
+
+## Search and Filtering
+
+Users can quickly find relevant tasks.
+
+Features include:
+
+- Search tasks by title
+- Filter by priority
+- Filter by labels
+
+---
+
+# Authentication & Security
+
+PrinceBoard Mobile uses Supabase Authentication with anonymous guest accounts.
+
+Features include:
+
+- Instant guest onboarding
+- Persistent user sessions
+- Secure cloud storage
+- User-specific data access
+
+Supabase Row Level Security policies ensure users can only access their own workspace data.
+
+---
+
+# Tech Stack
+
+## Mobile Frontend
+
+- React Native
+- Expo
+- TypeScript
+
+## Backend
+
+- Supabase
+- PostgreSQL
+
+## State Management
+
+- Zustand
+
+## Navigation
+
+- React Navigation
+
+---
+
+# Application Architecture
+
+```text
+React Native Application
+          │
+          ▼
+React Navigation
+          │
+          ▼
+Zustand State Management
+          │
+          ▼
+Supabase Authentication
+          │
+          ▼
+PostgreSQL Database
+          │
+          ▼
+Row Level Security
+```

@@ -9,11 +9,15 @@ import bankapp from "../content/other/bankapp/meta.js";
 import vaultapp from "../content/other/vaultapp/meta.js";
 import emptyapp from "../content/other/empty-library/meta.js";
 import emojiapp from "../content/other/emoji-sweeper/meta.js";
+import pboard from "../content/other/princeboard/meta.js";
+import pboardapp from "../content/other/princeboardmobile/meta.js";
 import pastpaperapp from "../content/other/past-paper/meta.js";
 import dinogame from "../content/featured/neuro-run/meta.js";
 import eyescroll from "../content/featured/eyescroll/meta.js";
 const projects = {
   "ai-chatbot": aiChatbot,
+  princeboard: pboard,
+  "princeboard-mobile": pboardapp,
   weather: weather,
   "uber-clone-frontend": uberclone,
   "uber-clone-backend": uberbackend,
@@ -35,11 +39,13 @@ export const featuredProjects = [
   dinogame,
   americabound,
   uberclone,
-  shonabackend,
+  pboard,
 ];
 
 export const otherProjects = [
   shonafrontend,
+  shonabackend,
+  pboardapp,
   bankapp,
   vaultapp,
   emptyapp,

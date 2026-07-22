@@ -1,0 +1,301 @@
+# PrinceBoard
+
+A modern Kanban-style task management platform inspired by tools like **Linear**, **Asana**, and **Notion**.
+
+PrinceBoard helps individuals and teams organize work through drag-and-drop boards, task assignments, labels, comments, and activity tracking while providing secure cloud persistence through Supabase.
+
+---
+
+# Live Demo
+
+https://princeboard-tau.vercel.app/
+
+---
+
+# Overview
+
+PrinceBoard is a full-stack project management application built to explore how modern collaboration platforms manage tasks, users, and workflows.
+
+The application combines a responsive React frontend with Supabase authentication, PostgreSQL storage, and Row Level Security to provide each user with an isolated workspace.
+
+Rather than simply displaying task cards, PrinceBoard focuses on solving real engineering problems including authentication, authorization, drag-and-drop state synchronization, relational database design, and scalable content management.
+
+---
+
+# Features
+
+## Kanban Board
+
+Organize work visually using an interactive Kanban board.
+
+Default workflow:
+
+- To Do
+- In Progress
+- In Review
+- Done
+
+Features include:
+
+- Drag-and-drop task movement
+- Persistent task status
+- Smooth animations
+- Real-time UI updates
+
+---
+
+## Guest Authentication
+
+Users can begin using the application immediately.
+
+Features:
+
+- Anonymous authentication
+- Automatic workspace creation
+- Persistent sessions
+- Secure cloud storage
+
+Supabase Authentication handles account creation without requiring email or password registration.
+
+---
+
+## Row Level Security
+
+Every user receives an isolated workspace.
+
+Supabase Row Level Security (RLS) policies ensure:
+
+- Users only access their own tasks
+- Private workspaces remain secure
+- Database-level authorization enforcement
+
+---
+
+## Task Management
+
+Each task supports:
+
+- Title
+- Description
+- Priority
+- Due date
+- Status
+- Labels
+- Assigned members
+
+Changes persist automatically through Supabase.
+
+---
+
+## Team Management
+
+Create collaborative workspaces by adding team members.
+
+Features include:
+
+- Member creation
+- Avatar color customization
+- Task assignments
+- Assigned user display on cards
+
+---
+
+## Labels
+
+Tasks can be categorized using customizable labels.
+
+Examples:
+
+- Bug
+- Feature
+- Backend
+- UI
+- Design
+
+Labels support:
+
+- Multiple assignments
+- Color coding
+- Task filtering
+
+---
+
+## Comments
+
+Each task includes its own discussion thread.
+
+Users can:
+
+- Add comments
+- View conversation history
+- Track collaboration within individual tasks
+
+---
+
+## Activity Timeline
+
+Task history is recorded automatically.
+
+Examples include:
+
+- Task created
+- Status changed
+- Member assigned
+- Comment added
+
+Providing a complete audit trail of project activity.
+
+---
+
+# Tech Stack
+
+Frontend
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+
+Backend
+
+- Supabase
+- PostgreSQL
+
+Libraries
+
+- React Router
+- dnd-kit
+- Zustand (if used)
+
+---
+
+# Architecture
+
+```text
+React Frontend
+       │
+       ▼
+React Router
+       │
+       ▼
+Supabase Authentication
+       │
+       ▼
+PostgreSQL Database
+       │
+       ▼
+Row Level Security
+```
+
+The architecture separates presentation, authentication, and persistence while keeping business logic modular and scalable.
+
+---
+
+# ️ Database Design
+
+PrinceBoard uses a relational PostgreSQL database.
+
+Core entities include:
+
+- Users
+- Tasks
+- Labels
+- Team Members
+- Comments
+- Activity History
+
+Relationships are maintained through linking tables, enabling many-to-many associations such as task labels and task assignees.
+
+---
+
+# Challenges Solved
+
+Developing PrinceBoard involved solving several common problems found in collaborative software.
+
+### Drag-and-Drop Synchronization
+
+Ensured task movement remained synchronized between UI state and persistent database storage.
+
+### Secure Multi-Tenant Data
+
+Implemented Row Level Security to isolate user workspaces and prevent unauthorized data access.
+
+### Relational Data Modeling
+
+Designed database relationships supporting labels, assignees, comments, and activity logs while maintaining data consistency.
+
+### Guest Authentication
+
+Created a frictionless onboarding experience using anonymous authentication while preserving persistent workspaces.
+
+### Scalable Content Management
+
+Separated project metadata and content to simplify future expansion and maintenance.
+
+---
+
+# What This Project Demonstrates
+
+PrinceBoard showcases experience in:
+
+- Full-stack web development
+- Authentication systems
+- Authorization with Row Level Security
+- PostgreSQL relational database design
+- Modern React architecture
+- Drag-and-drop interfaces
+- State management
+- CRUD application design
+- Team collaboration workflows
+- Responsive UI development
+
+---
+
+# Future Improvements
+
+Potential enhancements include:
+
+- Real-time collaboration
+- Live notifications
+- File attachments
+- Workspace invitations
+- Calendar view
+- Sprint planning
+- Markdown task descriptions
+- Search across projects
+- Dashboard analytics
+
+---
+
+# Why This Project Matters
+
+Modern software teams depend on project management platforms to coordinate work efficiently.
+
+PrinceBoard explores the engineering concepts behind those platforms by implementing authentication, authorization, relational data modeling, and intuitive task management workflows within a production-style application.
+
+The project demonstrates the ability to design software that is not only functional but also scalable, maintainable, and user-focused.
+
+---
+
+# Key Skills Demonstrated
+
+- React
+- TypeScript
+- PostgreSQL
+- Supabase
+- Authentication
+- Row Level Security
+- Database Design
+- State Management
+- Drag-and-Drop Interfaces
+- Full-Stack Architecture
+- Responsive Design
+- CRUD Systems
+
+---
+
+# Summary
+
+PrinceBoard is a full-stack Kanban project management platform that combines modern React development with secure cloud persistence, relational database design, and collaborative workflows.
+
+The project demonstrates the engineering principles behind production project management tools while showcasing scalable frontend and backend architecture.
