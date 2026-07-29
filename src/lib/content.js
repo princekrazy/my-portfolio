@@ -14,6 +14,8 @@ import pboardapp from "../content/other/princeboardmobile/meta.js";
 import pastpaperapp from "../content/other/past-paper/meta.js";
 import dinogame from "../content/featured/neuro-run/meta.js";
 import eyescroll from "../content/featured/eyescroll/meta.js";
+import tvapp from "../content/other/tvmatchalert/meta.js";
+import tvbackend from "../content/other/tvmatchalert-backend/meta.js";
 const projects = {
   "ai-chatbot": aiChatbot,
   princeboard: pboard,
@@ -31,11 +33,13 @@ const projects = {
   "past-paper-helper": pastpaperapp,
   neurorun: dinogame,
   eyescroll: eyescroll,
+  "tv-match-alert": tvapp,
+  "tv-match-alert-backend": tvbackend,
 };
 
 export const featuredProjects = [
   eyescroll,
-  uberbackend,
+  tvapp,
   dinogame,
   americabound,
   uberclone,
@@ -44,6 +48,8 @@ export const featuredProjects = [
 
 export const otherProjects = [
   shonafrontend,
+  uberbackend,
+  tvbackend,
   shonabackend,
   pboardapp,
   bankapp,

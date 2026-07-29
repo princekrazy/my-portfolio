@@ -1,0 +1,205 @@
+# TV Match Alert
+
+An Android TV application built with **Kotlin**, **Jetpack Compose**, and **Socket.IO** that keeps football fans informed without interrupting their viewing experience.
+
+TV Match Alert allows users to follow their favorite Premier League teams and receive small overlay notifications whenever a selected match begins or resumes after halftime—even while watching Netflix, YouTube, or external HDMI sources.
+
+---
+
+# Overview
+
+TV Match Alert was designed to solve a common problem for football fans: missing kickoff while watching other content on their television.
+
+Rather than requiring users to constantly check scores or switch between apps, the application displays lightweight overlay notifications directly over the current screen whenever an important match event occurs.
+
+The Android TV client communicates with a custom Node.js backend through Socket.IO to receive real-time notifications while maintaining a simple and responsive user experience.
+
+---
+
+# Features
+
+## Team Selection
+
+Users can choose the Premier League clubs they wish to follow.
+
+Features include:
+
+- Team selection interface
+- Local persistence
+- Quick updates to followed teams
+
+---
+
+## Real-Time Notifications
+
+Receive notifications when important match events occur.
+
+Current supported events:
+
+- Match kickoff
+- Second-half kickoff
+
+Notifications appear as small overlay cards that automatically disappear after five seconds.
+
+---
+
+## Overlay System
+
+Unlike standard Android notifications, TV Match Alert displays notifications over virtually any content.
+
+Supported scenarios include:
+
+- Netflix
+- YouTube
+- Disney+
+- HDMI inputs
+- Live TV
+
+The overlay remains unobtrusive while ensuring users never miss important match events.
+
+---
+
+## Background Tracking
+
+The application continues listening for match events even when running in the background.
+
+Features include:
+
+- Foreground service
+- Automatic Socket.IO reconnection
+- Lightweight background processing
+
+---
+
+# Tech Stack
+
+## Mobile
+
+- Kotlin
+- Jetpack Compose
+- Material 3
+
+## Communication
+
+- Socket.IO
+
+## Android APIs
+
+- Foreground Services
+- WindowManager Overlay API
+
+---
+
+# Application Architecture
+
+```text
+Android TV Application
+          │
+          ▼
+Socket.IO Client
+          │
+          ▼
+TV Match Alert Backend
+          │
+          ▼
+Football Data API
+```
+
+The architecture separates the Android client from backend scheduling logic, allowing the television application to remain lightweight while receiving live notifications.
+
+---
+
+# User Flow
+
+1. Select teams to follow.
+2. Team selections are stored locally.
+3. The application connects to the backend using Socket.IO.
+4. When a scheduled match event occurs, an overlay notification appears.
+5. The notification automatically dismisses after five seconds.
+
+---
+
+# Challenges Solved
+
+## Android TV Development
+
+Designed a television-focused interface using Jetpack Compose while following Android TV interaction patterns.
+
+---
+
+## Overlay Notifications
+
+Implemented system overlays capable of appearing above streaming applications and HDMI sources using Android's WindowManager APIs.
+
+---
+
+## Real-Time Communication
+
+Integrated Socket.IO to receive low-latency notifications without repeatedly polling the backend.
+
+---
+
+## Background Execution
+
+Maintained a persistent connection using Android foreground services while minimizing resource usage.
+
+---
+
+# What This Project Demonstrates
+
+TV Match Alert showcases experience with:
+
+- Android TV development
+- Kotlin
+- Jetpack Compose
+- Socket.IO
+- Foreground Services
+- Overlay window management
+- Mobile networking
+- Real-time applications
+- Client-server architecture
+
+---
+
+# Future Improvements
+
+Planned enhancements include:
+
+- Goal notifications
+- Red card notifications
+- Penalty notifications
+- Multiple competitions
+- Live score overlays
+- Match countdowns
+- Automatic startup after TV boot
+- LG webOS support
+
+---
+
+# Why This Project Matters
+
+Television applications often have limited multitasking capabilities, making it easy for users to miss live sporting events.
+
+TV Match Alert demonstrates how Android TV APIs, real-time communication, and backend scheduling can be combined to create a seamless second-screen experience without interrupting entertainment.
+
+---
+
+# Key Skills Demonstrated
+
+- Kotlin
+- Jetpack Compose
+- Android TV
+- Material 3
+- Socket.IO
+- Foreground Services
+- WindowManager
+- Real-Time Networking
+- Mobile Architecture
+
+---
+
+# Summary
+
+TV Match Alert is an Android TV application that delivers real-time football notifications directly over streaming apps and HDMI inputs using overlay technology and Socket.IO communication.
+
+The project demonstrates Android TV development, real-time networking, and user-focused application design.

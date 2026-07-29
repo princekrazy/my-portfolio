@@ -17,7 +17,7 @@ export default {
   ],
 
   github: "https://github.com/princekrazy/shona-translation-ai", // add repo if available
-  live: "https://shona-translation-ai.onrender.com",
+  live: "https://shona-translation-ai-4p67.onrender.com",
 
   featured: false,
 

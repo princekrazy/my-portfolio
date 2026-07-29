@@ -1,0 +1,239 @@
+# TV Match Alert Backend
+
+A Node.js backend responsible for scheduling football match notifications and delivering them to connected Android TV devices in real time.
+
+Rather than continuously polling live matches, the backend minimizes API usage by retrieving fixtures once each day and scheduling notifications locally.
+
+---
+
+# Overview
+
+The TV Match Alert Backend powers the Android TV application by coordinating football match schedules and delivering real-time notifications through Socket.IO.
+
+The system was designed with API efficiency as a primary objective, ensuring the application remains compatible with free API usage limits while still providing timely notifications.
+
+Instead of checking every match continuously, the backend intelligently schedules notifications based on each day's fixtures.
+
+---
+
+# Features
+
+## Daily Fixture Scheduling
+
+Each day the backend:
+
+- Retrieves today's fixtures
+- Identifies watched teams
+- Creates notification schedules
+- Avoids unnecessary API requests
+
+---
+
+## Real-Time Communication
+
+Connected Android TV devices receive notifications instantly using Socket.IO.
+
+Supported events include:
+
+- Match kickoff
+- Second-half kickoff
+
+---
+
+## Smart Team Tracking
+
+The backend only tracks fixtures involving teams selected by connected users.
+
+Benefits include:
+
+- Reduced API usage
+- Lower server workload
+- Faster scheduling
+
+---
+
+## Multi-Device Support
+
+Multiple Android TV devices can connect simultaneously.
+
+Each client receives notifications relevant to its selected teams.
+
+---
+
+# Tech Stack
+
+## Backend
+
+- Node.js
+- Express
+
+## Communication
+
+- Socket.IO
+
+## Scheduling
+
+- node-cron
+
+## Data
+
+- Axios
+- API-Football
+
+---
+
+# System Architecture
+
+```text
+Android TV
+      │
+      │ Socket.IO
+      ▼
+Node.js Backend
+      │
+      ▼
+Football API
+```
+
+The backend acts as an event scheduler between football data providers and connected Android TV clients.
+
+---
+
+# Notification Workflow
+
+1. Android TV connects to the backend.
+2. User selects favorite teams.
+3. Team subscriptions are stored in memory.
+4. A daily scheduler retrieves fixtures.
+5. Matches involving selected teams are scheduled.
+6. Kickoff notifications are emitted.
+7. After approximately one hour, the backend checks match status every two minutes.
+8. When the second half begins, another notification is sent.
+
+---
+
+# API Optimization Strategy
+
+A major engineering objective was minimizing Football API usage.
+
+Instead of continuously polling:
+
+```text
+00:00
+│
+├── Retrieve today's fixtures
+│
+├── Any watched teams playing?
+│       │
+│       ├── No → Stop
+│       │
+│       └── Yes
+│
+├── Schedule kickoff timers
+│
+├── Send kickoff notification
+│
+└── After 60 minutes
+        │
+        └── Check every 2 minutes until second half begins
+```
+
+This scheduling strategy dramatically reduces unnecessary API requests while maintaining accurate notifications.
+
+---
+
+# Challenges Solved
+
+## API Rate Limits
+
+Designed an event scheduling system that remains within free-tier Football API limits.
+
+---
+
+## Real-Time Event Delivery
+
+Implemented Socket.IO communication between the backend and Android TV clients.
+
+---
+
+## Job Scheduling
+
+Used node-cron and JavaScript timers to coordinate notifications throughout the day.
+
+---
+
+## Scalability
+
+Separated scheduling logic from client communication, making it easier to support additional users and competitions in the future.
+
+---
+
+# Deployment
+
+The backend is designed as a long-running Node.js service.
+
+Compatible deployment platforms include:
+
+- Render
+- Railway
+- Fly.io
+
+---
+
+# What This Project Demonstrates
+
+The backend showcases experience with:
+
+- Node.js
+- Express
+- Socket.IO
+- API integration
+- Cron scheduling
+- Event-driven architecture
+- Backend optimization
+- Real-time systems
+- Server deployment
+
+---
+
+# Future Improvements
+
+Potential enhancements include:
+
+- Database-backed subscriptions
+- User authentication
+- Redis job scheduling
+- Goal notifications
+- Match postponement detection
+- Push notifications
+- Multiple competitions
+- Administrative dashboard
+
+---
+
+# Why This Project Matters
+
+Building real-time applications often requires balancing responsiveness with external API limitations.
+
+This project demonstrates how intelligent scheduling, event-driven communication, and efficient backend architecture can provide timely notifications while minimizing infrastructure costs.
+
+---
+
+# Key Skills Demonstrated
+
+- Node.js
+- Express
+- Socket.IO
+- Axios
+- node-cron
+- REST API Integration
+- Event-Driven Systems
+- Scheduling Algorithms
+- Backend Architecture
+- Deployment
+
+---
+
+# Summary
+
+TV Match Alert Backend is a real-time Node.js notification server that intelligently schedules football match events and delivers them to Android TV devices using Socket.IO while minimizing external API usage through efficient scheduling techniques.
