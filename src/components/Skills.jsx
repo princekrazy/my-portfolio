@@ -2,9 +2,18 @@
 
 const skills = {
   Frontend: ["React", "Next.js", "React Native", "TypeScript", "Tauri"],
-  Backend: ["Node.js", "Laravel", "FastAPI", "REST APIs"],
-  Languages: ["Java", "Python", "Rust", "TypeScript", "Javascript", "C++"],
-  Database: ["MySQL"],
+  Backend: ["Node.js", "Laravel", "FastAPI", "REST APIs", "Express.js"],
+  Languages: [
+    "Java",
+    "Python",
+    "Rust",
+    "TypeScript",
+    "Javascript",
+    "C++",
+    "Kotlin",
+    "PHP",
+  ],
+  Tools: ["MySQL", "PostgreSQL", "Redis", "Docker", "AWS", "Linux", "Github"],
 };
 
 export default function Skills() {
