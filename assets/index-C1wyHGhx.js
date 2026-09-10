@@ -2432,7 +2432,362 @@ Player Movement
 `,(0,Q.jsx)(t.hr,{}),`
 `,(0,Q.jsx)(t.h1,{children:`Summary`}),`
 `,(0,Q.jsx)(t.p,{children:`EyeScroll is an AI-powered Android accessibility application that transforms eye gestures into navigation commands through real-time computer vision.`}),`
-`,(0,Q.jsx)(t.p,{children:`By integrating CameraX, MediaPipe, and Android Accessibility Services, the project demonstrates the design of responsive, privacy-first interaction systems that expand how users can interact with mobile devices.`})]})}function bm(e={}){let{wrapper:t}=e.components||{};return t?(0,Q.jsx)(t,{...e,children:(0,Q.jsx)(ym,{...e})}):ym(e)}var xm={id:`eyescroll`,title:`EyeScroll`,description:`A hands-free Android accessibility application that uses real-time eye tracking and MediaPipe to control scrolling across apps using eye gestures.`,tech:[`Kotlin`,`Android`,`Jetpack Compose`,`CameraX`,`MediaPipe`,`Computer Vision`,`Accessibility Services`,`Machine Learning`],github:`https://github.com/princekrazy/eyescroll`,live:`https://github.com/princekrazy/eyescroll/releases/tag/production`,featured:!0,content:bm};function Sm(e){let t={code:`code`,h1:`h1`,h2:`h2`,hr:`hr`,li:`li`,ol:`ol`,p:`p`,pre:`pre`,strong:`strong`,ul:`ul`,...e.components};return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(t.h1,{children:`TV Match Alert`}),`
+`,(0,Q.jsx)(t.p,{children:`By integrating CameraX, MediaPipe, and Android Accessibility Services, the project demonstrates the design of responsive, privacy-first interaction systems that expand how users can interact with mobile devices.`})]})}function bm(e={}){let{wrapper:t}=e.components||{};return t?(0,Q.jsx)(t,{...e,children:(0,Q.jsx)(ym,{...e})}):ym(e)}var xm={id:`eyescroll`,title:`EyeScroll`,description:`A hands-free Android accessibility application that uses real-time eye tracking and MediaPipe to control scrolling across apps using eye gestures.`,tech:[`Kotlin`,`Android`,`Jetpack Compose`,`CameraX`,`MediaPipe`,`Computer Vision`,`Accessibility Services`,`Machine Learning`],github:`https://github.com/princekrazy/eyescroll`,live:`https://github.com/princekrazy/eyescroll/releases/tag/production`,featured:!0,content:bm};function Sm(e){let t={blockquote:`blockquote`,code:`code`,h1:`h1`,h2:`h2`,hr:`hr`,li:`li`,ol:`ol`,p:`p`,pre:`pre`,strong:`strong`,ul:`ul`,...e.components};return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(t.h1,{children:`FocusScroll`}),`
+`,(0,Q.jsx)(t.p,{children:`A distraction-free Android application that blocks Instagram Reels and YouTube Shorts while preserving access to messaging, profiles, search, subscriptions, and regular videos.`}),`
+`,(0,Q.jsx)(t.p,{children:`FocusScroll is an Android application designed to reduce mindless short-form content consumption without completely blocking social media applications. Using Android Accessibility Services, FocusScroll analyzes the accessibility hierarchy of Instagram and YouTube and identifies when the user enters short-form video content.`}),`
+`,(0,Q.jsx)(t.p,{children:`When a Reel or Short is detected, FocusScroll automatically navigates back to the previous screen.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Overview`}),`
+`,(0,Q.jsx)(t.p,{children:`Social media applications provide useful communication and information tools, but their short-form video feeds are designed around continuous consumption.`}),`
+`,(0,Q.jsx)(t.p,{children:`FocusScroll explores a middle ground between completely blocking social media and allowing unrestricted access.`}),`
+`,(0,Q.jsx)(t.p,{children:`The application allows users to continue using useful functionality such as:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Instagram Direct Messages`}),`
+`,(0,Q.jsx)(t.li,{children:`Instagram profiles`}),`
+`,(0,Q.jsx)(t.li,{children:`Instagram posts`}),`
+`,(0,Q.jsx)(t.li,{children:`YouTube search`}),`
+`,(0,Q.jsx)(t.li,{children:`YouTube subscriptions`}),`
+`,(0,Q.jsx)(t.li,{children:`Individual YouTube videos`}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`While specifically blocking:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Instagram Reels`}),`
+`,(0,Q.jsx)(t.li,{children:`YouTube Shorts`}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`Rather than modifying or replacing the original applications, FocusScroll operates alongside them using Android's Accessibility Service API.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Features`}),`
+`,(0,Q.jsx)(t.h2,{children:`Instagram Reel Blocking`}),`
+`,(0,Q.jsx)(t.p,{children:`FocusScroll detects when Instagram displays a Reel by analyzing accessibility content descriptions exposed by the application.`}),`
+`,(0,Q.jsx)(t.p,{children:`Instagram Reel playback screens currently expose descriptions following a pattern similar to:`}),`
+`,(0,Q.jsx)(t.pre,{children:(0,Q.jsx)(t.code,{className:`language-text`,children:`Reel by username. Double tap to play or pause.
+`})}),`
+`,(0,Q.jsx)(t.p,{children:`FocusScroll searches the accessibility hierarchy for this pattern rather than relying on a specific username or hardcoded Reel.`}),`
+`,(0,Q.jsx)(t.p,{children:`When detected, the service automatically navigates back.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`YouTube Shorts Blocking`}),`
+`,(0,Q.jsx)(t.p,{children:`YouTube Shorts are detected using accessibility information exposed by the Shorts interface.`}),`
+`,(0,Q.jsx)(t.p,{children:`A Shorts screen currently contains a button with a content description similar to:`}),`
+`,(0,Q.jsx)(t.pre,{children:(0,Q.jsx)(t.code,{className:`language-text`,children:`Remix
+`})}),`
+`,(0,Q.jsxs)(t.p,{children:[`FocusScroll recursively searches the accessibility hierarchy for an Android button whose content description matches `,(0,Q.jsx)(t.code,{children:`Remix`}),`.`]}),`
+`,(0,Q.jsxs)(t.p,{children:[`This approach is more specific than simply searching for the word `,(0,Q.jsx)(t.code,{children:`Shorts`}),`, since `,(0,Q.jsx)(t.code,{children:`Shorts`}),` can also appear in normal YouTube navigation.`]}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`Preserving Useful Content`}),`
+`,(0,Q.jsx)(t.p,{children:`FocusScroll is intentionally selective.`}),`
+`,(0,Q.jsx)(t.p,{children:`It does not attempt to block the entire Instagram or YouTube application.`}),`
+`,(0,Q.jsx)(t.p,{children:`Users can still:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Send and receive Instagram messages`}),`
+`,(0,Q.jsx)(t.li,{children:`View profiles`}),`
+`,(0,Q.jsx)(t.li,{children:`View regular posts`}),`
+`,(0,Q.jsx)(t.li,{children:`Search YouTube`}),`
+`,(0,Q.jsx)(t.li,{children:`Browse subscriptions`}),`
+`,(0,Q.jsx)(t.li,{children:`Watch individual YouTube videos`}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`The objective is to remove the infinite short-form feed while preserving intentional use of the platforms.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Tech Stack`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Kotlin`}),`
+`,(0,Q.jsx)(t.li,{children:`Android SDK`}),`
+`,(0,Q.jsx)(t.li,{children:`Jetpack Compose`}),`
+`,(0,Q.jsx)(t.li,{children:`Material 3`}),`
+`,(0,Q.jsx)(t.li,{children:`Android Accessibility Services`}),`
+`,(0,Q.jsx)(t.li,{children:`AccessibilityNodeInfo`}),`
+`,(0,Q.jsx)(t.li,{children:`Gradle`}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`No backend, database, authentication system, or cloud service is required.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Architecture`}),`
+`,(0,Q.jsx)(t.pre,{children:(0,Q.jsx)(t.code,{className:`language-text`,children:`                    Android System\r
+                          │\r
+                          ▼\r
+               Accessibility Events\r
+                          │\r
+                          ▼\r
+              FocusScrollAccessibilityService\r
+                          │\r
+              ┌───────────┴───────────┐\r
+              │                       │\r
+              ▼                       ▼\r
+        Instagram                 YouTube\r
+              │                       │\r
+              ▼                       ▼\r
+       Accessibility Tree      Accessibility Tree\r
+              │                       │\r
+              ▼                       ▼\r
+       Reel Detection           Shorts Detection\r
+              │                       │\r
+              └───────────┬───────────┘\r
+                          │\r
+                    Content Detected\r
+                          │\r
+                          ▼\r
+                 GLOBAL_ACTION_BACK\r
+                          │\r
+                          ▼\r
+                   Previous Screen
+`})}),`
+`,(0,Q.jsx)(t.p,{children:`The application separates platform detection from content detection, allowing Instagram and YouTube to use different detection strategies while sharing the same accessibility service.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`How It Works`}),`
+`,(0,Q.jsx)(t.h2,{children:`1. Accessibility Service Receives Events`}),`
+`,(0,Q.jsx)(t.p,{children:`The Android system sends accessibility events whenever the UI changes, including events related to:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Window changes`}),`
+`,(0,Q.jsx)(t.li,{children:`Content changes`}),`
+`,(0,Q.jsx)(t.li,{children:`Scrolling`}),`
+`]}),`
+`,(0,Q.jsxs)(t.p,{children:[`FocusScroll listens for these events through its `,(0,Q.jsx)(t.code,{children:`AccessibilityService`}),`.`]}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`2. Identify the Active Application`}),`
+`,(0,Q.jsx)(t.p,{children:`The service checks the package name associated with the current accessibility event.`}),`
+`,(0,Q.jsx)(t.p,{children:`FocusScroll currently monitors:`}),`
+`,(0,Q.jsx)(t.pre,{children:(0,Q.jsx)(t.code,{className:`language-text`,children:`com.instagram.android\r
+com.google.android.youtube
+`})}),`
+`,(0,Q.jsx)(t.p,{children:`Other applications are ignored.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`3. Retrieve the Accessibility Tree`}),`
+`,(0,Q.jsx)(t.p,{children:`FocusScroll accesses the currently visible UI through:`}),`
+`,(0,Q.jsx)(t.pre,{children:(0,Q.jsx)(t.code,{className:`language-kotlin`,children:`rootInActiveWindow
+`})}),`
+`,(0,Q.jsx)(t.p,{children:`This produces an accessibility node hierarchy representing elements currently exposed by the application.`}),`
+`,(0,Q.jsx)(t.p,{children:`Each node can contain information such as:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Class name`}),`
+`,(0,Q.jsx)(t.li,{children:`Text`}),`
+`,(0,Q.jsx)(t.li,{children:`Content description`}),`
+`,(0,Q.jsx)(t.li,{children:`View ID`}),`
+`,(0,Q.jsx)(t.li,{children:`Clickable state`}),`
+`,(0,Q.jsx)(t.li,{children:`Scrollable state`}),`
+`,(0,Q.jsx)(t.li,{children:`Child nodes`}),`
+`]}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`4. Detect Instagram Reels`}),`
+`,(0,Q.jsx)(t.p,{children:`For Instagram, FocusScroll recursively traverses the accessibility hierarchy looking for a content description that:`}),`
+`,(0,Q.jsxs)(t.ol,{children:[`
+`,(0,Q.jsxs)(t.li,{children:[`Starts with `,(0,Q.jsx)(t.code,{children:`Reel by`})]}),`
+`,(0,Q.jsxs)(t.li,{children:[`Contains `,(0,Q.jsx)(t.code,{children:`Double tap to play or pause`})]}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`Conceptually:`}),`
+`,(0,Q.jsx)(t.pre,{children:(0,Q.jsx)(t.code,{className:`language-kotlin`,children:`if (\r
+    description.startsWith("Reel by ", ignoreCase = true) &&\r
+    description.contains(\r
+        "Double tap to play or pause",\r
+        ignoreCase = true\r
+    )\r
+) {\r
+    return true\r
+}
+`})}),`
+`,(0,Q.jsx)(t.p,{children:`This allows the detector to work across different Reel creators without depending on a specific account.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`5. Detect YouTube Shorts`}),`
+`,(0,Q.jsxs)(t.p,{children:[`For YouTube, FocusScroll searches for an accessibility button whose content description is `,(0,Q.jsx)(t.code,{children:`Remix`}),`.`]}),`
+`,(0,Q.jsx)(t.p,{children:`Conceptually:`}),`
+`,(0,Q.jsx)(t.pre,{children:(0,Q.jsx)(t.code,{className:`language-kotlin`,children:`if (\r
+    node.className?.toString() == "android.widget.Button" &&\r
+    description.equals("Remix", ignoreCase = true)\r
+) {\r
+    return true\r
+}
+`})}),`
+`,(0,Q.jsx)(t.p,{children:`The detector recursively checks child nodes because the relevant button can exist deep inside the accessibility hierarchy.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`6. Block the Content`}),`
+`,(0,Q.jsx)(t.p,{children:`When short-form content is detected, FocusScroll uses Android's global accessibility action:`}),`
+`,(0,Q.jsx)(t.pre,{children:(0,Q.jsx)(t.code,{className:`language-kotlin`,children:`performGlobalAction(GLOBAL_ACTION_BACK)
+`})}),`
+`,(0,Q.jsx)(t.p,{children:`This returns the user to the previous screen instead of allowing the short-form feed to continue.`}),`
+`,(0,Q.jsx)(t.p,{children:`A short cooldown prevents repeated accessibility events from triggering multiple back actions in rapid succession.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Detection Pipeline`}),`
+`,(0,Q.jsx)(t.pre,{children:(0,Q.jsx)(t.code,{className:`language-text`,children:`Accessibility Event\r
+        │\r
+        ▼\r
+Identify Package\r
+        │\r
+        ├───────────────┐\r
+        ▼               ▼\r
+   Instagram         YouTube\r
+        │               │\r
+        ▼               ▼\r
+ Search for          Search for\r
+ "Reel by..."        "Remix" Button\r
+        │               │\r
+        └───────┬───────┘\r
+                ▼\r
+          Content Found?\r
+             /       \\\r
+           No         Yes\r
+           │           │\r
+           ▼           ▼\r
+       Do Nothing   Go Back
+`})}),`
+`,(0,Q.jsx)(t.p,{children:`This creates a lightweight detection pipeline without requiring computer vision, screen recording, or a backend.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Accessibility Service`}),`
+`,(0,Q.jsxs)(t.p,{children:[`The core of FocusScroll is an Android `,(0,Q.jsx)(t.code,{children:`AccessibilityService`}),`.`]}),`
+`,(0,Q.jsx)(t.p,{children:`The service is configured to receive events including:`}),`
+`,(0,Q.jsx)(t.pre,{children:(0,Q.jsx)(t.code,{className:`language-text`,children:`TYPE_WINDOW_STATE_CHANGED\r
+TYPE_WINDOW_CONTENT_CHANGED\r
+TYPE_VIEW_SCROLLED
+`})}),`
+`,(0,Q.jsx)(t.p,{children:`It also enables access to the window's accessibility hierarchy so that FocusScroll can inspect the UI structure exposed by Instagram and YouTube.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Why Accessibility Services?`}),`
+`,(0,Q.jsx)(t.p,{children:`Android Accessibility Services provide applications with a system-level interface for observing and interacting with accessible UI elements.`}),`
+`,(0,Q.jsx)(t.p,{children:`For FocusScroll, this makes it possible to:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Detect UI changes in third-party applications`}),`
+`,(0,Q.jsx)(t.li,{children:`Inspect accessibility nodes`}),`
+`,(0,Q.jsx)(t.li,{children:`Read content descriptions`}),`
+`,(0,Q.jsx)(t.li,{children:`Identify specific UI components`}),`
+`,(0,Q.jsx)(t.li,{children:`Perform global navigation actions`}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`This allows FocusScroll to work without modifying Instagram or YouTube themselves.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Challenges Solved`}),`
+`,(0,Q.jsx)(t.h2,{children:`Avoiding False Positives on YouTube`}),`
+`,(0,Q.jsxs)(t.p,{children:[`An early detection approach searched the entire YouTube screen for the word `,(0,Q.jsx)(t.code,{children:`Shorts`}),`.`]}),`
+`,(0,Q.jsxs)(t.p,{children:[`This produced false positives because `,(0,Q.jsx)(t.code,{children:`Shorts`}),` also appears in YouTube's normal navigation.`]}),`
+`,(0,Q.jsxs)(t.p,{children:[`The solution was to identify a more specific UI characteristic of the Shorts interface: the `,(0,Q.jsx)(t.code,{children:`Remix`}),` accessibility button.`]}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`Identifying Instagram Reels`}),`
+`,(0,Q.jsx)(t.p,{children:`Instagram does not expose the same accessibility signals as YouTube.`}),`
+`,(0,Q.jsxs)(t.p,{children:[`Instead of looking for a `,(0,Q.jsx)(t.code,{children:`Remix`}),` button, FocusScroll analyzes accessibility descriptions associated with Reel playback.`]}),`
+`,(0,Q.jsx)(t.p,{children:`The pattern:`}),`
+`,(0,Q.jsx)(t.pre,{children:(0,Q.jsx)(t.code,{className:`language-text`,children:`Reel by [username]. Double tap to play or pause.
+`})}),`
+`,(0,Q.jsx)(t.p,{children:`provided a more reliable signal for identifying Reel screens.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`Handling Frequent Accessibility Events`}),`
+`,(0,Q.jsx)(t.p,{children:`Accessibility services can receive many events for a single UI transition.`}),`
+`,(0,Q.jsx)(t.p,{children:`Without protection, the service could repeatedly execute the back action.`}),`
+`,(0,Q.jsx)(t.p,{children:`FocusScroll therefore implements a cooldown between blocking actions to prevent repeated triggers.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h2,{children:`Recursive Accessibility Tree Traversal`}),`
+`,(0,Q.jsx)(t.p,{children:`The relevant UI element may not exist at the root of the accessibility hierarchy.`}),`
+`,(0,Q.jsx)(t.p,{children:`FocusScroll recursively traverses child nodes to locate detection signals regardless of their depth within the UI tree.`}),`
+`,(0,Q.jsx)(t.p,{children:`This makes the detectors less dependent on a fixed UI hierarchy.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Privacy`}),`
+`,(0,Q.jsx)(t.p,{children:`FocusScroll does not use a backend or upload accessibility information to a server.`}),`
+`,(0,Q.jsx)(t.p,{children:`The detection process occurs locally on the Android device.`}),`
+`,(0,Q.jsx)(t.p,{children:`The application does not require:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`User accounts`}),`
+`,(0,Q.jsx)(t.li,{children:`Cloud processing`}),`
+`,(0,Q.jsx)(t.li,{children:`A database`}),`
+`,(0,Q.jsx)(t.li,{children:`API keys`}),`
+`,(0,Q.jsx)(t.li,{children:`External servers`}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`The Accessibility Service is used specifically to detect supported short-form content and navigate away from it.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Project Structure`}),`
+`,(0,Q.jsx)(t.pre,{children:(0,Q.jsx)(t.code,{className:`language-text`,children:`app/\r
+├── src/\r
+│   └── main/\r
+│       ├── java/\r
+│       │   └── com/example/focusscroll/\r
+│       │       ├── MainActivity.kt\r
+│       │       └── FocusScrollAccessibilityService.kt\r
+│       │\r
+│       ├── res/\r
+│       │   ├── drawable/\r
+│       │   ├── mipmap/\r
+│       │   ├── values/\r
+│       │   └── xml/\r
+│       │       └── accessibility_service_config.xml\r
+│       │\r
+│       └── AndroidManifest.xml\r
+│\r
+└── build.gradle.kts
+`})}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Permissions`}),`
+`,(0,Q.jsx)(t.p,{children:`FocusScroll requires Android Accessibility Service access.`}),`
+`,(0,Q.jsx)(t.p,{children:`This permission allows the application to inspect accessibility information exposed by supported applications and perform global navigation actions.`}),`
+`,(0,Q.jsx)(t.p,{children:`The application does not require camera, location, storage, or notification permissions for its core functionality.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Current Limitations`}),`
+`,(0,Q.jsx)(t.p,{children:`FocusScroll is currently an MVP.`}),`
+`,(0,Q.jsx)(t.p,{children:`Because detection relies on accessibility information exposed by third-party applications, changes to Instagram or YouTube's UI may require updates to the detection logic.`}),`
+`,(0,Q.jsx)(t.p,{children:`Current scope:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Instagram Reels are blocked.`}),`
+`,(0,Q.jsx)(t.li,{children:`YouTube Shorts are blocked.`}),`
+`,(0,Q.jsx)(t.li,{children:`Instagram Explore is not currently blocked.`}),`
+`,(0,Q.jsx)(t.li,{children:`Instagram infinite scrolling is not currently limited.`}),`
+`,(0,Q.jsx)(t.li,{children:`YouTube recommendation feeds are not currently blocked.`}),`
+`,(0,Q.jsx)(t.li,{children:`Detection depends on accessibility information exposed by the current versions of Instagram and YouTube.`}),`
+`]}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Future Improvements`}),`
+`,(0,Q.jsx)(t.p,{children:`Potential improvements include:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Block Instagram Explore`}),`
+`,(0,Q.jsx)(t.li,{children:`Limit Instagram feed scrolling`}),`
+`,(0,Q.jsx)(t.li,{children:`Block YouTube Shorts shelves`}),`
+`,(0,Q.jsx)(t.li,{children:`Reduce YouTube recommendation rabbit holes`}),`
+`,(0,Q.jsx)(t.li,{children:`Configurable blocking rules`}),`
+`,(0,Q.jsx)(t.li,{children:`Usage statistics`}),`
+`,(0,Q.jsx)(t.li,{children:`Customizable cooldown periods`}),`
+`,(0,Q.jsx)(t.li,{children:`Improved detection across application updates`}),`
+`,(0,Q.jsx)(t.li,{children:`Settings dashboard`}),`
+`,(0,Q.jsx)(t.li,{children:`Temporary bypass option`}),`
+`,(0,Q.jsx)(t.li,{children:`Focus modes and schedules`}),`
+`]}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`What This Project Demonstrates`}),`
+`,(0,Q.jsx)(t.p,{children:`FocusScroll showcases experience in:`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Android development`}),`
+`,(0,Q.jsx)(t.li,{children:`Kotlin`}),`
+`,(0,Q.jsx)(t.li,{children:`Jetpack Compose`}),`
+`,(0,Q.jsx)(t.li,{children:`Android Accessibility APIs`}),`
+`,(0,Q.jsx)(t.li,{children:`Accessibility engineering`}),`
+`,(0,Q.jsx)(t.li,{children:`UI hierarchy analysis`}),`
+`,(0,Q.jsx)(t.li,{children:`Event-driven programming`}),`
+`,(0,Q.jsx)(t.li,{children:`Recursive tree traversal`}),`
+`,(0,Q.jsx)(t.li,{children:`Cross-application interaction`}),`
+`,(0,Q.jsx)(t.li,{children:`Mobile system services`}),`
+`,(0,Q.jsx)(t.li,{children:`Debugging third-party UI behavior`}),`
+`,(0,Q.jsx)(t.li,{children:`Privacy-focused application design`}),`
+`]}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Why This Project Matters`}),`
+`,(0,Q.jsx)(t.p,{children:`FocusScroll demonstrates a practical approach to solving a modern software problem without requiring control over the underlying platforms.`}),`
+`,(0,Q.jsx)(t.p,{children:`Instead of building another social media application, the project works at the system level to change how existing applications are used.`}),`
+`,(0,Q.jsx)(t.p,{children:`The most interesting part of the project is the detection problem: Instagram and YouTube expose different accessibility structures, requiring platform-specific heuristics rather than a single generic solution.`}),`
+`,(0,Q.jsx)(t.p,{children:`The project also demonstrates how Android system APIs can be combined with application-level logic to create tools that change user behavior while preserving access to useful functionality.`}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Key Skills Demonstrated`}),`
+`,(0,Q.jsxs)(t.ul,{children:[`
+`,(0,Q.jsx)(t.li,{children:`Android Development`}),`
+`,(0,Q.jsx)(t.li,{children:`Kotlin`}),`
+`,(0,Q.jsx)(t.li,{children:`Jetpack Compose`}),`
+`,(0,Q.jsx)(t.li,{children:`Accessibility Services`}),`
+`,(0,Q.jsx)(t.li,{children:`AccessibilityNodeInfo`}),`
+`,(0,Q.jsx)(t.li,{children:`UI Hierarchy Analysis`}),`
+`,(0,Q.jsx)(t.li,{children:`Event-Driven Systems`}),`
+`,(0,Q.jsx)(t.li,{children:`Recursive Algorithms`}),`
+`,(0,Q.jsx)(t.li,{children:`Mobile Application Development`}),`
+`,(0,Q.jsx)(t.li,{children:`Debugging`}),`
+`,(0,Q.jsx)(t.li,{children:`System-Level Android APIs`}),`
+`,(0,Q.jsx)(t.li,{children:`Privacy-Focused Engineering`}),`
+`]}),`
+`,(0,Q.jsx)(t.hr,{}),`
+`,(0,Q.jsx)(t.h1,{children:`Summary`}),`
+`,(0,Q.jsx)(t.p,{children:`FocusScroll is an Android productivity application that blocks Instagram Reels and YouTube Shorts while preserving access to useful social media functionality.`}),`
+`,(0,Q.jsx)(t.p,{children:`By combining Kotlin, Jetpack Compose, and Android Accessibility Services, the project demonstrates how system-level Android APIs can be used to selectively control third-party application experiences.`}),`
+`,(0,Q.jsx)(t.p,{children:`The core pipeline is:`}),`
+`,(0,Q.jsxs)(t.blockquote,{children:[`
+`,(0,Q.jsx)(t.p,{children:(0,Q.jsx)(t.strong,{children:`Accessibility Event → UI Hierarchy → Content Detection → Global Navigation Action`})}),`
+`]}),`
+`,(0,Q.jsx)(t.p,{children:`FocusScroll turns that pipeline into a practical tool for more intentional social media use.`})]})}function Cm(e={}){let{wrapper:t}=e.components||{};return t?(0,Q.jsx)(t,{...e,children:(0,Q.jsx)(Sm,{...e})}):Sm(e)}var wm={id:`focusscroll`,title:`FocusScroll`,description:`An Android productivity application that uses Accessibility Services to detect and block Instagram Reels and YouTube Shorts while preserving access to useful social media features.`,tech:[`Kotlin`,`Android`,`Jetpack Compose`,`Accessibility Services`,`AccessibilityNodeInfo`,`Android SDK`],github:`https://github.com/princekrazy/FocusScroll`,live:`https://github.com/princekrazy/FocusScroll/releases`,featured:!0,content:Cm};function Tm(e){let t={code:`code`,h1:`h1`,h2:`h2`,hr:`hr`,li:`li`,ol:`ol`,p:`p`,pre:`pre`,strong:`strong`,ul:`ul`,...e.components};return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(t.h1,{children:`TV Match Alert`}),`
 `,(0,Q.jsxs)(t.p,{children:[`An Android TV application built with `,(0,Q.jsx)(t.strong,{children:`Kotlin`}),`, `,(0,Q.jsx)(t.strong,{children:`Jetpack Compose`}),`, and `,(0,Q.jsx)(t.strong,{children:`Socket.IO`}),` that keeps football fans informed without interrupting their viewing experience.`]}),`
 `,(0,Q.jsx)(t.p,{children:`TV Match Alert allows users to follow their favorite Premier League teams and receive small overlay notifications whenever a selected match begins or resumes after halftime—even while watching Netflix, YouTube, or external HDMI sources.`}),`
 `,(0,Q.jsx)(t.hr,{}),`
@@ -2580,7 +2935,7 @@ Football Data API
 `,(0,Q.jsx)(t.hr,{}),`
 `,(0,Q.jsx)(t.h1,{children:`Summary`}),`
 `,(0,Q.jsx)(t.p,{children:`TV Match Alert is an Android TV application that delivers real-time football notifications directly over streaming apps and HDMI inputs using overlay technology and Socket.IO communication.`}),`
-`,(0,Q.jsx)(t.p,{children:`The project demonstrates Android TV development, real-time networking, and user-focused application design.`})]})}function Cm(e={}){let{wrapper:t}=e.components||{};return t?(0,Q.jsx)(t,{...e,children:(0,Q.jsx)(Sm,{...e})}):Sm(e)}var wm={id:`tv-match-alert`,title:`TV Match Alert`,description:`An Android TV application built with Kotlin and Jetpack Compose that displays real-time overlay notifications when selected football matches begin or resume after halftime, allowing fans to keep watching other content without missing kickoff.`,tech:[`Kotlin`,`Jetpack Compose`,`Android TV`,`Material 3`,`Socket.IO`,`Foreground Services`,`WindowManager Overlay API`],github:`https://github.com/princekrazy/TV-Match-Alert-App`,live:`https://github.com/princekrazy/TV-Match-Alert-App/releases/tag/production`,featured:!0,content:Cm};function Tm(e){let t={code:`code`,h1:`h1`,h2:`h2`,hr:`hr`,li:`li`,ol:`ol`,p:`p`,pre:`pre`,ul:`ul`,...e.components};return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(t.h1,{children:`TV Match Alert Backend`}),`
+`,(0,Q.jsx)(t.p,{children:`The project demonstrates Android TV development, real-time networking, and user-focused application design.`})]})}function Em(e={}){let{wrapper:t}=e.components||{};return t?(0,Q.jsx)(t,{...e,children:(0,Q.jsx)(Tm,{...e})}):Tm(e)}var Dm={id:`tv-match-alert`,title:`TV Match Alert`,description:`An Android TV application built with Kotlin and Jetpack Compose that displays real-time overlay notifications when selected football matches begin or resume after halftime, allowing fans to keep watching other content without missing kickoff.`,tech:[`Kotlin`,`Jetpack Compose`,`Android TV`,`Material 3`,`Socket.IO`,`Foreground Services`,`WindowManager Overlay API`],github:`https://github.com/princekrazy/TV-Match-Alert-App`,live:`https://github.com/princekrazy/TV-Match-Alert-App/releases/tag/production`,featured:!0,content:Em};function Om(e){let t={code:`code`,h1:`h1`,h2:`h2`,hr:`hr`,li:`li`,ol:`ol`,p:`p`,pre:`pre`,ul:`ul`,...e.components};return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(t.h1,{children:`TV Match Alert Backend`}),`
 `,(0,Q.jsx)(t.p,{children:`A Node.js backend responsible for scheduling football match notifications and delivering them to connected Android TV devices in real time.`}),`
 `,(0,Q.jsx)(t.p,{children:`Rather than continuously polling live matches, the backend minimizes API usage by retrieving fixtures once each day and scheduling notifications locally.`}),`
 `,(0,Q.jsx)(t.hr,{}),`
@@ -2755,4 +3110,4 @@ Football API
 `]}),`
 `,(0,Q.jsx)(t.hr,{}),`
 `,(0,Q.jsx)(t.h1,{children:`Summary`}),`
-`,(0,Q.jsx)(t.p,{children:`TV Match Alert Backend is a real-time Node.js notification server that intelligently schedules football match events and delivers them to Android TV devices using Socket.IO while minimizing external API usage through efficient scheduling techniques.`})]})}function Em(e={}){let{wrapper:t}=e.components||{};return t?(0,Q.jsx)(t,{...e,children:(0,Q.jsx)(Tm,{...e})}):Tm(e)}var Dm={id:`tv-match-alert-backend`,title:`TV Match Alert Backend`,description:`A Node.js backend that schedules football match notifications and delivers real-time updates to Android TV devices using Socket.IO while minimizing external API usage through intelligent scheduling.`,tech:[`Node.js`,`Express`,`Socket.IO`,`Axios`,`node-cron`,`API-Football`],github:`https://github.com/princekrazy/TV-Match-Alert-Backend`,live:`https://tv-match-alert-backend.onrender.com`,featured:!0,content:Em},Om={"ai-chatbot":Ap,princeboard:lm,"princeboard-mobile":fm,weather:zp,"uber-clone-frontend":Np,"uber-clone-backend":Ip,americabound:Hp,"shona-ai-translator":Gp,"shona-ai-translator-backend":Jp,"vault-app":em,"vault-manager-desktop":Zp,"the-empty-library":rm,"emoji-sweeper":om,"past-paper-helper":hm,neurorun:vm,eyescroll:xm,"tv-match-alert":wm,"tv-match-alert-backend":Dm},km=[xm,wm,vm,Hp,Np,lm],Am=[Gp,Ip,Dm,Jp,fm,Zp,em,rm,om,hm];function jm(e){return Om[e]}function Mm({project:e}){return(0,Q.jsxs)(`div`,{className:`border rounded-lg p-4 hover:shadow-md transition`,children:[(0,Q.jsxs)(zn,{to:`/projects/${e.id}`,className:`block`,children:[(0,Q.jsx)(`h3`,{className:`text-xl font-bold hover:underline`,children:e.title}),(0,Q.jsx)(`p`,{className:`text-gray-600 text-sm mt-1`,children:e.description}),(0,Q.jsx)(`div`,{className:`flex gap-2 mt-2 flex-wrap`,children:e.tech.map(e=>(0,Q.jsx)(`span`,{className:`text-xs bg-gray-200 text-black px-2 py-1 rounded`,children:e},e))})]}),(0,Q.jsxs)(`div`,{className:`flex gap-4 mt-3 text-sm`,children:[e.github&&(0,Q.jsx)(`a`,{href:e.github,target:`_blank`,rel:`noreferrer`,className:`text-blue-600`,children:`GitHub`}),e.live&&(0,Q.jsx)(`a`,{href:e.live,target:`_blank`,rel:`noreferrer`,className:`text-green-600`,children:`Live`})]})]})}function Nm(){return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(`h2`,{className:`text-2xl font-bold mb-4 bg-white text-black dark:bg-black dark:text-white`,children:`Featured Projects`}),(0,Q.jsx)(`div`,{className:`grid md:grid-cols-2 gap-4`,children:km.map(e=>(0,Q.jsx)(Mm,{project:e},e.id))})]})}function Pm(){return(0,Q.jsxs)(`section`,{className:`mt-10 bg-white text-black dark:bg-black dark:text-white`,children:[(0,Q.jsx)(`h2`,{className:`text-2xl font-bold mb-4`,children:`Other Projects`}),(0,Q.jsx)(`div`,{className:`space-y-3`,children:Am.map(e=>(0,Q.jsx)(Mm,{project:e},e.id))})]})}function Fm(){return localStorage.getItem(`theme`)||`light`}function Im(e){localStorage.setItem(`theme`,e),e===`dark`?document.documentElement.classList.add(`dark`):document.documentElement.classList.remove(`dark`)}function Lm(){let[e,t]=(0,w.useState)(`light`);(0,w.useEffect)(()=>{let e=Fm();t(e),Im(e)},[]);function n(){let n=e===`light`?`dark`:`light`;t(n),Im(n)}return(0,Q.jsx)(`button`,{onClick:n,className:`px-3 py-1 border rounded font-bold`,children:e===`light`?`Dark Mode`:`Light Mode`})}function Rm(){return{main:[{label:`Home`,path:`/`},{label:`Featured Projects`,path:`/#featured`},{label:`Other Projects`,path:`/#other`},{label:`Experience`,path:`/#experience`},{label:`Skills`,path:`/#skills`},{label:`Contact Me`,path:`/#contact`},{label:`About Me`,path:`/#about`},{label:`Download Resume`,path:`/#contact`},{label:`Filter Projects By Technologies`,path:`/projects`}],projects:[...km.map(e=>({label:e.title,path:`/projects/${e.id}`,featured:!0})),...Am.map(e=>({label:e.title,path:`/projects/${e.id}`,featured:!1}))]}}function zm(){let e=Rm();return xt(),(0,Q.jsxs)(`aside`,{className:`w-64 p-4 border-r min-h-screen bg-white text-black dark:bg-black dark:text-white`,children:[(0,Q.jsx)(`div`,{className:`mb-4 font-bold`,children:`Menu`}),(0,Q.jsx)(`nav`,{className:`flex flex-col gap-2 mb-6`,children:e.main.map(e=>e.path.includes(`#`)?(0,Q.jsx)(`a`,{href:e.path,onClick:t=>{t.preventDefault();let n=e.path.split(`#`)[1];document.getElementById(n)?.scrollIntoView({behavior:`smooth`}),window.history.pushState(null,``,e.path)},children:e.label},e.path):(0,Q.jsx)(zn,{to:e.path,children:e.label},e.path))}),(0,Q.jsx)(`div`,{className:`text-sm font-semibold mb-2`,children:`Projects`}),(0,Q.jsx)(`nav`,{className:`flex flex-col gap-1`,children:e.projects.map(e=>(0,Q.jsx)(zn,{to:e.path,className:`text-sm text-gray-600 hover:text-black`,children:e.label},e.path))})]})}function Bm({children:e}){return(0,Q.jsxs)(`div`,{className:`min-h-screen bg-white dark:bg-black dark:text-white flex flex-col`,children:[(0,Q.jsxs)(`header`,{className:`grid grid-cols-3 items-center p-4 border-b font-bold`,children:[(0,Q.jsx)(`div`,{children:`SOFTWARE ENGINEER`}),(0,Q.jsx)(`h1`,{className:`justify-self-center font-bold text-3xl`,children:`PRINCE KUVENGA`}),(0,Q.jsx)(`div`,{className:`justify-self-end`,children:(0,Q.jsx)(Lm,{})})]}),(0,Q.jsxs)(`div`,{className:`flex flex-1`,children:[(0,Q.jsx)(`aside`,{className:`w-64 border-r p-4 sticky top-0 h-screen`,children:(0,Q.jsx)(zm,{})}),(0,Q.jsx)(`main`,{className:`flex-1 p-6`,children:e})]})]})}var Vm=[{company:`St. Edward's University`,role:`Sports Program Supervisor`,period:`Jan 2026 – Present`,location:`Austin, Texas, United States`,type:`Part-time`,description:`Supervise club sports events and facility operations while ensuring participant safety and responding to incidents when needed. Developed strong leadership, decision-making, communication, and risk management skills in fast-paced environments.`,highlights:[`Supervise club sports competitions, practices, and events.`,`Coordinate facility operations and ensure participant safety.`,`Provide first aid and respond to incidents when needed.`,`Develop leadership, decision-making, and crisis management skills.`]},{company:`Global Origin, LLC`,role:`Game Development & Software Development Intern`,period:`Jun 2026 – Aug 2026`,location:`Remote`,type:`Internship`,description:`Tested and debugged mobile applications while collaborating with developers to identify defects, validate fixes, and improve application reliability. Worked with Kotlin and React Native while performing functional, regression, and validation testing throughout the development lifecycle.`,highlights:[`Tested mobile applications to identify functional defects, usability issues, and edge cases.`,`Debugged and resolved software issues using Kotlin and React Native.`,`Executed functional, regression, and validation testing to verify fixes.`,`Documented and communicated software defects to support efficient issue resolution.`]},{company:`Swan Valley Group`,role:`IT & Software Engineer Intern`,period:`May 2025 – Aug 2025`,location:`Harare, Zimbabwe`,type:`Internship`,description:`Developed internal web applications and automation tools that streamlined business operations and reduced manual effort. Built Python scripts and Excel dashboards while supporting IT systems, workflow automation, and technical troubleshooting.`,highlights:[`Developed internal web applications to streamline business operations.`,`Built Python automation scripts for processing and analyzing operational data.`,`Created interactive Excel dashboards and reports to support data-driven decisions.`,`Supported workflow automation for manufacturing and factory processes.`,`Diagnosed and resolved hardware, software, and network issues for end users.`]},{company:`SoftClans Technologies Limited`,role:`Software Engineer Intern`,period:`Jan 2025 – May 2025`,location:`Nairobi, Kenya`,type:`Internship`,description:`Developed real-world software solutions using Laravel and Sencha Ext JS while collaborating with developers and clients to understand requirements and plan features. Contributed to a government software system by building a multilingual API that enabled users to switch the application's interface between languages.`,highlights:[`Developed software using Laravel and Sencha Ext JS.`,`Built a multilingual API for a government software application.`,`Collaborated with developers and clients during requirements gathering and project planning.`,`Gained hands-on experience with API development and system integration.`]}];function Hm(){return(0,Q.jsxs)(`section`,{className:`mt-16`,children:[(0,Q.jsx)(`h2`,{className:`text-3xl font-bold mb-8`,children:`Experience`}),(0,Q.jsx)(`div`,{className:`space-y-8`,children:Vm.map(e=>(0,Q.jsxs)(`div`,{className:`border rounded-xl p-6 bg-white dark:bg-neutral-900`,children:[(0,Q.jsxs)(`div`,{className:`flex justify-between flex-wrap gap-2`,children:[(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`h3`,{className:`text-xl font-semibold`,children:e.role}),(0,Q.jsx)(`p`,{className:`font-medium`,children:e.company})]}),(0,Q.jsxs)(`div`,{className:`text-sm text-gray-500 dark:text-gray-400 text-right`,children:[(0,Q.jsx)(`p`,{children:e.period}),(0,Q.jsx)(`p`,{children:e.location}),(0,Q.jsx)(`p`,{children:e.type})]})]}),(0,Q.jsx)(`p`,{className:`mt-4 text-gray-700 dark:text-gray-300`,children:e.description}),(0,Q.jsx)(`ul`,{className:`mt-4 list-disc list-inside space-y-1`,children:e.highlights.map(e=>(0,Q.jsx)(`li`,{children:e},e))})]},`${e.company}-${e.role}`))})]})}var Um={Frontend:[`React`,`Next.js`,`React Native`,`TypeScript`,`Tauri`],Backend:[`Node.js`,`Laravel`,`FastAPI`,`REST APIs`,`Express.js`],Languages:[`Java`,`Python`,`Rust`,`TypeScript`,`Javascript`,`C++`,`Kotlin`,`PHP`],Tools:[`MySQL`,`PostgreSQL`,`Redis`,`Docker`,`AWS`,`Linux`,`Github`]};function Wm(){return(0,Q.jsxs)(`section`,{className:`mt-16`,children:[(0,Q.jsx)(`h2`,{className:`text-3xl font-bold mb-8`,children:`Skills`}),(0,Q.jsx)(`div`,{className:`grid gap-6 md:grid-cols-2`,children:Object.entries(Um).map(([e,t])=>(0,Q.jsxs)(`div`,{className:`rounded-xl border p-6 bg-white dark:bg-neutral-900`,children:[(0,Q.jsx)(`h3`,{className:`text-xl font-semibold mb-4`,children:e}),(0,Q.jsx)(`div`,{className:`flex flex-wrap gap-2`,children:t.map(e=>(0,Q.jsx)(`span`,{className:`rounded-full bg-gray-200 dark:bg-gray-700 px-3 py-1 text-sm font-medium text-black dark:text-white`,children:e},e))})]},e))})]})}var Gm={color:void 0,size:void 0,className:void 0,style:void 0,attr:void 0},Km=w.createContext&&w.createContext(Gm),qm=[`attr`,`size`,`title`];function Jm(e,t){if(e==null)return{};var n,r,i=Ym(e,t);if(Object.getOwnPropertySymbols){var a=Object.getOwnPropertySymbols(e);for(r=0;r<a.length;r++)n=a[r],t.indexOf(n)===-1&&{}.propertyIsEnumerable.call(e,n)&&(i[n]=e[n])}return i}function Ym(e,t){if(e==null)return{};var n={};for(var r in e)if({}.hasOwnProperty.call(e,r)){if(t.indexOf(r)!==-1)continue;n[r]=e[r]}return n}function Xm(){return Xm=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)({}).hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e},Xm.apply(null,arguments)}function Zm(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable})),n.push.apply(n,r)}return n}function Qm(e){for(var t=1;t<arguments.length;t++){var n=arguments[t]==null?{}:arguments[t];t%2?Zm(Object(n),!0).forEach(function(t){$m(e,t,n[t])}):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):Zm(Object(n)).forEach(function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))})}return e}function $m(e,t,n){return(t=eh(t))in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function eh(e){var t=th(e,`string`);return typeof t==`symbol`?t:t+``}function th(e,t){if(typeof e!=`object`||!e)return e;var n=e[Symbol.toPrimitive];if(n!==void 0){var r=n.call(e,t||`default`);if(typeof r!=`object`)return r;throw TypeError(`@@toPrimitive must return a primitive value.`)}return(t===`string`?String:Number)(e)}function nh(e){return e&&e.map((e,t)=>w.createElement(e.tag,Qm({key:t},e.attr),nh(e.child)))}function rh(e){return t=>w.createElement(ih,Xm({attr:Qm({},e.attr)},t),nh(e.child))}function ih(e){var t=t=>{var n=e.attr,r=e.size,i=e.title,a=Jm(e,qm),o=r||t.size||`1em`,s;return t.className&&(s=t.className),e.className&&(s=(s?s+` `:``)+e.className),w.createElement(`svg`,Xm({stroke:`currentColor`,fill:`currentColor`,strokeWidth:`0`},t.attr,n,a,{className:s,style:Qm(Qm({color:e.color||t.color},t.style),e.style),height:o,width:o,xmlns:`http://www.w3.org/2000/svg`}),i&&w.createElement(`title`,null,i),e.children)};return Km===void 0?t(Gm):w.createElement(Km.Consumer,null,e=>t(e))}function ah(e){return rh({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z`},child:[]}]})(e)}function oh(e){return rh({tag:`svg`,attr:{viewBox:`0 0 496 512`},child:[{tag:`path`,attr:{d:`M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z`},child:[]}]})(e)}function sh(e){return rh({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z`},child:[]}]})(e)}function ch(e){return rh({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z`},child:[]}]})(e)}function lh(){return(0,Q.jsxs)(`section`,{id:`contact`,className:`mt-16`,children:[(0,Q.jsx)(`h2`,{className:`text-3xl font-bold mb-4`,children:`Contact`}),(0,Q.jsx)(`p`,{className:`text-gray-600 dark:text-gray-400 mb-8`,children:`I'm always open to discussing new opportunities and interesting projects.`}),(0,Q.jsxs)(`div`,{className:`flex gap-6`,children:[(0,Q.jsx)(`a`,{href:`mailto:kuvengaprince@gmail.com`,"aria-label":`Email`,className:`rounded-full border p-4 transition hover:scale-110 hover:bg-gray-100 dark:hover:bg-neutral-800`,children:(0,Q.jsx)(sh,{size:28})}),(0,Q.jsx)(`a`,{href:`https://github.com/princekrazy`,target:`_blank`,rel:`noopener noreferrer`,"aria-label":`GitHub`,className:`rounded-full border p-4 transition hover:scale-110 hover:bg-gray-100 dark:hover:bg-neutral-800`,children:(0,Q.jsx)(oh,{size:28})}),(0,Q.jsx)(`a`,{href:`https://www.linkedin.com/in/prince-kuvenga`,target:`_blank`,rel:`noopener noreferrer`,"aria-label":`LinkedIn`,className:`rounded-full border p-4 transition hover:scale-110 hover:bg-gray-100 dark:hover:bg-neutral-800`,children:(0,Q.jsx)(ah,{size:28})}),(0,Q.jsxs)(`a`,{href:`/Prince_Kuvenga_Resume.pdf`,download:`Prince_Kuvenga_Resume.pdf`,className:`inline-flex items-center gap-2 rounded-lg bg-black px-4 py-2 font-medium text-white transition hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200`,children:[(0,Q.jsx)(ch,{size:28}),`Download Resume`]})]})]})}function uh(){return(0,Q.jsxs)(`section`,{id:`about`,className:`mt-16`,children:[(0,Q.jsx)(`h2`,{className:`text-3xl font-bold mb-6`,children:`About Me`}),(0,Q.jsxs)(`div`,{className:`space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed`,children:[(0,Q.jsx)(`p`,{children:`I’m from Zimbabwe and currently an international student at St. Edward’s University, where I’m majoring in Computer Science and set to graduate in 2029.`}),(0,Q.jsx)(`p`,{children:`My journey into tech started long before university driven by a childhood curiosity about the world around me. I was fascinated by the idea that everything I interacted with, from apps on my phone to the games I played, was built by someone no smarter than me. That realization made software feel less like something distant and more like something I could actively create.`}),(0,Q.jsx)(`p`,{children:`Outside of coding, I enjoy hiking and playing video games. Both reflect how I like to explore different worlds one in nature and the other in interactive digital spaces.`}),(0,Q.jsx)(`p`,{children:`When it comes to software development, I care less about using flashy tools or writing overly complex code, and more about how well a system is designed to solve real problems. To me, good engineering is about clarity, intention, and building solutions that actually work for the people who use them.`})]})]})}function dh(){return(0,Q.jsx)(Dp,{children:(0,Q.jsx)(Bm,{children:(0,Q.jsxs)(`div`,{className:`max-w-4xl mx-auto p-6 bg-white text-black dark:bg-black dark:text-white`,children:[(0,Q.jsxs)(`section`,{className:`mb-10`,children:[(0,Q.jsx)(`header`,{className:`flex justify-between  border-b`,children:(0,Q.jsx)(`h1`,{className:`text-4xl font-bold`,children:`My Portfolio`})}),(0,Q.jsx)(`p`,{className:`text-gray-600 mt-2`,children:`Full-stack developer building scalable web applications with React, Laravel, and modern APIs.`})]}),(0,Q.jsx)(`section`,{id:`contact`,children:(0,Q.jsx)(lh,{})}),(0,Q.jsx)(`section`,{id:`featured`,className:`mt-10`,children:(0,Q.jsx)(Nm,{})}),(0,Q.jsx)(`section`,{id:`other`,className:`mt-12`,children:(0,Q.jsx)(Pm,{})}),(0,Q.jsx)(`section`,{id:`experience`,children:(0,Q.jsx)(Hm,{})}),(0,Q.jsx)(`section`,{id:`skills`,children:(0,Q.jsx)(Wm,{})}),(0,Q.jsx)(`section`,{id:`about`,children:(0,Q.jsx)(uh,{})})]})})})}function fh(){let{id:e}=Ct(),t=jm(e);if(console.log(`Route ID:`,e),!t)return(0,Q.jsx)(Bm,{children:(0,Q.jsx)(`div`,{className:`p-6`,children:`Project not found`})});let n=t.content;return(0,Q.jsx)(Bm,{children:(0,Q.jsxs)(`div`,{className:`max-w-3xl mx-auto p-6`,children:[(0,Q.jsx)(`h1`,{className:`text-3xl font-bold`,children:t.title}),(0,Q.jsx)(`p`,{className:`text-gray-600 dark:text-gray-300 mb-4`,children:t.description}),(0,Q.jsxs)(`div`,{className:`flex gap-4 mb-6 text-blue-500`,children:[t.github&&(0,Q.jsx)(`a`,{href:t.github,children:`GitHub`}),t.live&&(0,Q.jsx)(`a`,{href:t.live,children:`Live`})]}),(0,Q.jsx)(`article`,{className:`prose dark:prose-invert max-w-none`,children:(0,Q.jsx)(n,{})})]})})}function ph({tags:e,active:t,setActive:n}){return(0,Q.jsxs)(`div`,{className:`flex gap-2 flex-wrap mb-4 bg-white text-black dark:bg-black dark:text-white`,children:[(0,Q.jsx)(`button`,{onClick:()=>n(`all`),className:`px-3 py-1 border rounded ${t===`all`?`bg-black text-white`:``}`,children:`All`}),e.map(e=>(0,Q.jsx)(`button`,{onClick:()=>n(e),className:`px-3 py-1 border rounded ${t===e?`bg-black text-white`:``}`,children:e},e))]})}function mh(){let e=[...km,...Am],t=[...new Set(e.flatMap(e=>e.tech))],[n,r]=(0,w.useState)(`all`),i=n===`all`?e:e.filter(e=>e.tech.includes(n));return(0,Q.jsx)(Bm,{children:(0,Q.jsxs)(`div`,{className:`max-w-4xl mx-auto p-6`,children:[(0,Q.jsx)(`h1`,{className:`text-3xl font-bold mb-4`,children:`Filter by Technologies`}),(0,Q.jsx)(ph,{tags:t,active:n,setActive:r}),(0,Q.jsx)(`div`,{className:`grid gap-3 mt-4`,children:i.map(e=>(0,Q.jsx)(zn,{to:`/projects/${e.id}`,className:`border p-3 rounded hover:bg-gray-50`,children:e.title},e.id))})]})})}function hh(){let e=vt();return(0,Q.jsx)(kd,{mode:`wait`,children:(0,Q.jsxs)(Yt,{location:e,children:[(0,Q.jsx)(qt,{path:`/`,element:(0,Q.jsx)(dh,{})}),(0,Q.jsx)(qt,{path:`/projects`,element:(0,Q.jsx)(mh,{})}),(0,Q.jsx)(qt,{path:`/projects/:id`,element:(0,Q.jsx)(fh,{})}),(0,Q.jsx)(qt,{path:`*`,element:(0,Q.jsx)(dh,{})})]},e.pathname)})}Ep.createRoot(document.getElementById(`root`)).render((0,Q.jsx)(Ln,{basename:`/`,children:(0,Q.jsx)(hh,{})}));
+`,(0,Q.jsx)(t.p,{children:`TV Match Alert Backend is a real-time Node.js notification server that intelligently schedules football match events and delivers them to Android TV devices using Socket.IO while minimizing external API usage through efficient scheduling techniques.`})]})}function km(e={}){let{wrapper:t}=e.components||{};return t?(0,Q.jsx)(t,{...e,children:(0,Q.jsx)(Om,{...e})}):Om(e)}var Am={id:`tv-match-alert-backend`,title:`TV Match Alert Backend`,description:`A Node.js backend that schedules football match notifications and delivers real-time updates to Android TV devices using Socket.IO while minimizing external API usage through intelligent scheduling.`,tech:[`Node.js`,`Express`,`Socket.IO`,`Axios`,`node-cron`,`API-Football`],github:`https://github.com/princekrazy/TV-Match-Alert-Backend`,live:`https://tv-match-alert-backend.onrender.com`,featured:!0,content:km},jm={"ai-chatbot":Ap,princeboard:lm,focusscroll:wm,"princeboard-mobile":fm,weather:zp,"uber-clone-frontend":Np,"uber-clone-backend":Ip,americabound:Hp,"shona-ai-translator":Gp,"shona-ai-translator-backend":Jp,"vault-app":em,"vault-manager-desktop":Zp,"the-empty-library":rm,"emoji-sweeper":om,"past-paper-helper":hm,neurorun:vm,eyescroll:xm,"tv-match-alert":Dm,"tv-match-alert-backend":Am},Mm=[xm,Dm,vm,Hp,Np,lm],Nm=[Gp,wm,Ip,Am,Jp,fm,Zp,em,rm,om,hm];function Pm(e){return jm[e]}function Fm({project:e}){return(0,Q.jsxs)(`div`,{className:`border rounded-lg p-4 hover:shadow-md transition`,children:[(0,Q.jsxs)(zn,{to:`/projects/${e.id}`,className:`block`,children:[(0,Q.jsx)(`h3`,{className:`text-xl font-bold hover:underline`,children:e.title}),(0,Q.jsx)(`p`,{className:`text-gray-600 text-sm mt-1`,children:e.description}),(0,Q.jsx)(`div`,{className:`flex gap-2 mt-2 flex-wrap`,children:e.tech.map(e=>(0,Q.jsx)(`span`,{className:`text-xs bg-gray-200 text-black px-2 py-1 rounded`,children:e},e))})]}),(0,Q.jsxs)(`div`,{className:`flex gap-4 mt-3 text-sm`,children:[e.github&&(0,Q.jsx)(`a`,{href:e.github,target:`_blank`,rel:`noreferrer`,className:`text-blue-600`,children:`GitHub`}),e.live&&(0,Q.jsx)(`a`,{href:e.live,target:`_blank`,rel:`noreferrer`,className:`text-green-600`,children:`Live`})]})]})}function Im(){return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(`h2`,{className:`text-2xl font-bold mb-4 bg-white text-black dark:bg-black dark:text-white`,children:`Featured Projects`}),(0,Q.jsx)(`div`,{className:`grid md:grid-cols-2 gap-4`,children:Mm.map(e=>(0,Q.jsx)(Fm,{project:e},e.id))})]})}function Lm(){return(0,Q.jsxs)(`section`,{className:`mt-10 bg-white text-black dark:bg-black dark:text-white`,children:[(0,Q.jsx)(`h2`,{className:`text-2xl font-bold mb-4`,children:`Other Projects`}),(0,Q.jsx)(`div`,{className:`space-y-3`,children:Nm.map(e=>(0,Q.jsx)(Fm,{project:e},e.id))})]})}function Rm(){return localStorage.getItem(`theme`)||`light`}function zm(e){localStorage.setItem(`theme`,e),e===`dark`?document.documentElement.classList.add(`dark`):document.documentElement.classList.remove(`dark`)}function Bm(){let[e,t]=(0,w.useState)(`light`);(0,w.useEffect)(()=>{let e=Rm();t(e),zm(e)},[]);function n(){let n=e===`light`?`dark`:`light`;t(n),zm(n)}return(0,Q.jsx)(`button`,{onClick:n,className:`px-3 py-1 border rounded font-bold`,children:e===`light`?`Dark Mode`:`Light Mode`})}function Vm(){return{main:[{label:`Home`,path:`/`},{label:`Featured Projects`,path:`/#featured`},{label:`Other Projects`,path:`/#other`},{label:`Experience`,path:`/#experience`},{label:`Skills`,path:`/#skills`},{label:`Contact Me`,path:`/#contact`},{label:`About Me`,path:`/#about`},{label:`Download Resume`,path:`/#contact`},{label:`Filter Projects By Technologies`,path:`/projects`}],projects:[...Mm.map(e=>({label:e.title,path:`/projects/${e.id}`,featured:!0})),...Nm.map(e=>({label:e.title,path:`/projects/${e.id}`,featured:!1}))]}}function Hm(){let e=Vm();return xt(),(0,Q.jsxs)(`aside`,{className:`w-64 p-4 border-r min-h-screen bg-white text-black dark:bg-black dark:text-white`,children:[(0,Q.jsx)(`div`,{className:`mb-4 font-bold`,children:`Menu`}),(0,Q.jsx)(`nav`,{className:`flex flex-col gap-2 mb-6`,children:e.main.map(e=>e.path.includes(`#`)?(0,Q.jsx)(`a`,{href:e.path,onClick:t=>{t.preventDefault();let n=e.path.split(`#`)[1];document.getElementById(n)?.scrollIntoView({behavior:`smooth`}),window.history.pushState(null,``,e.path)},children:e.label},e.path):(0,Q.jsx)(zn,{to:e.path,children:e.label},e.path))}),(0,Q.jsx)(`div`,{className:`text-sm font-semibold mb-2`,children:`Projects`}),(0,Q.jsx)(`nav`,{className:`flex flex-col gap-1`,children:e.projects.map(e=>(0,Q.jsx)(zn,{to:e.path,className:`text-sm text-gray-600 hover:text-black`,children:e.label},e.path))})]})}function Um({children:e}){return(0,Q.jsxs)(`div`,{className:`min-h-screen bg-white dark:bg-black dark:text-white flex flex-col`,children:[(0,Q.jsxs)(`header`,{className:`grid grid-cols-3 items-center p-4 border-b font-bold`,children:[(0,Q.jsx)(`div`,{children:`SOFTWARE ENGINEER`}),(0,Q.jsx)(`h1`,{className:`justify-self-center font-bold text-3xl`,children:`PRINCE KUVENGA`}),(0,Q.jsx)(`div`,{className:`justify-self-end`,children:(0,Q.jsx)(Bm,{})})]}),(0,Q.jsxs)(`div`,{className:`flex flex-1`,children:[(0,Q.jsx)(`aside`,{className:`w-64 border-r p-4 sticky top-0 h-screen`,children:(0,Q.jsx)(Hm,{})}),(0,Q.jsx)(`main`,{className:`flex-1 p-6`,children:e})]})]})}var Wm=[{company:`St. Edward's University`,role:`Sports Program Supervisor`,period:`Jan 2026 – Present`,location:`Austin, Texas, United States`,type:`Part-time`,description:`Supervise club sports events and facility operations while ensuring participant safety and responding to incidents when needed. Developed strong leadership, decision-making, communication, and risk management skills in fast-paced environments.`,highlights:[`Supervise club sports competitions, practices, and events.`,`Coordinate facility operations and ensure participant safety.`,`Provide first aid and respond to incidents when needed.`,`Develop leadership, decision-making, and crisis management skills.`]},{company:`Global Origin, LLC`,role:`Game Development & Software Development Intern`,period:`Jun 2026 – Aug 2026`,location:`Remote`,type:`Internship`,description:`Tested and debugged mobile applications while collaborating with developers to identify defects, validate fixes, and improve application reliability. Worked with Kotlin and React Native while performing functional, regression, and validation testing throughout the development lifecycle.`,highlights:[`Tested mobile applications to identify functional defects, usability issues, and edge cases.`,`Debugged and resolved software issues using Kotlin and React Native.`,`Executed functional, regression, and validation testing to verify fixes.`,`Documented and communicated software defects to support efficient issue resolution.`]},{company:`Swan Valley Group`,role:`IT & Software Engineer Intern`,period:`May 2025 – Aug 2025`,location:`Harare, Zimbabwe`,type:`Internship`,description:`Developed internal web applications and automation tools that streamlined business operations and reduced manual effort. Built Python scripts and Excel dashboards while supporting IT systems, workflow automation, and technical troubleshooting.`,highlights:[`Developed internal web applications to streamline business operations.`,`Built Python automation scripts for processing and analyzing operational data.`,`Created interactive Excel dashboards and reports to support data-driven decisions.`,`Supported workflow automation for manufacturing and factory processes.`,`Diagnosed and resolved hardware, software, and network issues for end users.`]},{company:`SoftClans Technologies Limited`,role:`Software Engineer Intern`,period:`Jan 2025 – May 2025`,location:`Nairobi, Kenya`,type:`Internship`,description:`Developed real-world software solutions using Laravel and Sencha Ext JS while collaborating with developers and clients to understand requirements and plan features. Contributed to a government software system by building a multilingual API that enabled users to switch the application's interface between languages.`,highlights:[`Developed software using Laravel and Sencha Ext JS.`,`Built a multilingual API for a government software application.`,`Collaborated with developers and clients during requirements gathering and project planning.`,`Gained hands-on experience with API development and system integration.`]}];function Gm(){return(0,Q.jsxs)(`section`,{className:`mt-16`,children:[(0,Q.jsx)(`h2`,{className:`text-3xl font-bold mb-8`,children:`Experience`}),(0,Q.jsx)(`div`,{className:`space-y-8`,children:Wm.map(e=>(0,Q.jsxs)(`div`,{className:`border rounded-xl p-6 bg-white dark:bg-neutral-900`,children:[(0,Q.jsxs)(`div`,{className:`flex justify-between flex-wrap gap-2`,children:[(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`h3`,{className:`text-xl font-semibold`,children:e.role}),(0,Q.jsx)(`p`,{className:`font-medium`,children:e.company})]}),(0,Q.jsxs)(`div`,{className:`text-sm text-gray-500 dark:text-gray-400 text-right`,children:[(0,Q.jsx)(`p`,{children:e.period}),(0,Q.jsx)(`p`,{children:e.location}),(0,Q.jsx)(`p`,{children:e.type})]})]}),(0,Q.jsx)(`p`,{className:`mt-4 text-gray-700 dark:text-gray-300`,children:e.description}),(0,Q.jsx)(`ul`,{className:`mt-4 list-disc list-inside space-y-1`,children:e.highlights.map(e=>(0,Q.jsx)(`li`,{children:e},e))})]},`${e.company}-${e.role}`))})]})}var Km={Frontend:[`React`,`Next.js`,`React Native`,`TypeScript`,`Tauri`],Backend:[`Node.js`,`Laravel`,`FastAPI`,`REST APIs`,`Express.js`],Languages:[`Java`,`Python`,`Rust`,`TypeScript`,`Javascript`,`C++`,`Kotlin`,`PHP`],Tools:[`MySQL`,`PostgreSQL`,`Redis`,`Docker`,`AWS`,`Linux`,`Github`]};function qm(){return(0,Q.jsxs)(`section`,{className:`mt-16`,children:[(0,Q.jsx)(`h2`,{className:`text-3xl font-bold mb-8`,children:`Skills`}),(0,Q.jsx)(`div`,{className:`grid gap-6 md:grid-cols-2`,children:Object.entries(Km).map(([e,t])=>(0,Q.jsxs)(`div`,{className:`rounded-xl border p-6 bg-white dark:bg-neutral-900`,children:[(0,Q.jsx)(`h3`,{className:`text-xl font-semibold mb-4`,children:e}),(0,Q.jsx)(`div`,{className:`flex flex-wrap gap-2`,children:t.map(e=>(0,Q.jsx)(`span`,{className:`rounded-full bg-gray-200 dark:bg-gray-700 px-3 py-1 text-sm font-medium text-black dark:text-white`,children:e},e))})]},e))})]})}var Jm={color:void 0,size:void 0,className:void 0,style:void 0,attr:void 0},Ym=w.createContext&&w.createContext(Jm),Xm=[`attr`,`size`,`title`];function Zm(e,t){if(e==null)return{};var n,r,i=Qm(e,t);if(Object.getOwnPropertySymbols){var a=Object.getOwnPropertySymbols(e);for(r=0;r<a.length;r++)n=a[r],t.indexOf(n)===-1&&{}.propertyIsEnumerable.call(e,n)&&(i[n]=e[n])}return i}function Qm(e,t){if(e==null)return{};var n={};for(var r in e)if({}.hasOwnProperty.call(e,r)){if(t.indexOf(r)!==-1)continue;n[r]=e[r]}return n}function $m(){return $m=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)({}).hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e},$m.apply(null,arguments)}function eh(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable})),n.push.apply(n,r)}return n}function th(e){for(var t=1;t<arguments.length;t++){var n=arguments[t]==null?{}:arguments[t];t%2?eh(Object(n),!0).forEach(function(t){nh(e,t,n[t])}):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):eh(Object(n)).forEach(function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))})}return e}function nh(e,t,n){return(t=rh(t))in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function rh(e){var t=ih(e,`string`);return typeof t==`symbol`?t:t+``}function ih(e,t){if(typeof e!=`object`||!e)return e;var n=e[Symbol.toPrimitive];if(n!==void 0){var r=n.call(e,t||`default`);if(typeof r!=`object`)return r;throw TypeError(`@@toPrimitive must return a primitive value.`)}return(t===`string`?String:Number)(e)}function ah(e){return e&&e.map((e,t)=>w.createElement(e.tag,th({key:t},e.attr),ah(e.child)))}function oh(e){return t=>w.createElement(sh,$m({attr:th({},e.attr)},t),ah(e.child))}function sh(e){var t=t=>{var n=e.attr,r=e.size,i=e.title,a=Zm(e,Xm),o=r||t.size||`1em`,s;return t.className&&(s=t.className),e.className&&(s=(s?s+` `:``)+e.className),w.createElement(`svg`,$m({stroke:`currentColor`,fill:`currentColor`,strokeWidth:`0`},t.attr,n,a,{className:s,style:th(th({color:e.color||t.color},t.style),e.style),height:o,width:o,xmlns:`http://www.w3.org/2000/svg`}),i&&w.createElement(`title`,null,i),e.children)};return Ym===void 0?t(Jm):w.createElement(Ym.Consumer,null,e=>t(e))}function ch(e){return oh({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z`},child:[]}]})(e)}function lh(e){return oh({tag:`svg`,attr:{viewBox:`0 0 496 512`},child:[{tag:`path`,attr:{d:`M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z`},child:[]}]})(e)}function uh(e){return oh({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z`},child:[]}]})(e)}function dh(e){return oh({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z`},child:[]}]})(e)}function fh(){return(0,Q.jsxs)(`section`,{id:`contact`,className:`mt-16`,children:[(0,Q.jsx)(`h2`,{className:`text-3xl font-bold mb-4`,children:`Contact`}),(0,Q.jsx)(`p`,{className:`text-gray-600 dark:text-gray-400 mb-8`,children:`I'm always open to discussing new opportunities and interesting projects.`}),(0,Q.jsxs)(`div`,{className:`flex gap-6`,children:[(0,Q.jsx)(`a`,{href:`mailto:kuvengaprince@gmail.com`,"aria-label":`Email`,className:`rounded-full border p-4 transition hover:scale-110 hover:bg-gray-100 dark:hover:bg-neutral-800`,children:(0,Q.jsx)(uh,{size:28})}),(0,Q.jsx)(`a`,{href:`https://github.com/princekrazy`,target:`_blank`,rel:`noopener noreferrer`,"aria-label":`GitHub`,className:`rounded-full border p-4 transition hover:scale-110 hover:bg-gray-100 dark:hover:bg-neutral-800`,children:(0,Q.jsx)(lh,{size:28})}),(0,Q.jsx)(`a`,{href:`https://www.linkedin.com/in/prince-kuvenga`,target:`_blank`,rel:`noopener noreferrer`,"aria-label":`LinkedIn`,className:`rounded-full border p-4 transition hover:scale-110 hover:bg-gray-100 dark:hover:bg-neutral-800`,children:(0,Q.jsx)(ch,{size:28})}),(0,Q.jsxs)(`a`,{href:`/Prince_Kuvenga_Resume.pdf`,download:`Prince_Kuvenga_Resume.pdf`,className:`inline-flex items-center gap-2 rounded-lg bg-black px-4 py-2 font-medium text-white transition hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200`,children:[(0,Q.jsx)(dh,{size:28}),`Download Resume`]})]})]})}function ph(){return(0,Q.jsxs)(`section`,{id:`about`,className:`mt-16`,children:[(0,Q.jsx)(`h2`,{className:`text-3xl font-bold mb-6`,children:`About Me`}),(0,Q.jsxs)(`div`,{className:`space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed`,children:[(0,Q.jsx)(`p`,{children:`I’m from Zimbabwe and currently an international student at St. Edward’s University, where I’m majoring in Computer Science and set to graduate in 2029.`}),(0,Q.jsx)(`p`,{children:`My journey into tech started long before university driven by a childhood curiosity about the world around me. I was fascinated by the idea that everything I interacted with, from apps on my phone to the games I played, was built by someone no smarter than me. That realization made software feel less like something distant and more like something I could actively create.`}),(0,Q.jsx)(`p`,{children:`Outside of coding, I enjoy hiking and playing video games. Both reflect how I like to explore different worlds one in nature and the other in interactive digital spaces.`}),(0,Q.jsx)(`p`,{children:`When it comes to software development, I care less about using flashy tools or writing overly complex code, and more about how well a system is designed to solve real problems. To me, good engineering is about clarity, intention, and building solutions that actually work for the people who use them.`})]})]})}function mh(){return(0,Q.jsx)(Dp,{children:(0,Q.jsx)(Um,{children:(0,Q.jsxs)(`div`,{className:`max-w-4xl mx-auto p-6 bg-white text-black dark:bg-black dark:text-white`,children:[(0,Q.jsxs)(`section`,{className:`mb-10`,children:[(0,Q.jsx)(`header`,{className:`flex justify-between  border-b`,children:(0,Q.jsx)(`h1`,{className:`text-4xl font-bold`,children:`My Portfolio`})}),(0,Q.jsx)(`p`,{className:`text-gray-600 mt-2`,children:`Full-stack developer building scalable web applications with React, Laravel, and modern APIs.`})]}),(0,Q.jsx)(`section`,{id:`contact`,children:(0,Q.jsx)(fh,{})}),(0,Q.jsx)(`section`,{id:`featured`,className:`mt-10`,children:(0,Q.jsx)(Im,{})}),(0,Q.jsx)(`section`,{id:`other`,className:`mt-12`,children:(0,Q.jsx)(Lm,{})}),(0,Q.jsx)(`section`,{id:`experience`,children:(0,Q.jsx)(Gm,{})}),(0,Q.jsx)(`section`,{id:`skills`,children:(0,Q.jsx)(qm,{})}),(0,Q.jsx)(`section`,{id:`about`,children:(0,Q.jsx)(ph,{})})]})})})}function hh(){let{id:e}=Ct(),t=Pm(e);if(console.log(`Route ID:`,e),!t)return(0,Q.jsx)(Um,{children:(0,Q.jsx)(`div`,{className:`p-6`,children:`Project not found`})});let n=t.content;return(0,Q.jsx)(Um,{children:(0,Q.jsxs)(`div`,{className:`max-w-3xl mx-auto p-6`,children:[(0,Q.jsx)(`h1`,{className:`text-3xl font-bold`,children:t.title}),(0,Q.jsx)(`p`,{className:`text-gray-600 dark:text-gray-300 mb-4`,children:t.description}),(0,Q.jsxs)(`div`,{className:`flex gap-4 mb-6 text-blue-500`,children:[t.github&&(0,Q.jsx)(`a`,{href:t.github,children:`GitHub`}),t.live&&(0,Q.jsx)(`a`,{href:t.live,children:`Live`})]}),(0,Q.jsx)(`article`,{className:`prose dark:prose-invert max-w-none`,children:(0,Q.jsx)(n,{})})]})})}function gh({tags:e,active:t,setActive:n}){return(0,Q.jsxs)(`div`,{className:`flex gap-2 flex-wrap mb-4 bg-white text-black dark:bg-black dark:text-white`,children:[(0,Q.jsx)(`button`,{onClick:()=>n(`all`),className:`px-3 py-1 border rounded ${t===`all`?`bg-black text-white`:``}`,children:`All`}),e.map(e=>(0,Q.jsx)(`button`,{onClick:()=>n(e),className:`px-3 py-1 border rounded ${t===e?`bg-black text-white`:``}`,children:e},e))]})}function _h(){let e=[...Mm,...Nm],t=[...new Set(e.flatMap(e=>e.tech))],[n,r]=(0,w.useState)(`all`),i=n===`all`?e:e.filter(e=>e.tech.includes(n));return(0,Q.jsx)(Um,{children:(0,Q.jsxs)(`div`,{className:`max-w-4xl mx-auto p-6`,children:[(0,Q.jsx)(`h1`,{className:`text-3xl font-bold mb-4`,children:`Filter by Technologies`}),(0,Q.jsx)(gh,{tags:t,active:n,setActive:r}),(0,Q.jsx)(`div`,{className:`grid gap-3 mt-4`,children:i.map(e=>(0,Q.jsx)(zn,{to:`/projects/${e.id}`,className:`border p-3 rounded hover:bg-gray-50`,children:e.title},e.id))})]})})}function vh(){let e=vt();return(0,Q.jsx)(kd,{mode:`wait`,children:(0,Q.jsxs)(Yt,{location:e,children:[(0,Q.jsx)(qt,{path:`/`,element:(0,Q.jsx)(mh,{})}),(0,Q.jsx)(qt,{path:`/projects`,element:(0,Q.jsx)(_h,{})}),(0,Q.jsx)(qt,{path:`/projects/:id`,element:(0,Q.jsx)(hh,{})}),(0,Q.jsx)(qt,{path:`*`,element:(0,Q.jsx)(mh,{})})]},e.pathname)})}Ep.createRoot(document.getElementById(`root`)).render((0,Q.jsx)(Ln,{basename:`/`,children:(0,Q.jsx)(vh,{})}));
