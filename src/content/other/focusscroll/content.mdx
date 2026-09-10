@@ -1,0 +1,504 @@
+# FocusScroll
+
+A distraction-free Android application that blocks Instagram Reels and YouTube Shorts while preserving access to messaging, profiles, search, subscriptions, and regular videos.
+
+FocusScroll is an Android application designed to reduce mindless short-form content consumption without completely blocking social media applications. Using Android Accessibility Services, FocusScroll analyzes the accessibility hierarchy of Instagram and YouTube and identifies when the user enters short-form video content.
+
+When a Reel or Short is detected, FocusScroll automatically navigates back to the previous screen.
+
+---
+
+# Overview
+
+Social media applications provide useful communication and information tools, but their short-form video feeds are designed around continuous consumption.
+
+FocusScroll explores a middle ground between completely blocking social media and allowing unrestricted access.
+
+The application allows users to continue using useful functionality such as:
+
+- Instagram Direct Messages
+- Instagram profiles
+- Instagram posts
+- YouTube search
+- YouTube subscriptions
+- Individual YouTube videos
+
+While specifically blocking:
+
+- Instagram Reels
+- YouTube Shorts
+
+Rather than modifying or replacing the original applications, FocusScroll operates alongside them using Android's Accessibility Service API.
+
+---
+
+# Features
+
+## Instagram Reel Blocking
+
+FocusScroll detects when Instagram displays a Reel by analyzing accessibility content descriptions exposed by the application.
+
+Instagram Reel playback screens currently expose descriptions following a pattern similar to:
+
+```text
+Reel by username. Double tap to play or pause.
+```
+
+FocusScroll searches the accessibility hierarchy for this pattern rather than relying on a specific username or hardcoded Reel.
+
+When detected, the service automatically navigates back.
+
+---
+
+## YouTube Shorts Blocking
+
+YouTube Shorts are detected using accessibility information exposed by the Shorts interface.
+
+A Shorts screen currently contains a button with a content description similar to:
+
+```text
+Remix
+```
+
+FocusScroll recursively searches the accessibility hierarchy for an Android button whose content description matches `Remix`.
+
+This approach is more specific than simply searching for the word `Shorts`, since `Shorts` can also appear in normal YouTube navigation.
+
+---
+
+## Preserving Useful Content
+
+FocusScroll is intentionally selective.
+
+It does not attempt to block the entire Instagram or YouTube application.
+
+Users can still:
+
+- Send and receive Instagram messages
+- View profiles
+- View regular posts
+- Search YouTube
+- Browse subscriptions
+- Watch individual YouTube videos
+
+The objective is to remove the infinite short-form feed while preserving intentional use of the platforms.
+
+---
+
+# Tech Stack
+
+- Kotlin
+- Android SDK
+- Jetpack Compose
+- Material 3
+- Android Accessibility Services
+- AccessibilityNodeInfo
+- Gradle
+
+No backend, database, authentication system, or cloud service is required.
+
+---
+
+# Architecture
+
+```text
+                    Android System
+                          │
+                          ▼
+               Accessibility Events
+                          │
+                          ▼
+              FocusScrollAccessibilityService
+                          │
+              ┌───────────┴───────────┐
+              │                       │
+              ▼                       ▼
+        Instagram                 YouTube
+              │                       │
+              ▼                       ▼
+       Accessibility Tree      Accessibility Tree
+              │                       │
+              ▼                       ▼
+       Reel Detection           Shorts Detection
+              │                       │
+              └───────────┬───────────┘
+                          │
+                    Content Detected
+                          │
+                          ▼
+                 GLOBAL_ACTION_BACK
+                          │
+                          ▼
+                   Previous Screen
+```
+
+The application separates platform detection from content detection, allowing Instagram and YouTube to use different detection strategies while sharing the same accessibility service.
+
+---
+
+# How It Works
+
+## 1. Accessibility Service Receives Events
+
+The Android system sends accessibility events whenever the UI changes, including events related to:
+
+- Window changes
+- Content changes
+- Scrolling
+
+FocusScroll listens for these events through its `AccessibilityService`.
+
+---
+
+## 2. Identify the Active Application
+
+The service checks the package name associated with the current accessibility event.
+
+FocusScroll currently monitors:
+
+```text
+com.instagram.android
+com.google.android.youtube
+```
+
+Other applications are ignored.
+
+---
+
+## 3. Retrieve the Accessibility Tree
+
+FocusScroll accesses the currently visible UI through:
+
+```kotlin
+rootInActiveWindow
+```
+
+This produces an accessibility node hierarchy representing elements currently exposed by the application.
+
+Each node can contain information such as:
+
+- Class name
+- Text
+- Content description
+- View ID
+- Clickable state
+- Scrollable state
+- Child nodes
+
+---
+
+## 4. Detect Instagram Reels
+
+For Instagram, FocusScroll recursively traverses the accessibility hierarchy looking for a content description that:
+
+1. Starts with `Reel by`
+2. Contains `Double tap to play or pause`
+
+Conceptually:
+
+```kotlin
+if (
+    description.startsWith("Reel by ", ignoreCase = true) &&
+    description.contains(
+        "Double tap to play or pause",
+        ignoreCase = true
+    )
+) {
+    return true
+}
+```
+
+This allows the detector to work across different Reel creators without depending on a specific account.
+
+---
+
+## 5. Detect YouTube Shorts
+
+For YouTube, FocusScroll searches for an accessibility button whose content description is `Remix`.
+
+Conceptually:
+
+```kotlin
+if (
+    node.className?.toString() == "android.widget.Button" &&
+    description.equals("Remix", ignoreCase = true)
+) {
+    return true
+}
+```
+
+The detector recursively checks child nodes because the relevant button can exist deep inside the accessibility hierarchy.
+
+---
+
+## 6. Block the Content
+
+When short-form content is detected, FocusScroll uses Android's global accessibility action:
+
+```kotlin
+performGlobalAction(GLOBAL_ACTION_BACK)
+```
+
+This returns the user to the previous screen instead of allowing the short-form feed to continue.
+
+A short cooldown prevents repeated accessibility events from triggering multiple back actions in rapid succession.
+
+---
+
+# Detection Pipeline
+
+```text
+Accessibility Event
+        │
+        ▼
+Identify Package
+        │
+        ├───────────────┐
+        ▼               ▼
+   Instagram         YouTube
+        │               │
+        ▼               ▼
+ Search for          Search for
+ "Reel by..."        "Remix" Button
+        │               │
+        └───────┬───────┘
+                ▼
+          Content Found?
+             /       \
+           No         Yes
+           │           │
+           ▼           ▼
+       Do Nothing   Go Back
+```
+
+This creates a lightweight detection pipeline without requiring computer vision, screen recording, or a backend.
+
+---
+
+# Accessibility Service
+
+The core of FocusScroll is an Android `AccessibilityService`.
+
+The service is configured to receive events including:
+
+```text
+TYPE_WINDOW_STATE_CHANGED
+TYPE_WINDOW_CONTENT_CHANGED
+TYPE_VIEW_SCROLLED
+```
+
+It also enables access to the window's accessibility hierarchy so that FocusScroll can inspect the UI structure exposed by Instagram and YouTube.
+
+---
+
+# Why Accessibility Services?
+
+Android Accessibility Services provide applications with a system-level interface for observing and interacting with accessible UI elements.
+
+For FocusScroll, this makes it possible to:
+
+- Detect UI changes in third-party applications
+- Inspect accessibility nodes
+- Read content descriptions
+- Identify specific UI components
+- Perform global navigation actions
+
+This allows FocusScroll to work without modifying Instagram or YouTube themselves.
+
+---
+
+# Challenges Solved
+
+## Avoiding False Positives on YouTube
+
+An early detection approach searched the entire YouTube screen for the word `Shorts`.
+
+This produced false positives because `Shorts` also appears in YouTube's normal navigation.
+
+The solution was to identify a more specific UI characteristic of the Shorts interface: the `Remix` accessibility button.
+
+---
+
+## Identifying Instagram Reels
+
+Instagram does not expose the same accessibility signals as YouTube.
+
+Instead of looking for a `Remix` button, FocusScroll analyzes accessibility descriptions associated with Reel playback.
+
+The pattern:
+
+```text
+Reel by [username]. Double tap to play or pause.
+```
+
+provided a more reliable signal for identifying Reel screens.
+
+---
+
+## Handling Frequent Accessibility Events
+
+Accessibility services can receive many events for a single UI transition.
+
+Without protection, the service could repeatedly execute the back action.
+
+FocusScroll therefore implements a cooldown between blocking actions to prevent repeated triggers.
+
+---
+
+## Recursive Accessibility Tree Traversal
+
+The relevant UI element may not exist at the root of the accessibility hierarchy.
+
+FocusScroll recursively traverses child nodes to locate detection signals regardless of their depth within the UI tree.
+
+This makes the detectors less dependent on a fixed UI hierarchy.
+
+---
+
+# Privacy
+
+FocusScroll does not use a backend or upload accessibility information to a server.
+
+The detection process occurs locally on the Android device.
+
+The application does not require:
+
+- User accounts
+- Cloud processing
+- A database
+- API keys
+- External servers
+
+The Accessibility Service is used specifically to detect supported short-form content and navigate away from it.
+
+---
+
+# Project Structure
+
+```text
+app/
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── com/example/focusscroll/
+│       │       ├── MainActivity.kt
+│       │       └── FocusScrollAccessibilityService.kt
+│       │
+│       ├── res/
+│       │   ├── drawable/
+│       │   ├── mipmap/
+│       │   ├── values/
+│       │   └── xml/
+│       │       └── accessibility_service_config.xml
+│       │
+│       └── AndroidManifest.xml
+│
+└── build.gradle.kts
+```
+
+---
+
+# Permissions
+
+FocusScroll requires Android Accessibility Service access.
+
+This permission allows the application to inspect accessibility information exposed by supported applications and perform global navigation actions.
+
+The application does not require camera, location, storage, or notification permissions for its core functionality.
+
+---
+
+# Current Limitations
+
+FocusScroll is currently an MVP.
+
+Because detection relies on accessibility information exposed by third-party applications, changes to Instagram or YouTube's UI may require updates to the detection logic.
+
+Current scope:
+
+- Instagram Reels are blocked.
+- YouTube Shorts are blocked.
+- Instagram Explore is not currently blocked.
+- Instagram infinite scrolling is not currently limited.
+- YouTube recommendation feeds are not currently blocked.
+- Detection depends on accessibility information exposed by the current versions of Instagram and YouTube.
+
+---
+
+# Future Improvements
+
+Potential improvements include:
+
+- Block Instagram Explore
+- Limit Instagram feed scrolling
+- Block YouTube Shorts shelves
+- Reduce YouTube recommendation rabbit holes
+- Configurable blocking rules
+- Usage statistics
+- Customizable cooldown periods
+- Improved detection across application updates
+- Settings dashboard
+- Temporary bypass option
+- Focus modes and schedules
+
+---
+
+# What This Project Demonstrates
+
+FocusScroll showcases experience in:
+
+- Android development
+- Kotlin
+- Jetpack Compose
+- Android Accessibility APIs
+- Accessibility engineering
+- UI hierarchy analysis
+- Event-driven programming
+- Recursive tree traversal
+- Cross-application interaction
+- Mobile system services
+- Debugging third-party UI behavior
+- Privacy-focused application design
+
+---
+
+# Why This Project Matters
+
+FocusScroll demonstrates a practical approach to solving a modern software problem without requiring control over the underlying platforms.
+
+Instead of building another social media application, the project works at the system level to change how existing applications are used.
+
+The most interesting part of the project is the detection problem: Instagram and YouTube expose different accessibility structures, requiring platform-specific heuristics rather than a single generic solution.
+
+The project also demonstrates how Android system APIs can be combined with application-level logic to create tools that change user behavior while preserving access to useful functionality.
+
+---
+
+# Key Skills Demonstrated
+
+- Android Development
+- Kotlin
+- Jetpack Compose
+- Accessibility Services
+- AccessibilityNodeInfo
+- UI Hierarchy Analysis
+- Event-Driven Systems
+- Recursive Algorithms
+- Mobile Application Development
+- Debugging
+- System-Level Android APIs
+- Privacy-Focused Engineering
+
+---
+
+# Summary
+
+FocusScroll is an Android productivity application that blocks Instagram Reels and YouTube Shorts while preserving access to useful social media functionality.
+
+By combining Kotlin, Jetpack Compose, and Android Accessibility Services, the project demonstrates how system-level Android APIs can be used to selectively control third-party application experiences.
+
+The core pipeline is:
+
+> **Accessibility Event → UI Hierarchy → Content Detection → Global Navigation Action**
+
+FocusScroll turns that pipeline into a practical tool for more intentional social media use.
