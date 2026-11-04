@@ -17,6 +17,7 @@ import eyescroll from "../content/featured/eyescroll/meta.js";
 import focusscroll from "../content/other/focusscroll/meta.js";
 import tvapp from "../content/other/tvmatchalert/meta.js";
 import tvbackend from "../content/other/tvmatchalert-backend/meta.js";
+import yoohoo from "../content/other/yoohoo/meta.js";
 const projects = {
   "ai-chatbot": aiChatbot,
   princeboard: pboard,
@@ -37,9 +38,11 @@ const projects = {
   eyescroll: eyescroll,
   "tv-match-alert": tvapp,
   "tv-match-alert-backend": tvbackend,
+  yoohoo: yoohoo,
 };
 
 export const featuredProjects = [
+  yoohoo,
   eyescroll,
   tvapp,
   dinogame,

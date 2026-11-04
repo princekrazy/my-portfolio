@@ -1,0 +1,211 @@
+# Yoohoo
+
+**Real videos. Real people.**
+
+An AI-powered video-sharing platform designed to promote authentic human-made content by analyzing uploaded videos for potential AI generation before publication.
+
+Yoohoo combines a modern web interface with NVIDIA's synthetic video detection technology, a Python backend, cloud storage, and PostgreSQL persistence to create a video-sharing experience centered around content authenticity.
+
+---
+
+# Live Demo
+
+- **Frontend:** https://frontend-six-fawn-29.vercel.app/
+- **Backend API:** https://yoohoo-backend.onrender.com
+- **Health Check:** https://yoohoo-backend.onrender.com/health
+- **GitHub:** https://github.com/princekrazy/yoohoo
+
+---
+
+# Overview
+
+As AI-generated video becomes increasingly accessible, distinguishing authentic human-created content from synthetic media is becoming more challenging.
+
+Yoohoo explores a different approach to video sharing: analyze content before it reaches the public feed.
+
+Users can upload videos, provide metadata, and submit their content for automated analysis. The backend processes the video using OpenCV and NVIDIA's Synthetic Video Detector, calculates a detection probability, and applies a configurable threshold to determine whether the upload can proceed.
+
+Videos that pass the configured threshold are stored in Supabase Storage, with their metadata and analysis results persisted in PostgreSQL.
+
+Videos that exceed the threshold are rejected and users receive feedback explaining the result.
+
+The goal is to create a platform where content authenticity is an important part of the publishing workflow.
+
+---
+
+# Features
+
+## Video Uploads
+
+Users can submit videos through a modern upload interface.
+
+Features include:
+
+- Video file selection
+- Title and metadata submission
+- File validation
+- Upload feedback
+- Analysis status indicators
+- Rejection feedback
+
+---
+
+## AI-Powered Video Detection
+
+Yoohoo integrates NVIDIA's Synthetic Video Detector to analyze uploaded video content.
+
+The backend uses OpenCV to inspect videos and prepare them for analysis.
+
+Features include:
+
+- Video inspection
+- Frame sampling
+- NVIDIA detector integration
+- Detection probability extraction
+- Analysis result aggregation
+
+This allows the platform to evaluate potentially synthetic content before publication.
+
+---
+
+## Automated Review Decisions
+
+Yoohoo applies a configurable detection threshold to determine whether an uploaded video passes the automated review process.
+
+Current configuration:
+
+- Detection threshold: `0.30`
+- Mean detection probability used for evaluation
+- Videos exceeding the threshold are rejected
+- Videos passing the threshold proceed to storage and publication
+
+The threshold provides a straightforward way to control the platform's acceptance criteria.
+
+Because AI detection is probabilistic, these decisions should be treated as automated screening rather than definitive proof of a video's origin.
+
+---
+
+## Video Discovery
+
+Approved videos become available through the community feed.
+
+Features include:
+
+- Browse approved videos
+- Discover community content
+- View published video metadata
+- Access content that has passed automated screening
+
+---
+
+## Cloud Video Storage
+
+Approved video files are stored using Supabase Storage.
+
+The backend manages the upload process to ensure videos are stored only after passing the configured analysis threshold.
+
+---
+
+## Database Persistence
+
+Yoohoo uses PostgreSQL through Supabase to maintain video records and analysis information.
+
+Stored information includes:
+
+- Video metadata
+- Storage references
+- Analysis results
+- Publication status
+
+This separates video file storage from structured application data.
+
+---
+
+## Responsive Interface
+
+The frontend is built with Next.js, TypeScript, and Tailwind CSS.
+
+The interface focuses on:
+
+- Modern video-sharing layouts
+- Responsive components
+- Upload progress and status feedback
+- Clean navigation
+- Community video discovery
+
+---
+
+# Tech Stack
+
+## Frontend
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Lucide React
+
+## Backend
+
+- Python
+- FastAPI
+- OpenCV
+
+## AI Integration
+
+- NVIDIA Synthetic Video Detector
+- NVIDIA NIM
+
+## Database & Storage
+
+- Supabase
+- PostgreSQL
+- Supabase Storage
+
+## Deployment
+
+- Vercel
+- Render
+
+---
+
+# System Architecture
+
+```text
+              User
+                |
+                v
+         Next.js Frontend
+                |
+                | HTTP Requests
+                v
+          FastAPI Backend
+                |
+        +-------+-------+
+        |       |       |
+        v       v       v
+      OpenCV  NVIDIA  Validation
+              Detector
+        |       |
+        +-------+
+                |
+                v
+        Detection Analysis
+                |
+                v
+       Configurable Threshold
+                |
+          +-----+-----+
+          |           |
+          v           v
+       Approved    Rejected
+          |
+          v
+    Supabase Storage
+          |
+          v
+    Supabase PostgreSQL
+          |
+          v
+      Community Feed
+```
